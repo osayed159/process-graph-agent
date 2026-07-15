@@ -76,3 +76,34 @@ every one is genuine light paraphrase (e.g. real text "vielleicht überfahr
 ich irgendeinen anderen Auftrag" vs. quoted "Überfahre ich einen anderen
 Auftrag"), on both Haiku and Sonnet output, so "quote verbatim" is a soft
 instruction for current models regardless of size.
+
+## Where it would fall over
+
+- **Label-similarity dedup has no semantic understanding** — the
+  transcript_1 near-duplicate (76% string-similar, same real step) shows
+  this directly. A transcript with more paraphrase-heavy repetition than
+  these two would produce more silent near-duplicates than the checking
+  stage can catch (it only catches the *disconnection* that results, not
+  the duplication itself if both copies happen to get wired in).
+- **"Quote verbatim" is a soft constraint** — every grounding flag we
+  inspected was genuine light paraphrase, not hallucination, on both
+  model sizes. The check catches it, but a transcript where the model
+  paraphrases more aggressively would rack up grounding flags that are
+  technically correct behavior but noisy to review.
+- **No cross-transcript consistency** — each run is independent; two
+  transcripts describing the same real process would produce two
+  unrelated graphs with no reconciliation.
+
+## What I'd do with another week
+
+- Replace label-similarity dedup with embedding-based/semantic dedup.
+- Add a repair loop: feed a specific validation failure back to the LLM
+  for a targeted fix before escalating model tier, instead of the manual
+  escalation used here.
+- Investigate the extraction non-determinism observed on transcript_2
+  (52 → 60 → 29 activities across three identical-input Haiku runs)
+- Re-run transcript_1 with Sonnet to separate "model capability" from
+  "genuinely finer-grained human annotation" in the 52-vs-72 node gap.
+- Replace substring/fuzzy grounding with span-alignment robust to minor
+  rewording, without loosening it enough to let real hallucinations
+  through.
