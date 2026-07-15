@@ -20,18 +20,18 @@ independently.
 Plain Python calling Claude directly. The transcripts
 fit in a single context window (~15–20k tokens), so no chunking.
 
-1. **Extract activities** (LLM) — identify candidate process steps, each with
+1. **Extract activities** (LLM) identify candidate process steps, each with
    a verbatim supporting quote. This is what makes grounding checkable
    later, not just asserted.
-2. **Order & branch** (LLM) — sequence and conditionals ("if in stock → ...,
+2. **Order & branch** (LLM) sequence and conditionals ("if in stock → ...,
    otherwise → ..."), each edge quote-grounded or explicitly marked
    `inferred` if the transcript only implies the order.
-3. **Assemble** (deterministic, no LLM) — stable content-derived node IDs,
+3. **Assemble** (deterministic, no LLM) stable content-derived node IDs,
    de-duplication of near-identical activities (fuzzy label match), and
-   canonical ordering (BFS from start — the graph isn't a DAG; obstacle
+   canonical ordering (BFS from start the graph isn't a DAG; obstacle
    steps loop back). This is what makes re-running the pipeline idempotent
    rather than trusting the LLM to be consistent.
-4. **Check** (mandatory, deterministic) — **structural validation**
+4. **Check** (mandatory, deterministic)**structural validation**
    (`networkx`: no dangling edges, every node reachable, clear start/
    terminal) and **grounding** (does each quote actually appear in the
    transcript, exact or fuzzy match). Anything that fails is flagged in
@@ -79,18 +79,18 @@ instruction for current models regardless of size.
 
 ## Where it would fall over
 
-- **Label-similarity dedup has no semantic understanding** — the
+- **Label-similarity dedup has no semantic understanding** the
   transcript_1 near-duplicate (76% string-similar, same real step) shows
   this directly. A transcript with more paraphrase-heavy repetition than
   these two would produce more silent near-duplicates than the checking
   stage can catch (it only catches the *disconnection* that results, not
   the duplication itself if both copies happen to get wired in).
-- **"Quote verbatim" is a soft constraint** — every grounding flag we
+- **"Quote verbatim" is a soft constraint** every grounding flag we
   inspected was genuine light paraphrase, not hallucination, on both
   model sizes. The check catches it, but a transcript where the model
   paraphrases more aggressively would rack up grounding flags that are
   technically correct behavior but noisy to review.
-- **No cross-transcript consistency** — each run is independent; two
+- **No cross-transcript consistency** each run is independent; two
   transcripts describing the same real process would produce two
   unrelated graphs with no reconciliation.
 
