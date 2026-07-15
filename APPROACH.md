@@ -10,7 +10,7 @@ lean on as a generalization test.
 
 ## Why not one-shot
 
-A single "transcript in, JSON out" call can't be checked or debugged — if it
+A single "transcript in, JSON out" call can't be checked or debugged. If it
 hallucinates a step, there's no way to tell short of manually re-reading the
 transcript. Splitting into stages makes each step small enough to verify
 independently.
