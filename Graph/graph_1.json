@@ -1,0 +1,3477 @@
+{
+  "process": {
+    "swimlane": "Auftragssachbearbeitung",
+    "role": "Auftragssachbearbeiter",
+    "start": "Eingang einer Bestellung des Kunden: per E-Mail in Outlook (meist mit PDF-Anhang) oder telefonisch; bei Telefonbestellungen dient die Gesprächsnotiz als Grundlage der Auftragsanlage.",
+    "end": "Rechnung an den Kunden versendet und der Vorgang im Palettenkonto des Spediteurs erfasst; die monatliche Palettenkonto-Abrechnung liegt hinter dem Endpunkt."
+  },
+  "phases": [
+    {
+      "name": "Bestellprüfung und Kundenidentifikation",
+      "description": "Die Bestellung geht per E-Mail (meist mit PDF-Anhang) oder telefonisch ein; bei Telefonbestellungen hält der Sachbearbeiter die Bestelldaten in einer Gesprächsnotiz fest. Die Bestellung wird gesichtet und der bestellende Kunde wird im Adressmodul des ERP identifiziert. Seine Auftragsmerkmale wie Zahlungsart und Versandart sind im Kundenstamm hinterlegt und werden beim Anlegen des Auftrags automatisch übernommen. Beleg: Teil 2; telefonischer Eingang ergänzt auf Anweisung aus dem Review.",
+      "abschlusskriterium": {
+        "frage": "Ist die Bestellung gesichtet und der bestellende Kunde eindeutig identifiziert?",
+        "merkmale": [
+          "Bestell-E-Mail",
+          "Gesprächsnotiz",
+          "Bestellpositionen",
+          "Kundenname laut Bestellung",
+          "Kundennummer"
+        ]
+      }
+    },
+    {
+      "name": "Auftragsanlage im ERP (Kopfdaten)",
+      "description": "Im Auftragsmodul wird ein neuer Kundenauftrag angelegt, der Infotext des Kunden wird als Hinweisquelle geprüft, Kopfdaten (Referenz/Zeichennummer, Lieferdatum, Spedition, Transportart) werden erfasst, die Bestell-E-Mail wird in die Korrespondenz des Auftrags gezogen. Fehlt eine Bestellnummer des Kunden, wird als Hindernis-Behandlung eine Ersatz-Referenz aus Ansprechpartner und Datum gebildet. Spedition und Transportart gehören fachlich zum Versand, werden aber in derselben ERP-Maske wie die übrigen Kopfdaten erfasst (Regel 1). Beleg: Teil 2.",
+      "abschlusskriterium": {
+        "frage": "Existiert der Kundenauftrag im ERP mit vollständigen Kopfdaten und ist die Bestellung am Vorgang dokumentiert?",
+        "merkmale": [
+          "Auftragsnummer",
+          "Hinweise aus Infotext",
+          "Bestellnummer",
+          "Bestelldatum",
+          "Wunschlieferdatum",
+          "Spedition",
+          "Transportart"
+        ]
+      }
+    },
+    {
+      "name": "Positionsbearbeitung",
+      "description": "Für jede Bestellposition: kundenseitige Bezeichnung oder Artikelnummer auf die eigene Artikelnummer matchen, Bestand und Chargen prüfen, Position mit Menge erfassen, Packweise ermitteln und unter Position 9 eintragen, Stapelbarkeit feststellen. Danach einmalig: Materialpreiszuschlag bei LKW-Kunden und Reservierung der Ware. Beleg: Teil 2 und Teil 3.",
+      "abschlusskriterium": {
+        "frage": "Sind alle Bestellpositionen mit korrektem Artikel, Menge und Packweise im Auftrag erfasst, Fehlmengen festgestellt und die Ware reserviert?",
+        "merkmale": [
+          "Artikelnummer",
+          "Bestellmenge",
+          "Packweise",
+          "Positionspreis",
+          "Palettenanzahl je Position",
+          "Stapelbarkeit je Position",
+          "Fehlmenge je Position",
+          "Fehlmenge im Auftrag vorhanden",
+          "Materialpreiszuschlag",
+          "Reservierungsstatus"
+        ]
+      }
+    },
+    {
+      "name": "Versandklärung (Mengen und Kosten)",
+      "description": "Bei LKW-Kunden werden aus Palettenanzahl und Stapelbarkeit die Stellplätze je Position abgeleitet, summiert und gegen die LKW-Kapazität (38 Stellplätze) geprüft; bei mehr als 38 Stellplätzen wird die Kürzung mit dem Kunden geklärt, bei einer für den Kunden untypisch geringen Stellplatzzahl das Auffüllen auf einen vollen LKW angeboten und der Auftrag entsprechend angepasst. Zum Abschluss werden die Versandkosten aus der Frachtkostensätze-Excel beziehungsweise der Stückgutliste ermittelt und eingetragen. Beleg: Teil 2, Teil 3 und Feedback.",
+      "abschlusskriterium": {
+        "frage": "Passt die Bestellmenge zum Versand (volle LKW-Auslastung bei LKW-Kunden) und sind die Versandkosten im Auftrag eingetragen?",
+        "merkmale": [
+          "Stellplätze je Position",
+          "Gesamtstellplatzbedarf",
+          "Stellplatzbedarf kundenüblich",
+          "Kundenrückmeldung zur Mengenanpassung",
+          "Angepasste Auftragsmenge",
+          "Frachtpreis laut Preisliste",
+          "Versandkosten"
+        ]
+      }
+    },
+    {
+      "name": "Pickliste und Zahlungsklärung",
+      "description": "Die Pickliste wird gedruckt; fehlt der Vorkasse-Vermerk im Pickhinweis, wird er über die Zahlungsbedingungen geklärt und nachgetragen. Anschließend wird geprüft, ob der Kunde Vorkasse-Kunde ist; falls ja, wird die Proforma-Rechnung erstellt, die zugleich als Bestätigung des Auftragseingangs dient, die Pickliste zurückgehalten und auf die Zahlungsmeldung der Buchhaltung gewartet. Beleg: Feedback, die Vorkasse-Abwicklung wurde vor die Terminklärung gezogen.",
+      "abschlusskriterium": {
+        "frage": "Liegt die Pickliste vor und ist bei Vorkasse-Kunden der Zahlungseingang gemeldet?",
+        "merkmale": [
+          "Pickliste",
+          "Proforma-Rechnung",
+          "Zahlungseingang gemeldet"
+        ]
+      }
+    },
+    {
+      "name": "Terminklärung",
+      "description": "Nach dem Drucken der Pickliste und der Vorkasse-Klärung wird die Machbarkeit des Liefertermins ausnahmslos mit der Disposition ([Person 11]) geklärt, die die Pickliste mit dem aufgedruckten Liefertermin prüft; das deckt Produktion bei Fehlmenge und Lagerkapazität ab. Ist der Termin nicht machbar, wird die Terminabweichung behandelt. Beleg: Feedback, die Disposition-Rücksprache wurde zum Pflichtschritt.",
+      "abschlusskriterium": {
+        "frage": "Ist die Pickliste an die Disposition übergeben, die Machbarkeit des Liefertermins mit der Disposition geklärt und eine Abweichung behandelt?",
+        "merkmale": [
+          "Machbarkeit zum Wunschtermin",
+          "Bestätigter Liefertermin"
+        ]
+      }
+    },
+    {
+      "name": "Auftragsbestätigung",
+      "description": "Der Auftrag wird gegenüber dem Kunden bestätigt: die Auftragsbestätigung wird als PDF erstellt und an den Kunden versendet. Beleg: Teil 3 und Teil 4.",
+      "abschlusskriterium": {
+        "frage": "Ist die Auftragsbestätigung als PDF erstellt und an den Kunden versendet?",
+        "merkmale": [
+          "Auftragsbestätigung (PDF)",
+          "Liefertermin in der AB angegeben",
+          "Auftragsbestätigung versendet"
+        ]
+      }
+    },
+    {
+      "name": "Lieferterminanpassung",
+      "description": "Steht der Liefertermin nicht bereits in der Auftragsbestätigung, holt der Sachbearbeiter ihn von der Disposition nach und teilt ihn dem Kunden mit. Steht er bereits in der Auftragsbestätigung, entfällt dieser Schritt. Beleg: Teil 3.",
+      "abschlusskriterium": {
+        "frage": "Ist der Liefertermin geklärt, also entweder bereits in der Auftragsbestätigung enthalten oder von der Disposition nachgereicht und dem Kunden mitgeteilt?",
+        "merkmale": [
+          "Nachgereichter Liefertermin",
+          "Liefertermin an Kunden kommuniziert"
+        ]
+      }
+    },
+    {
+      "name": "Versandplanung",
+      "description": "Der Versand wird geplant: Lieferumfang festlegen, bei fernem Liefertermin den Merker setzen und bei Produktionsbedarf die Fertigmeldung abwarten, Frachtauftrag erstellen und an den Spediteur senden, bei Absage einen Ersatzspediteur wählen, den bestätigten Frachtauftrag ablegen und den Abholtermin im Dispokalender eintragen. Beleg: Teil 3, Teil 4 und Feedback 2.",
+      "abschlusskriterium": {
+        "frage": "Ist der Versand geplant, also der Frachtauftrag erstellt, an den Spediteur gesendet und von ihm bestätigt, und der Abholtermin im Dispokalender eingetragen?",
+        "merkmale": [
+          "Frachtauftrag (Excel)",
+          "Spediteur-Bestätigung",
+          "Abholtag",
+          "Dispokalender-Eintrag"
+        ]
+      }
+    },
+    {
+      "name": "Versandabwicklung",
+      "description": "Die Auslieferung wird abgewickelt: je Lieferlager wird der Lieferschein freigeschaltet und die Verladung abgewartet, die Abholung wird über den zurückkommenden Lieferschein abgehakt und, sofern der Spediteur ein Palettenkonto führt, der Palettenkonto-Eintrag erfasst. Eine Bestellung wird komplett in einer Auslieferung versandt. Beleg: Teil 3, Teil 4 und Feedback 2.",
+      "abschlusskriterium": {
+        "frage": "Ist die Auslieferung je Lieferlager verladen, die Abholung über den zurückkommenden Lieferschein abgehakt und, sofern der Spediteur ein Palettenkonto führt, der Palettenkonto-Eintrag erfasst?",
+        "merkmale": [
+          "Lieferscheine",
+          "Liefermenge je Position",
+          "Abhol-Häkchen",
+          "Palettenkonto-Eintrag"
+        ]
+      }
+    },
+    {
+      "name": "Fakturierung",
+      "description": "Anhand des hochgebrachten Lieferscheins (Kontrolle alternativ über die offenen Lieferscheine in der Rechnungsverwaltung) ruft der Sachbearbeiter den Auftrag im Rechnungsmodul auf und lässt die Rechnung erstellen; das System fasst mehrere Lieferscheine eines Auftrags zu einer Rechnung zusammen und vergibt die Rechnungsnummer. Die Rechnungsnummer wird handschriftlich auf dem Lieferschein vermerkt, die Rechnung mit Kopf und AGB gedruckt und per E-Mail an die Rechnungs-E-Mail-Adresse des Kunden (E-Mail 3) gesendet; ein Kunde erhält Rechnungen nur per Post. Beleg: Teil 4.",
+      "abschlusskriterium": {
+        "frage": "Ist der Lieferschein als unberechnet bestätigt, die Rechnung erstellt, die Rechnungsnummer auf dem Lieferschein vermerkt und die Rechnung an den Kunden versendet?",
+        "merkmale": [
+          "Lieferschein unberechnet",
+          "Rechnungsnummer",
+          "Rechnung (PDF)",
+          "Rechnungs-E-Mail-Adresse des Kunden"
+        ]
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_bestellung_sichten",
+      "type": "task",
+      "label": "Bestellung entgegennehmen und sichten (E-Mail oder Telefon)",
+      "phase": "Bestellprüfung und Kundenidentifikation",
+      "activity": "Öffnet die Bestell-E-Mail in Outlook und sichtet die Bestellung im PDF-Anhang mit Positionen, Mengen und Wunschtermin; bei telefonischen Bestellungen nimmt er die Bestelldaten im Gespräch auf einem vorgedruckten Formular oder Notizblock auf und erfasst sie später im System.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 03:34: wir nehmen auch tatsächlich per Telefon an, vorgedruckte Formulare oder jeder hat einen Block zur Hand, das schreiben wir kurz auf und erfassen es später",
+      "fields": [
+        {
+          "name": "Bestell-E-Mail",
+          "direction": "input",
+          "reads_from": {
+            "system": "Outlook",
+            "field": "Posteingang"
+          }
+        },
+        {
+          "name": "Gesprächsnotiz",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gesprächsnotiz (Telefon)",
+            "field": "Bestelldaten"
+          }
+        },
+        {
+          "name": "Bestellpositionen",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Bestellpositionen"
+          },
+          "essential": true
+        }
+      ]
+    },
+    {
+      "id": "n_kunde_identifizieren",
+      "type": "task",
+      "label": "Kunden im Adressmodul identifizieren",
+      "phase": "Bestellprüfung und Kundenidentifikation",
+      "activity": "Sucht den bestellenden Kunden im Adressmodul (zum Beispiel Namenssuche mit Prozentzeichen) und stellt die Kundennummer fest.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 05:12: du gehst erst ins Adressmodul, gibst den Namen ein, der filtert die Ergebnisse, und mit der Kundennummer gehst du ins Auftragsmodul",
+      "fields": [
+        {
+          "name": "Kundenname laut Bestellung",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Absender/Kundenname"
+          },
+          "essential": true
+        },
+        {
+          "name": "Kundennummer",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Kundennummer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_auftrag_anlegen",
+      "type": "task",
+      "label": "Neuen Kundenauftrag im ERP anlegen",
+      "phase": "Auftragsanlage im ERP (Kopfdaten)",
+      "activity": "Legt im Auftragsmodul einen neuen Kundenauftrag für die Kundennummer an; dabei übernimmt das System automatisch die im Adressmodul hinterlegten Auftragsmerkmale des Kunden (Zahlungsbedingungen, Lieferbedingungen, Kundenpreise) in den Auftrag.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 06:58: die ziehen sich automatisch raus, die sind alle im Adressmodul hinterlegt, das wird automatisch übernommen, wenn man den Auftrag anlegt",
+      "fields": [
+        {
+          "name": "Kundennummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Kundennummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Auftragsnummer",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          }
+        },
+        {
+          "name": "Zahlungsart des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Zahlungsbedingungen"
+          }
+        },
+        {
+          "name": "Versandart des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Adressmodul Lieferbedingungen"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_infotext_pruefen",
+      "type": "task",
+      "label": "Kunden-Infotext auf Hinweise prüfen",
+      "phase": "Auftragsanlage im ERP (Kopfdaten)",
+      "activity": "Prüft die Infotexte des Kunden im Adressmodul auf Hinweise wie Chargen, Preisanpassungen oder Sondervereinbarungen.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'haben wir hier im Adressmodul auch noch verschiedene Infotexte ... wie so ein Notizbuch'",
+      "fields": [
+        {
+          "name": "Kunden-Infotext",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Adressmodul Infotexte"
+          }
+        },
+        {
+          "name": "Hinweise aus Infotext",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Hinweise aus Infotext"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_kopfdaten_erfassen",
+      "type": "task",
+      "label": "Kopfdaten erfassen (Referenz, Lieferdatum, Spedition, Transportart)",
+      "phase": "Auftragsanlage im ERP (Kopfdaten)",
+      "activity": "Erfasst die Kopfdaten des Auftrags: Bestellnummer und Bestelldatum als Zeichennummer/Referenz, gewünschtes Lieferdatum, Spedition und Transportart.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 11:04: da trägt man die Spedition ein, die es fährt, wir haben für die Kunden feste Spedition, das weiß man, das steht nur geschrieben",
+      "fields": [
+        {
+          "name": "Bestellnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Bestellnummer"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Zeichennummer"
+          }
+        },
+        {
+          "name": "Bestelldatum",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Bestelldatum"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Zeichennummer"
+          }
+        },
+        {
+          "name": "Wunschlieferdatum",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Lieferdatum"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          }
+        },
+        {
+          "name": "Spedition",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Spedition"
+          }
+        },
+        {
+          "name": "Transportart",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Transportart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_referenz",
+      "type": "task",
+      "label": "Hindernis beheben: Ersatz-Referenz aus Ansprechpartner und Datum bilden",
+      "phase": "Auftragsanlage im ERP (Kopfdaten)",
+      "activity": "Bildet bei fehlender Bestellnummer eine Ersatz-Referenz aus dem Ansprechpartner des Kunden und dem Bestelldatum (z.B. 'Frau [Person 16] vom 18.05.') und verwendet sie als Zeichennummer, damit der Kunde den Vorgang zuordnen kann.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Oder sonst würdest du sagen, Frau so und so ... einfach damit man das zuordnen kann'",
+      "review": "Die Quelle des Ansprechpartners für die Ersatz-Referenz (aus der Bestellung, dem Absender oder dem Telefonat) ist zu bestätigen.",
+      "fields": [
+        {
+          "name": "Ersatz-Referenz",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Zeichennummer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_bestellung_ablegen",
+      "type": "task",
+      "label": "Bestell-E-Mail in Auftragskorrespondenz ablegen",
+      "phase": "Auftragsanlage im ERP (Kopfdaten)",
+      "activity": "Zieht die Bestell-E-Mail in die Korrespondenz des Auftrags, damit die Bestellung am Vorgang dokumentiert ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'Und schon mal in die Korrespondenz ziehen'",
+      "fields": [
+        {
+          "name": "Bestell-E-Mail",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Outlook",
+            "field": "Posteingang"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskorrespondenz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "loop_positionen",
+      "type": "subProcess",
+      "label": "Für jede Bestellposition der Kundenbestellung",
+      "phase": "Positionsbearbeitung",
+      "source_ref": "Teil 2: 'du gehst jetzt für jeden Artikel manuell in den Lagerbestand'",
+      "iterates": {
+        "items": "Bestellpositionen der Kundenbestellung",
+        "source": {
+          "system": "Bestell-E-Mail (PDF-Anhang)",
+          "field": "Bestellpositionen"
+        }
+      },
+      "accumulates": [
+        {
+          "name": "Fehlmenge im Auftrag vorhanden",
+          "rule": "Trifft zu, sobald mindestens eine Position eine Fehlmenge hat."
+        }
+      ]
+    },
+    {
+      "id": "n_artikel_matchen",
+      "type": "task",
+      "label": "Artikel matchen (Kundenbezeichnung/Kunden-Artikelnummer auf eigene Artikelnummer)",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Ordnet die kundenseitige Bezeichnung oder Kunden-Artikelnummer über die Artikelattribute im Adressmodul der eigenen Artikelnummer zu.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'ich geh dann ins Adressmodul von dem Kunden, welcher bestellt hat, geh dann in die Artikelattribute'",
+      "fields": [
+        {
+          "name": "Artikelbezeichnung laut Bestellung",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Artikelbezeichnung"
+          }
+        },
+        {
+          "name": "Kunden-Artikelnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Artikelnummer des Kunden"
+          }
+        },
+        {
+          "name": "Artikelattribute des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Adressmodul Artikelattribute"
+          }
+        },
+        {
+          "name": "Artikelnummer",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Artikelnummer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_artikel_alt",
+      "type": "task",
+      "label": "Hindernis beheben: Mehrfach vorhandene Artikelnummer (alter/neuer Artikel) über Ersatzverweis klären",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Klärt bei mehrfach vorhandener Artikelnummer über den Verweis 'ersetzt durch' im Artikel, welcher Artikel der gültige ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'die alten Artikelnummern haben immer diese Schnittstelle ersetzt durch'",
+      "fields": [
+        {
+          "name": "Ersatzverweis ersetzt durch",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Artikelmodul ersetzt durch"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_artikel_unklar",
+      "type": "sendTask",
+      "label": "Hindernis beheben: Artikelzuordnung per Rückfrage mit Kunde klären",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Fragt beim Kunden nach, welcher Artikel gemeint ist, wenn die Zuordnung über Bezeichnung und Plausibilisierung der Menge nicht eindeutig gelingt.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'dann ist ja sowas wie eine Rückfrage E-Mail'",
+      "review": "Dieser Schritt ist als Soll-Vorgehen festgehalten; in der heutigen Praxis wird die Zuordnung über Erfahrung und die Bestellmenge plausibilisiert. Das tatsächliche Vorgehen bei echter Unklarheit ist zu bestätigen.",
+      "boundary": {
+        "target_actor": "Kunde",
+        "sends": [
+          {
+            "name": "Artikelbezeichnung laut Bestellung",
+            "reads_from": {
+              "system": "Bestell-E-Mail (PDF-Anhang)",
+              "field": "Artikelbezeichnung"
+            },
+            "essential": true
+          }
+        ],
+        "returns": [
+          {
+            "name": "Geklärte Artikelzuordnung",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Geklärte Artikelzuordnung"
+            }
+          }
+        ],
+        "resume_event": "kunde_rueckmeldung_artikelzuordnung"
+      }
+    },
+    {
+      "id": "n_bestand_pruefen",
+      "type": "task",
+      "label": "Bestand und Chargen prüfen (verfügbar, reserviert, bestellt), Fehlmenge feststellen",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Prüft je Artikel den Bestand mit Chargen (verfügbar, reserviert, bestellt), stellt eine etwaige Fehlmenge gegenüber der Bestellmenge fest und merkt sich dabei, in welchem Lager die Chargen liegen (Hauptlager oder eines der Außenlager bei [Firma J], [Firma T] oder [Firma K]).",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'ich guck dann reserviert, verfügbar und hier bei bestellt'",
+      "fields": [
+        {
+          "name": "Artikelnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Artikelnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Bestellmenge",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Menge"
+          },
+          "essential": true
+        },
+        {
+          "name": "Bestand je Charge",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Artikelmodul Bestand (verfügbar, reserviert, bestellt)"
+          }
+        },
+        {
+          "name": "Lagerort je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Artikelmodul Chargen Lagerort"
+          }
+        },
+        {
+          "name": "Fehlmenge je Position",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Fehlmenge je Position"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_position_erfassen",
+      "type": "task",
+      "label": "Position im Auftrag erfassen (Artikelnummer, Menge; Preis aus Stammdaten)",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Fügt den Artikel als Position in den Auftrag ein und trägt die bestellte Menge ein; der Preis zieht sich automatisch aus den Stammdaten.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'Artikelnummer, Menge, Packweise, Preis zieht er sich automatisch'",
+      "fields": [
+        {
+          "name": "Artikelnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Artikelnummer"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Artikelnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Bestellmenge",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Menge"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Menge"
+          },
+          "essential": true
+        },
+        {
+          "name": "Positionspreis",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Stammdaten Preis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_packweise_ermitteln",
+      "type": "task",
+      "label": "Packweise ermitteln und Palettenanzahl der Position berechnen",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Ermittelt die Packweise des Artikels über die Packweisen-Listen und berechnet daraus die Palettenanzahl der Position.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: '4000 geteilt durch die 200, dann kommt man auf 20 Paletten'",
+      "fields": [
+        {
+          "name": "Packweise",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Packweisen-Liste"
+          },
+          "essential": true
+        },
+        {
+          "name": "Bestellmenge",
+          "direction": "input",
+          "reads_from": {
+            "system": "Bestell-E-Mail (PDF-Anhang)",
+            "field": "Menge"
+          },
+          "essential": true
+        },
+        {
+          "name": "Palettenanzahl je Position",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Palettenanzahl je Position"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_packweise",
+      "type": "task",
+      "label": "Hindernis beheben: Fehlende Packweise über Infotext und Chargenangaben ermitteln",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Ermittelt die fehlende Packweise behelfsweise über den Infotext 1 des Kunden beziehungsweise die Chargenangaben.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'Das kann ich mir auch dann theoretisch wieder in den Infotext 1 abholen'",
+      "fields": [
+        {
+          "name": "Kunden-Infotext",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Adressmodul Infotext 1"
+          }
+        },
+        {
+          "name": "Bestand je Charge",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Chargenangaben"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_menge_packweise",
+      "type": "task",
+      "label": "Hindernis beheben: Bestellmenge auf Standardpackweise anpassen (mit Hinweis an Kunden)",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Passt die bestellte Menge auf die Standardpackweise an (mehr oder etwas weniger) und gibt dem Kunden eine kurze Info dazu mit.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 2: 'Es gibt viele, die bestellen nicht zu unseren Packweisen, die passen wir dann aber unseren Packweisen an'",
+      "fields": [
+        {
+          "name": "Auf Packweise gerundete Menge",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Menge"
+          }
+        },
+        {
+          "name": "Hinweis an Kunden",
+          "direction": "output",
+          "writes_to": {
+            "system": "zu klären",
+            "field": "zu klären"
+          }
+        }
+      ],
+      "review": "Wo der Hinweis an den Kunden zur Mengenanpassung festgehalten wird, ist nicht beschrieben."
+    },
+    {
+      "id": "n_packweise_eintragen",
+      "type": "task",
+      "label": "Packweise und Stapelbarkeit unter Position 9 eintragen",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Trägt über Position editieren im Feld Position 9 der Auftragsposition die Packweise (Stellplätze beziehungsweise Paletten je Einheit) und die Stapelbarkeit ein.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 31:20: dann macht es Sinn, erst Stapelbarkeit, weil ich das ja dann auch unter der Position 9 eintrage; dann würde ich sagen Packweise und Stapelbarkeit unter Position 9 eintragen",
+      "fields": [
+        {
+          "name": "Packweise",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Packweisen-Liste"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Position 9"
+          }
+        },
+        {
+          "name": "Stapelbarkeit je Position",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Position 9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_stapelbarkeit_feststellen",
+      "type": "task",
+      "label": "Stapelbarkeit der Position im Artikelstamm feststellen",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Stellt anhand des Artikelstamms fest, ob der Artikel stapelbar ist; stapelbar bedeutet immer nur doppelt.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Das weiß ich, weil es jetzt hier steht, stapelbar'",
+      "fields": [
+        {
+          "name": "Stapelbarkeit je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Artikelstamm Stapelbarkeit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_stapelbarkeit",
+      "type": "task",
+      "label": "Hindernis beheben: Fehlende Stapelbarkeits-Angabe klären und im Artikelstamm nachpflegen",
+      "phase": "Positionsbearbeitung",
+      "parent": "loop_positionen",
+      "activity": "Klärt die Stapelbarkeit aus Erfahrungswissen und pflegt die Angabe im Artikelstamm nach.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Speicher ich das im Artikelstamm ... Das sind so Sachen, die müssen wir dann halt eigentlich echt mal pflegen'",
+      "fields": [
+        {
+          "name": "Stapelbarkeits-Angabe",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Artikelstamm Stapelbarkeit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_versandart_zuschlag",
+      "type": "exclusiveGateway",
+      "label": "Welche Versandart hat der Kunde?",
+      "phase": "Positionsbearbeitung",
+      "source_ref": "Teil 3: 'Das machen wir nur bei Großkunden'; Feedback 2 12:25: Kundengruppe fällt weg, der Zuschlag richtet sich nach derselben Unterscheidung wie der Versand, LKW-Kunde gegen Stückgut-Kunde",
+      "checks": {
+        "name": "Versandart des Kunden"
+      }
+    },
+    {
+      "id": "n_zuschlag_einfuegen",
+      "type": "task",
+      "label": "Materialpreiszuschlag als Position einfügen",
+      "phase": "Positionsbearbeitung",
+      "activity": "Fügt bei LKW-Kunden den Materialpreiszuschlag als eigene Position in den Auftrag ein; den Prozentsatz rechnet das System automatisch auf, eingegeben wird nur die Zuschlagsposition.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 36:46: das ist automatisch, da müssen wir nichts rechnen, wir müssen nur den Materialpreiszuschlag als Position eingeben",
+      "fields": [
+        {
+          "name": "Materialpreiszuschlag",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Materialpreiszuschlag"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_auftrag_reservieren",
+      "type": "task",
+      "label": "Ware über Statusänderung reservieren",
+      "phase": "Positionsbearbeitung",
+      "activity": "Reserviert die Ware des Auftrags über die Statusänderung (Auftrag setzen und reservieren drücken).",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'die Ware reserviere ich, indem ich hier auf Statusänderung gehe und dann Auftrag setze und reservieren drücke'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Reservierungsstatus",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsstatus reserviert"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_versandart",
+      "type": "exclusiveGateway",
+      "label": "Welche Versandart hat der Kunde?",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "source_ref": "Teil 3: 'Entweder ist es ein LKW oder es ist ein Stückgut'",
+      "checks": {
+        "name": "Versandart des Kunden"
+      }
+    },
+    {
+      "id": "n_stellplaetze_je_position",
+      "type": "task",
+      "label": "Stellplätze je Position ableiten (stapelbar = Paletten halbiert, sonst eine Palette je Stellplatz)",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Leitet je Position die Stellplätze ab: stapelbare Paletten zählen halb (nur doppelt stapelbar), nicht stapelbare Paletten belegen je einen Stellplatz, eine einzelne Palette belegt einen vollen Stellplatz.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: '54, die kann ich stapeln, bin ich bei 27'",
+      "fields": [
+        {
+          "name": "Palettenanzahl je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Palettenanzahl je Position"
+          },
+          "essential": true
+        },
+        {
+          "name": "Stapelbarkeit je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Artikelstamm Stapelbarkeit"
+          },
+          "essential": true
+        },
+        {
+          "name": "Stellplätze je Position",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Stellplätze je Position"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_stellplatzbedarf_summieren",
+      "type": "task",
+      "label": "Gesamtstellplatzbedarf über alle Positionen summieren",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Summiert die Stellplätze aller Positionen zum Gesamtstellplatzbedarf des Auftrags.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Dann komme ich ja auch auf 37, 41, 42 Stellplätze'",
+      "fields": [
+        {
+          "name": "Stellplätze je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Stellplätze je Position"
+          }
+        },
+        {
+          "name": "Gesamtstellplatzbedarf",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Gesamtstellplatzbedarf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_stellplaetze",
+      "type": "exclusiveGateway",
+      "label": "Wie verhält sich der Gesamtstellplatzbedarf zur vollen LKW-Auslastung?",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "source_ref": "Teil 3: 'Und den muss ich jetzt dann noch runterkürzen auf die 38'",
+      "checks": {
+        "name": "Gesamtstellplatzbedarf"
+      }
+    },
+    {
+      "id": "n_kunde_mengenklaerung",
+      "type": "sendTask",
+      "label": "Mengenanpassung mit Kunde klären (kürzen oder auffüllen)",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Schreibt dem Kunden per E-Mail, dass die Bestellung nicht zur LKW-Auslastung passt, nennt Paletten- und Stellplatzzahl und fragt, was gekürzt oder aufgefüllt wird.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 46:12 und 48:53: über 38 kürzen lassen, bei untypischem Unterhang das Auffüllen anbieten",
+      "boundary": {
+        "target_actor": "Kunde",
+        "sends": [
+          {
+            "name": "Gesamtstellplatzbedarf",
+            "reads_from": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Gesamtstellplatzbedarf"
+            }
+          },
+          {
+            "name": "Palettenanzahl je Position",
+            "reads_from": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Palettenanzahl je Position"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "name": "Kundenrückmeldung zur Mengenanpassung",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Kundenrückmeldung zur Mengenanpassung"
+            }
+          }
+        ],
+        "resume_event": "kunde_rueckmeldung_mengenanpassung"
+      }
+    },
+    {
+      "id": "n_auftrag_anpassen",
+      "type": "task",
+      "label": "Auftragspositionen gemäß Kundenrückmeldung anpassen",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Passt die Auftragspositionen gemäß der Kundenrückmeldung an; überzählige Reservierungen werden dabei automatisch wieder frei.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 49:04: dann muss ich einfach noch die Auftragspositionen anpassen, je nachdem was an Rückmeldungen kommt",
+      "fields": [
+        {
+          "name": "Kundenrückmeldung zur Mengenanpassung",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Kundenrückmeldung zur Mengenanpassung"
+          },
+          "essential": true
+        },
+        {
+          "name": "Angepasste Auftragsmenge",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Menge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_versandkosten_erfassen",
+      "type": "task",
+      "label": "Versandkosten ermitteln und eintragen",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Ermittelt die Versandkosten und trägt sie in den Auftrag ein: beim LKW-Kunden sucht er in der Frachtkostensätze-Excel auf dem Server den günstigsten passenden Spediteur für die Region heraus (häufig [Firma J] als Hausspediteur, bei manchen Kunden schon im Adressmodul hinterlegt) und trägt dessen Frachtpreis als Versandkosten ein; beim Stückgut-Kunden den Palettenpreis nach Palettenzahl und Postleitzahl aus der Stückgutliste. Der so gewählte Spediteur gilt zunächst als der fahrende Spediteur; ob für ihn ein Palettenkonto geführt wird, weiß der Sachbearbeiter aus Erfahrung.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 49:20: auf unserem Server haben wir die Frachtkostensätze als Excel-Tabelle, da gehe ich rein und trage den Preis im Auftrag ein; Feedback 2 05:38: ich guck in die Frachtkostensätze-Excel, such mir den günstigsten raus, der wird das fahren, dann frag ich an",
+      "fields": [
+        {
+          "name": "Versandart des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Adressmodul Lieferbedingungen"
+          }
+        },
+        {
+          "name": "Spedition",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Spedition"
+          }
+        },
+        {
+          "name": "Palettenanzahl je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Palettenanzahl je Position"
+          }
+        },
+        {
+          "name": "Frachtpreis laut Preisliste",
+          "direction": "input",
+          "reads_from": {
+            "system": "Server (Frachtkostensätze-Excel)",
+            "field": "Frachtpreis je Spediteur und Region"
+          }
+        },
+        {
+          "name": "Versandkosten",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftrag Versandkosten"
+          }
+        },
+        {
+          "name": "Spediteur",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur"
+          }
+        },
+        {
+          "name": "Spediteur mit Palettenkonto",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur mit Palettenkonto"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_pickliste_drucken",
+      "type": "task",
+      "label": "Pickliste drucken",
+      "phase": "Pickliste und Zahlungsklärung",
+      "activity": "Druckt die Pickliste zum Auftrag inklusive Pickhinweisen (z.B. Vorkasse-Vermerk).",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Dann würde ich die Pickliste drucken'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Vorkasse-Vermerk im Pickhinweis",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Pickhinweis"
+          }
+        },
+        {
+          "name": "Pickliste",
+          "direction": "output",
+          "writes_to": {
+            "system": "Papier (Ausdruck)",
+            "field": "Pickliste"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hb_vorkasse_pickhinweis",
+      "type": "task",
+      "label": "Hindernis beheben: Fehlenden Vorkasse-Vermerk über Zahlungsbedingungen klären und im Pickhinweis nachtragen",
+      "phase": "Pickliste und Zahlungsklärung",
+      "activity": "Prüft bei fehlendem Vorkasse-Vermerk die Zahlungsbedingungen des Kunden (sichtbar auf der AB beziehungsweise im Kundenstamm) und trägt den Vermerk 'Vorkasse' im Pickhinweis nach.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'da steht dann aber oben drauf oder muss ich dann eintragen Vorkasse. Bei manchen ... steht drin in diesem Pickhinweis. Vorkasse, bei manchen nicht. Da muss ich dann extra gucken auf der AB, was hat der für Zahlungsbedingungen'",
+      "review": "Zu klären, ob der Vorkasse-Vermerk dauerhaft im Stammdaten-Pickhinweis nachgetragen wird oder nur auf der gedruckten Pickliste erscheint.",
+      "fields": [
+        {
+          "name": "Zahlungsart des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Zahlungsbedingungen"
+          },
+          "essential": true
+        },
+        {
+          "name": "Vorkasse-Vermerk im Pickhinweis",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Pickhinweis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_dispo_liefertermin_klaeren",
+      "type": "sendTask",
+      "label": "Pickliste an Disposition übergeben und Machbarkeit Liefertermin klären",
+      "phase": "Terminklärung",
+      "activity": "Übergibt der Disposition ([Person 11]) die Pickliste und klärt im selben Zug, ob der gewünschte Liefertermin machbar ist; [Person 11] prüft die Machbarkeit und nennt den Termin oder meldet, dass der Termin noch offen ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 56:13 und 1:28:47: nach dem Drucken die Pickliste mit der Dispo besprechen, dabei Machbarkeit klären und entscheiden, aus welchem Lager welche Ware gezogen wird",
+      "boundary": {
+        "target_actor": "Disposition ([Person 11])",
+        "sends": [
+          {
+            "name": "Pickliste",
+            "reads_from": {
+              "system": "Papier (Ausdruck)",
+              "field": "Pickliste"
+            },
+            "essential": true
+          },
+          {
+            "name": "Fehlmenge im Auftrag vorhanden",
+            "reads_from": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Fehlmenge im Auftrag vorhanden"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "name": "Machbarkeit zum Wunschtermin",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Machbarkeit zum Wunschtermin"
+            }
+          },
+          {
+            "name": "Lagerentnahme je Position",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Lagerentnahme je Position"
+            }
+          }
+        ],
+        "resume_event": "dispo_rueckmeldung_machbarkeit"
+      }
+    },
+    {
+      "id": "n_gw_machbarkeit",
+      "type": "exclusiveGateway",
+      "label": "Ist der Wunschtermin machbar?",
+      "phase": "Terminklärung",
+      "source_ref": "Teil 2: 'Kriegen wir das hin, ja oder nein?'",
+      "checks": {
+        "name": "Machbarkeit zum Wunschtermin"
+      }
+    },
+    {
+      "id": "n_liefertermin_behandeln",
+      "type": "task",
+      "label": "Liefertermin-Abweichung behandeln (Termin im Auftrag anpassen oder AB ohne Liefertermin vorsehen)",
+      "phase": "Terminklärung",
+      "activity": "Behandelt die Terminabweichung: passt den Liefertermin im Auftrag an oder sieht die AB ohne Liefertermin mit dem Hinweis vor, dass produziert wird und der Termin nachgemeldet wird.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 57:17 und 58:16: bei Fehlmenge Liefertermin im Auftrag weglassen und ohne Liefertermin bestätigen (Liefertermin folgt), sonst den von der Disposition genannten Termin im Auftrag eintragen",
+      "fields": [
+        {
+          "name": "Machbarkeit zum Wunschtermin",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Machbarkeit zum Wunschtermin"
+          }
+        },
+        {
+          "name": "Bestätigter Liefertermin",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_vorkasse",
+      "type": "exclusiveGateway",
+      "label": "Welche Zahlungsart hat der Kunde?",
+      "phase": "Pickliste und Zahlungsklärung",
+      "source_ref": "Teil 2: 'Es gibt bestimmte Kunden, die immer Vorkasse kriegen ... in den Kundenstamm gespeichert'",
+      "checks": {
+        "name": "Zahlungsart des Kunden"
+      }
+    },
+    {
+      "id": "n_proforma_erstellen",
+      "type": "task",
+      "label": "Proforma-Rechnung erstellen (Pickliste zurückhalten)",
+      "phase": "Pickliste und Zahlungsklärung",
+      "activity": "Erstellt die Proforma-Rechnung zum Auftrag und speichert sie wie die Auftragsbestätigung im Kundenordner auf dem Server und im Kundenstamm; die Pickliste wird zurückgehalten und nicht ans Lager gegeben, damit nicht kommissioniert wird.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'wir erstellen keine AB in dem Sinne, so eine Proforma Rechnung ... wir gehen hier eigentlich gar nicht ins Lager'; Feedback 2 12:29: die Proformarechnung wird genauso wie die AB auf dem Server gespeichert und in dem Kunden auch",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Proforma-Rechnung",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Proforma-Rechnung (PDF)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_zahlung_abwarten",
+      "type": "sendTask",
+      "label": "Proforma-Rechnung an Kunden senden und auf Zahlungsmeldung der Buchhaltung warten",
+      "phase": "Pickliste und Zahlungsklärung",
+      "activity": "Sendet die Proforma-Rechnung an den Kunden und wartet, bis die Buchhaltung den Zahlungseingang meldet (Häkchen 'bezahlt' im Auftrag).",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 1:00:47: wenn der Buchhalter den Zahlungseingang kriegt, geht er zum Kasten, holt die Pickliste und meldet sich",
+      "boundary": {
+        "target_actor": "Kunde",
+        "sends": [
+          {
+            "name": "Proforma-Rechnung",
+            "reads_from": {
+              "system": "Server (Kundenordner)",
+              "field": "Proforma-Rechnung (PDF)"
+            },
+            "essential": true
+          }
+        ],
+        "returns": [
+          {
+            "name": "Zahlungseingang gemeldet",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Zahlungseingang gemeldet"
+            }
+          }
+        ],
+        "resume_event": "buchhaltung_meldet_zahlungseingang"
+      }
+    },
+    {
+      "id": "n_ab_erstellen",
+      "type": "task",
+      "label": "Auftragsbestätigung als PDF erzeugen und im Kundenordner speichern",
+      "phase": "Auftragsbestätigung",
+      "activity": "Druckt die Auftragsbestätigung als PDF und speichert sie im Kundenordner auf dem Server; dabei steht fest, ob die Auftragsbestätigung einen Liefertermin enthält oder ohne Liefertermin verschickt wird.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'ich speichere mir die ab als PDF und dann haben wir hier auf unserem Server ... Kundenordner'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Auftragsbestätigung (PDF)",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "AB-PDF"
+          }
+        },
+        {
+          "name": "Liefertermin in der AB angegeben",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Liefertermin in der AB angegeben"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_ab_versenden",
+      "type": "task",
+      "label": "Auftragsbestätigung per E-Mail an Kunden senden",
+      "phase": "Auftragsbestätigung",
+      "activity": "Hängt die AB an eine E-Mail und sendet sie an die AB-E-Mail-Adresse des Kunden (E-Mail 2 im Kundenstamm); damit gilt die Auftragsbestätigung als versendet.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'Bei E-Mail 2, daran gehen immer die ganzen ABs'",
+      "fields": [
+        {
+          "name": "Auftragsbestätigung (PDF)",
+          "direction": "input",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "AB-PDF"
+          },
+          "essential": true
+        },
+        {
+          "name": "AB-E-Mail-Adresse des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm E-Mail 2"
+          },
+          "essential": true
+        },
+        {
+          "name": "Auftragsbestätigung versendet",
+          "direction": "output",
+          "writes_to": {
+            "system": "Outlook",
+            "field": "Gesendet-Objekte"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_lt_in_ab",
+      "type": "exclusiveGateway",
+      "label": "Liefertermin in der AB angegeben?",
+      "phase": "Lieferterminanpassung",
+      "source_ref": "Feedback 57:34, [Person 1]: der Kunde bekommt mit der Auftragsbestätigung zunächst keinen Liefertermin",
+      "checks": {
+        "name": "Liefertermin in der AB angegeben"
+      }
+    },
+    {
+      "id": "n_lt_von_dispo_erhalten",
+      "type": "task",
+      "label": "Liefertermin von Disposition erhalten",
+      "phase": "Lieferterminanpassung",
+      "activity": "Nimmt den von der Disposition ([Person 11]) nachgereichten Liefertermin entgegen und trägt ihn im Auftrag ein, nachdem die Auftragsbestätigung zunächst ohne Liefertermin verschickt wurde.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 58:16, [Person 8]: 'Dann kommt der Liefertermin, aber kommt immer von [Person 11]'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Nachgereichter Liefertermin",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_kunde_lt_informieren",
+      "type": "task",
+      "label": "Kunde per E-Mail über Lieferdatum informieren",
+      "phase": "Lieferterminanpassung",
+      "activity": "Informiert den Kunden per E-Mail über den nun feststehenden Liefertermin, nachdem die Auftragsbestätigung zuvor ohne Liefertermin verschickt wurde.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 58:19, [Person 1]: Auftragsbestätigung ohne Termin raus, Liefertermin später nachschicken",
+      "fields": [
+        {
+          "name": "Nachgereichter Liefertermin",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          }
+        },
+        {
+          "name": "AB-E-Mail-Adresse des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm E-Mail 2"
+          }
+        },
+        {
+          "name": "Liefertermin an Kunden kommuniziert",
+          "direction": "output",
+          "writes_to": {
+            "system": "Outlook",
+            "field": "Gesendet-Objekte"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_lieferumfang_festlegen",
+      "type": "task",
+      "label": "Lieferumfang festlegen (Mengen je Position, Paletten, Produktionsbedarf)",
+      "phase": "Versandplanung",
+      "activity": "Legt anhand der Auftragspositionen und der Bestandslage je Lager fest, welche Positionen mit welcher Menge ausgeliefert werden, in der Regel die volle Auftragsmenge, leitet daraus die Gesamtpalettenanzahl und den Produktionsbedarf ab und stellt fest, ob ein Außenlager beteiligt ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'Auftragsmenge, Restmenge und Liefermenge'; Feedback 2 02:44: Teillieferungen sind ein absoluter Ausnahmefall, eine Bestellung wird komplett verschickt, sonst schiebt sich der Liefertermin nach hinten",
+      "fields": [
+        {
+          "name": "Auftragsmenge je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftrag Positionsmenge"
+          },
+          "essential": true
+        },
+        {
+          "name": "Bestand je Charge",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Chargenangaben (Bestand je Lager)"
+          }
+        },
+        {
+          "name": "Lieferlager",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Chargenangaben Lagerort"
+          }
+        },
+        {
+          "name": "Lagerentnahme je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Lagerentnahme je Position"
+          }
+        },
+        {
+          "name": "Geplante Liefermenge je Position",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Geplante Liefermenge je Position"
+          }
+        },
+        {
+          "name": "Gesamtpalettenanzahl",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Gesamtpalettenanzahl"
+          }
+        },
+        {
+          "name": "Produktionsbedarf",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Produktionsbedarf"
+          }
+        },
+        {
+          "name": "Außenlager beteiligt",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Außenlager beteiligt"
+          }
+        },
+        {
+          "name": "Liefertermin",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          }
+        }
+      ],
+      "review": "Das im Auftragskopf hinterlegte Lieferdatum wird ab hier für die Versandplanung gebraucht. Zu bestätigen ist, an welcher Stelle der Sachbearbeiter dieses Datum für die Entscheidung über den Anmeldezeitpunkt heranzieht."
+    },
+    {
+      "id": "n2_gw_anmeldezeitpunkt",
+      "type": "exclusiveGateway",
+      "label": "Ist der Liefertermin nah genug, dass die Anmeldung fällig ist?",
+      "phase": "Versandplanung",
+      "source_ref": "Teil 3: 'Das ist also der insgesamt bestellt jetzt für August. Dann schicke ich das noch nicht direkt ... ein, 2 Wochen vor Lieferdatum würde man das dann anmelden'",
+      "checks": {
+        "name": "Liefertermin"
+      }
+    },
+    {
+      "id": "n2_merker_eintragen",
+      "type": "task",
+      "label": "Anmelde-Merker im Dispokalender auf den Sonntag vor dem Liefertermin eintragen",
+      "phase": "Versandplanung",
+      "activity": "Trägt die Auslieferung als Merker auf den Sonntag vor dem Liefertermin in den Dispokalender ein, mit Notiz je nach Fall ('wird produziert, [Person 11] meldet sich' beziehungsweise 'noch anzumelden'), damit sichtbar bleibt, dass die Auslieferung noch anzumelden ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'dann schiebe ich den dann auf den Sonntag, melde ihn erst mal noch nicht an' und Teil 3: 'Dann trage ich das, wenn ich es noch nicht verplant habe, auf den Sonntag ein ... Wenn er jetzt für August bestellt, dann trage ich ihn im August auf den Sonntag ein und guck dann im August ein, zwei Wochen vorher mal drauf'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Liefertermin",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          },
+          "essential": true
+        },
+        {
+          "name": "Anmelde-Merker",
+          "direction": "output",
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Merker-Eintrag (Sonntag)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_gw_fehlmenge_nach_merker",
+      "type": "exclusiveGateway",
+      "label": "Besteht Produktionsbedarf?",
+      "phase": "Versandplanung",
+      "source_ref": "Teil 4: '[Person 11] meldet sich' gegen Teil 3: 'guck dann im August ein, zwei Wochen vorher mal drauf'",
+      "checks": {
+        "name": "Produktionsbedarf"
+      }
+    },
+    {
+      "id": "n2_fertigmeldung_abwarten",
+      "type": "sendTask",
+      "label": "Produktions-Fertigmeldung der Disposition abwarten",
+      "phase": "Versandplanung",
+      "activity": "Wartet darauf, dass die Disposition mit der Pickliste zurückkommt und meldet, dass die für diese Auslieferung benötigten Mengen produziert sind und der Versand angemeldet werden kann.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'Der kommt dann immer mit der Pickliste hoch und sagt: Das passt ... kannst du jetzt anmelden'",
+      "boundary": {
+        "target_actor": "Disposition ([Person 11])",
+        "sends": [],
+        "returns": [
+          {
+            "name": "Produktionsfertigmeldung",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Produktionsfertigmeldung"
+            }
+          }
+        ],
+        "resume_event": "dispo_fertigmeldung_produktion"
+      }
+    },
+    {
+      "id": "n2_frachtauftrag_erstellen",
+      "type": "task",
+      "label": "Frachtauftrag in der Excel-Vorlage ausfüllen und im Kundenordner (Verkauf) speichern",
+      "phase": "Versandplanung",
+      "activity": "Füllt die Frachtauftrags-Excel-Vorlage im Kundenordner des Verkaufslaufwerks für diese Auslieferung aus (Auftragsnummer, Gesamtpalettenanzahl, Frachtpreis, Abhol-/Vorladedatum, Zustelldatum, Palettentausch-Regelung) und speichert sie auf dem Server; der Abholtag wird dabei festgelegt (bei Großaufträgen in der Regel der Tag vor dem Liefertermin).",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'wir haben so Excel Tabellenvorlagen, die ich dann auch noch händisch ausfülle' und 'trage dann ein unsere Auftragsnummer ... Ich schreibe dann die Anzahl der Euro-Paletten da rein, den Preis ... Vorladedatum ... Zustellungsdatum'",
+      "review": "Die Herkunft der Palettentausch-Regelung im Frachtauftrag ist nicht beschrieben.",
+      "fields": [
+        {
+          "name": "Spediteur",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur"
+          },
+          "essential": true
+        },
+        {
+          "name": "Auftragsnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "essential": true
+        },
+        {
+          "name": "Liefertermin",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          },
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "essential": true
+        },
+        {
+          "name": "Gesamtpalettenanzahl",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Gesamtpalettenanzahl"
+          },
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "essential": true
+        },
+        {
+          "name": "Frachtpreis",
+          "direction": "input",
+          "reads_from": {
+            "system": "Server (Frachtkostensätze-Excel)",
+            "field": "Frachtpreis je Spediteur und Region"
+          }
+        },
+        {
+          "name": "Palettentausch-Regelung",
+          "direction": "input",
+          "reads_from": {
+            "system": "zu klären",
+            "field": "zu klären"
+          }
+        },
+        {
+          "name": "Abholtag",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          }
+        },
+        {
+          "name": "Frachtauftrag (Excel)",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_frachtauftrag_senden",
+      "type": "sendTask",
+      "label": "Frachtauftrag per E-Mail an Spediteur senden und Bestätigung abwarten",
+      "phase": "Versandplanung",
+      "activity": "Sendet den Frachtauftrag per E-Mail an den Spediteur und wartet dessen Bestätigung ab; ist ein Außenlager beteiligt, wird die zuvor erstellte gesonderte Außenlager-Pickliste in derselben E-Mail mitgeschickt, sodass der dortige Spediteur sie scannen kann.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 1:22:50 und 1:23:05: eigentlich schicke ich die Pickliste zusammen mit dem Frachtauftrag, wenn Ware vom [Firma J]-Lager geht, in Kombination mit der Pickliste",
+      "boundary": {
+        "target_actor": "Spediteur",
+        "sends": [
+          {
+            "name": "Frachtauftrag (Excel)",
+            "reads_from": {
+              "system": "Server (Kundenordner)",
+              "field": "Frachtauftrag-Excel"
+            },
+            "essential": true
+          },
+          {
+            "name": "Abholtag",
+            "reads_from": {
+              "system": "Server (Kundenordner)",
+              "field": "Frachtauftrag-Excel"
+            }
+          },
+          {
+            "name": "Liefertermin",
+            "reads_from": {
+              "system": "[ERP-System]",
+              "field": "Auftragskopf Lieferdatum"
+            }
+          },
+          {
+            "name": "Außenlager-Pickliste",
+            "reads_from": {
+              "system": "PDF (Ausdruck)",
+              "field": "Pickliste (nur Außenlager-Positionen)"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "name": "Spediteur-Bestätigung",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Spediteur-Bestätigung"
+            }
+          }
+        ],
+        "resume_event": "spediteur_rueckmeldung_frachtauftrag"
+      }
+    },
+    {
+      "id": "n2_hb_ersatzspedition",
+      "type": "task",
+      "label": "Hindernis beheben: Ersatzspedition ermitteln und Frachtauftrag anpassen",
+      "phase": "Versandplanung",
+      "activity": "Ermittelt anhand früherer Transporte und Erfahrungswissens eine Ersatzspedition (unter Beachtung der Fahrzeugkapazitäten, zum Beispiel keine Jumbo-LKW bei [Firma P]), ändert den fahrenden Spediteur entsprechend und passt den Frachtauftrag an.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Wenn jetzt mir der [Firma J] sagen würde: Ey, tut mir leid, kann ich nicht machen ... Wer ist nochmal von uns gefahren?'; Feedback 2 09:47: ich würd die Schleife einbauen, in der Frachtkostentabelle einen neuen Spediteur aussuchen, falls einer keine Kapazität frei hat",
+      "review": "Ob bei einer Ersatzspedition auch die im Auftragskopf hinterlegte Spedition angepasst wird, ist nicht beschrieben.",
+      "fields": [
+        {
+          "name": "Frühere Transporte",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Alte Lieferscheine"
+          },
+          "essential": true
+        },
+        {
+          "name": "Spediteur",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur"
+          }
+        },
+        {
+          "name": "Spediteur mit Palettenkonto",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur mit Palettenkonto"
+          }
+        },
+        {
+          "name": "Frachtauftrag (Excel)",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_frachtauftrag_ablegen",
+      "type": "task",
+      "label": "Frachtauftrag in der Auftragskorrespondenz ablegen",
+      "phase": "Versandplanung",
+      "activity": "Legt den versendeten Frachtauftrag in der Korrespondenz des Auftrags ab, damit Vertretungen den Anmeldestand nachvollziehen können.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'den Frachtauftrag speicher ich auch immer in der Korrespondenz in dem Ordner ab ... kann der [Person 21] aber reingucken und sagen, aha, der [Person 8] hat ... auch schon angemeldet'",
+      "fields": [
+        {
+          "name": "Frachtauftrag (Excel)",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragskorrespondenz"
+          },
+          "essential": true
+        }
+      ]
+    },
+    {
+      "id": "n2_abholtermin_eintragen",
+      "type": "task",
+      "label": "Abholtermin in den Dispokalender des Spediteurs eintragen (Paletten, Kunde, Ort, Auftragsnummer, LT-Vermerk)",
+      "phase": "Versandplanung",
+      "activity": "Trägt den Abholtermin in den Kalender des jeweiligen Spediteurs ein ([Firma J], [Firma K] oder Andere): Titel mit Gesamtpalettenanzahl, Kundenname und Ort, Beschreibung mit der Auftragsnummer, Zeitraum am Abholtag, dazu der LT-Vermerk mit dem Liefertermin.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'Du machst den Kalender [Firma J], weil [Firma J] hat einen eigenen Kalender ... Titel ist Anzahl Paletten, Name, Ort. Beschreibung ist Auftragsnummer ... Zeitraum ist dann immer Tag der Abholung ... schreib dann hier unter Wer immer noch L.T. für den Liefertermin'",
+      "fields": [
+        {
+          "name": "Spediteur",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur"
+          },
+          "essential": true
+        },
+        {
+          "name": "Abholtag",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          },
+          "essential": true
+        },
+        {
+          "name": "Gesamtpalettenanzahl",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Gesamtpalettenanzahl"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          }
+        },
+        {
+          "name": "Kundenname laut Bestellung",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftrag Kundenname"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          }
+        },
+        {
+          "name": "Lieferort des Kunden",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Adresse"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          }
+        },
+        {
+          "name": "Auftragsnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          },
+          "essential": true
+        },
+        {
+          "name": "Liefertermin",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragskopf Lieferdatum"
+          },
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          }
+        },
+        {
+          "name": "Dispokalender-Eintrag",
+          "direction": "output",
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          }
+        }
+      ]
+    },
+    {
+      "id": "loop2_lieferlager",
+      "type": "subProcess",
+      "label": "Für jedes Lieferlager der Auslieferung",
+      "phase": "Versandabwicklung",
+      "source_ref": "Teil 4: 'Dann drucke ich den Lieferschein aus, wähle unser Lager aus ... dann gehe ich hin, wieder in den Auftrag, wieder auf Lieferschein erstellen, wähle dann oben Lager [Firma J] aus'",
+      "iterates": {
+        "items": "Lieferlager der Auslieferung (Hauptlager, gegebenenfalls Lager [Firma J])",
+        "source": {
+          "system": "[ERP-System]",
+          "field": "Chargenangaben Lagerort"
+        }
+      },
+      "accumulates": [
+        {
+          "name": "Lieferscheine",
+          "rule": "Die Lieferscheinnummern, die für diese Auslieferung je Lager entstehen."
+        },
+        {
+          "name": "Liefermenge je Position",
+          "rule": "Die je Position tatsächlich verladene Menge der Auslieferung, über alle Lieferscheine zusammengezählt."
+        }
+      ]
+    },
+    {
+      "id": "n2_lieferschein_freischalten",
+      "type": "task",
+      "label": "Lieferschein für das Lager freischalten (geplante Mengen je Position bestätigen)",
+      "phase": "Versandabwicklung",
+      "parent": "loop2_lieferlager",
+      "activity": "Ruft im Auftrag 'Lieferschein erstellen' auf, wählt das Lager aus, bestätigt je Position die im Lieferumfang geplante Menge dieses Lagers (beziehungsweise wählt die nicht zu der Auslieferung gehörenden Positionen ab) und schaltet den Lieferschein damit für das Scannen frei.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'ich schalte den frei ... damit der [Person 11] unten überhaupt scannen kann' und 'willst du den Lieferschein für alle Artikel in diesem Auftrag erstellen? ... dann sag ich entweder ja oder ich wähle halt diverse Artikel ab' sowie Teil 2: 'dann kann ich auswählen, wie viel von dem Produkt soll denn hier geladen werden und wie viel von den Produkten im Lager [Firma J]'",
+      "fields": [
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Lieferlager",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Chargenangaben Lagerort"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Lieferschein Lager"
+          },
+          "essential": true
+        },
+        {
+          "name": "Geplante Liefermenge je Position",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Geplante Liefermenge je Position"
+          },
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Lieferschein Positionsmenge"
+          },
+          "essential": true
+        },
+        {
+          "name": "Freigeschalteter Lieferschein",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Lieferschein (freigeschaltet)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_verladung_abwarten",
+      "type": "sendTask",
+      "label": "Verladung abwarten und gedruckten Lieferschein entgegennehmen",
+      "phase": "Versandabwicklung",
+      "parent": "loop2_lieferlager",
+      "activity": "Das Lager scannt die Paletten des freigeschalteten Lieferscheins, bucht die Chargen aus und druckt den Lieferschein zweifach; eine Ausfertigung geht dem Fahrer mit, die andere kommt zur Sachbearbeitung hoch.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'dann hat der [Person 11] den Lieferschein, scannt die Paletten. Und daraus resultiert dann die Liefermenge' und 'jetzt hat der [Person 11] verladen, kommt dann hoch mit dem Lieferschein und gibt mir den ... 2 Lieferscheine, eine geht an den Spediteur'",
+      "boundary": {
+        "target_actor": "Lager (Disposition/[Person 11] beziehungsweise Lager [Firma J])",
+        "sends": [
+          {
+            "name": "Freigeschalteter Lieferschein",
+            "reads_from": {
+              "system": "[ERP-System]",
+              "field": "Lieferschein (freigeschaltet)"
+            },
+            "essential": true
+          }
+        ],
+        "returns": [
+          {
+            "name": "Gedruckter Lieferschein",
+            "writes_to": {
+              "system": "Papier (Ausdruck)",
+              "field": "Lieferschein"
+            }
+          },
+          {
+            "name": "Liefermenge je Position",
+            "writes_to": {
+              "system": "[ERP-System]",
+              "field": "Lieferschein Positionsmenge"
+            }
+          },
+          {
+            "name": "Lieferscheinnummer",
+            "writes_to": {
+              "system": "[ERP-System]",
+              "field": "Lieferscheinnummer"
+            }
+          }
+        ],
+        "resume_event": "lager_bringt_lieferschein_hoch"
+      }
+    },
+    {
+      "id": "n2_hb_liefermenge",
+      "type": "sendTask",
+      "label": "Hindernis beheben: Abweichende Liefermenge mit Disposition klären",
+      "phase": "Versandabwicklung",
+      "parent": "loop2_lieferlager",
+      "activity": "Fragt bei der Disposition nach, warum weniger gescannt wurde als angemeldet ('ey [Person 11], was ist da passiert?'), und klärt die Ursache der Mengenabweichung.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'hat aber nur 18000 gescannt und dann würden hier 2000 offen bleiben ... dann würden dir schon sagen, ey [Person 11], was ist da passiert? Ja klar, wieso, weshalb, warum?'",
+      "review": "Der Ausgang ist offen: bei abweichender Liefermenge wird entweder nachverladen oder die Menge reduziert und entsprechend weniger berechnet.",
+      "boundary": {
+        "target_actor": "Disposition ([Person 11])",
+        "sends": [
+          {
+            "name": "Lieferscheinnummer",
+            "reads_from": {
+              "system": "Papier (Ausdruck)",
+              "field": "Lieferschein"
+            }
+          },
+          {
+            "name": "Liefermenge je Position",
+            "reads_from": {
+              "system": "[ERP-System]",
+              "field": "Lieferschein Positionsmenge"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "name": "Klärung zur Mengenabweichung",
+            "writes_to": {
+              "system": "Gedächtnis des Sachbearbeiters",
+              "field": "Klärung zur Mengenabweichung"
+            }
+          }
+        ],
+        "resume_event": "dispo_rueckmeldung_mengenabweichung"
+      }
+    },
+    {
+      "id": "n2_hb_nichts_zu_laden",
+      "type": "task",
+      "label": "Hindernis, Vorgehen offen: LKW vor Ort, Ware nicht verladbar (z.B. nächtlicher Maschinenausfall)",
+      "phase": "Versandabwicklung",
+      "parent": "loop2_lieferlager",
+      "activity": "Behandelt den Fall, dass der bestellte LKW vor Ort steht, die Ware aber nicht verladen werden kann, etwa weil die Produktion in der Nacht ausgefallen ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'Dann hat der Kollege die Maschine abgestellt. LKW steht hier, wir haben nichts zu laden ... das ist aber immer Sonderthema'",
+      "review": "Vorgehen und Zuständigkeit für diese Ausnahme sind im Gespräch nicht beschrieben; mangels beschriebenen Vorgehens lassen sich die benötigten Angaben nicht bestimmen.",
+      "fields": []
+    },
+    {
+      "id": "n2_abholung_abhaken",
+      "type": "task",
+      "label": "Abholung im Dispokalender abhaken",
+      "phase": "Versandabwicklung",
+      "activity": "Sobald der Lieferschein nach der Auslieferung wieder bei der Sachbearbeitung eingeht, gilt die Abholung als erfolgt; der Sachbearbeiter setzt daraufhin das Häkchen am Kalendereintrag im Dispokalender.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 3: 'wenn sie abgeholt wurden ... dann machst du da ein Häkchen hin ... Wer macht das Häkchen? Wir machen das hier.'; Feedback 2: die Rückmeldung, dass abgeholt wurde, ergibt sich daraus, dass der Lieferschein nach der Auslieferung bei der Sachbearbeitung ankommt",
+      "fields": [
+        {
+          "name": "Gedruckter Lieferschein",
+          "direction": "input",
+          "reads_from": {
+            "system": "Papier (Ausdruck)",
+            "field": "Lieferschein"
+          },
+          "essential": true
+        },
+        {
+          "name": "Dispokalender-Eintrag",
+          "direction": "input",
+          "reads_from": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag"
+          },
+          "essential": true
+        },
+        {
+          "name": "Abhol-Häkchen",
+          "direction": "output",
+          "writes_to": {
+            "system": "Dispokalender",
+            "field": "Abholtermin-Eintrag (Häkchen)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_gw_palettenkonto",
+      "type": "exclusiveGateway",
+      "label": "Führt der Spediteur ein Palettenkonto?",
+      "phase": "Versandabwicklung",
+      "source_ref": "Feedback 2 13:14: wir haben einen eigenen Ordner Palettenkonto, da sind alle Spediteure mit Palettentausch eingetragen, Spediteure ohne Palettentausch sind nicht drin",
+      "checks": {
+        "name": "Spediteur mit Palettenkonto"
+      }
+    },
+    {
+      "id": "n2_palettenkonto_eintragen",
+      "type": "task",
+      "label": "Abholung in die Palettenkonto-Excel des Spediteurs eintragen",
+      "phase": "Versandabwicklung",
+      "activity": "Öffnet im Palettenkonto-Ordner die Palettenkonto-Excel des Spediteurs und legt für die Abholung eine neue Zeile an (Abholdatum, Lieferscheinnummer, Kunde und Ort); die abgeholten Paletten übernimmt er aus der Position Anzahl Collie auf dem Lieferschein oder, wenn der Spediteur Tauschpaletten mitgebracht und abgegeben hat, aus dem Palettenschein. Positionen, bei denen der Kunde die Paletten gekauft hat (Europalette), werden dem Spediteur nicht belastet; liegt kein Palettenschein vor, trägt er null ein.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 2 10:38 und 10:43: die Palettenzahl nehme ich vom Lieferschein, Position Anzahl Collie, oder vom Palettenschein, wenn der Spediteur Tauschpaletten abgegeben hat; Feedback 2 13:14: im Palettenkonto-Ordner sind alle Spediteure mit Palettentausch eingetragen",
+      "fields": [
+        {
+          "name": "Spediteur",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Spediteur"
+          },
+          "essential": true
+        },
+        {
+          "name": "Lieferscheinnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Papier (Ausdruck)",
+            "field": "Lieferschein"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          },
+          "essential": true
+        },
+        {
+          "name": "Abholtag",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "Frachtauftrag-Excel"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        },
+        {
+          "name": "Kundenname laut Bestellung",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftrag Kundenname"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        },
+        {
+          "name": "Lieferort des Kunden",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm Adresse"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        },
+        {
+          "name": "Abgeholte Paletten",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Lieferschein Position Anzahl Collie"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        },
+        {
+          "name": "Tauschpaletten",
+          "direction": "transport",
+          "reads_from": {
+            "system": "Papier (Palettenschein)",
+            "field": "Anzahl mitgebrachter Leerpaletten"
+          },
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        },
+        {
+          "name": "Palettenkonto-Eintrag",
+          "direction": "output",
+          "writes_to": {
+            "system": "Excel (Palettenkonto)",
+            "field": "Zeile der Auslieferung"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_lieferschein_unberechnet_pruefen",
+      "type": "task",
+      "label": "Über die offenen Lieferscheine im Rechnungsmodul prüfen, ob der Lieferschein noch unberechnet ist",
+      "phase": "Fakturierung",
+      "activity": "Öffnet das Rechnungsmodul, einen eigenen Baustein wie Adress- und Auftragsmodul, lässt sich über die Leiste die offenen, noch nicht berechneten Lieferscheine anzeigen und prüft, ob der hochgebrachte Lieferschein darunter ist; ist er dabei, ist er noch unberechnet und wird berechnet, sonst wurde bereits eine Rechnung geschrieben.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 2 17:37: du kannst über das Rechnungsmodul alle offenen Lieferscheine anzeigen lassen, wenn er dabei ist, musst du ihn noch schreiben, wenn nicht, ist er schon geschrieben",
+      "fields": [
+        {
+          "name": "Gedruckter Lieferschein",
+          "direction": "input",
+          "reads_from": {
+            "system": "Papier (Ausdruck)",
+            "field": "Lieferschein"
+          },
+          "essential": true
+        },
+        {
+          "name": "Offene Lieferscheine",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Rechnungsverwaltung offene Lieferscheine"
+          }
+        },
+        {
+          "name": "Lieferschein unberechnet",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Lieferschein unberechnet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_rechnung_erstellen",
+      "type": "task",
+      "label": "Auftrag über den offenen Lieferschein im Rechnungsmodul aufrufen und Rechnung erstellen",
+      "phase": "Fakturierung",
+      "activity": "Öffnet den Auftrag per Doppelklick auf den offenen Lieferschein in der Rechnungsverwaltung und lässt die Rechnung erstellen; das System fasst dabei mehrere Lieferscheine eines Auftrags (etwa bei einer Auslieferung aus zwei Lagern) zu einer Rechnung zusammen und vergibt die Rechnungsnummer.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'Dann gehe ich hier drauf, dann Doppelklick und bin dann automatisch im Auftrag wieder drinne. Dann gehe ich hier oben auf Auftrag und sage: Ey, erstelle mir die Rechnung' und 'dann fasst das System beide Lieferscheine zu einer Rechnung zusammen'",
+      "fields": [
+        {
+          "name": "Lieferscheine",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Rechnungsverwaltung offene Lieferscheine"
+          },
+          "essential": true
+        },
+        {
+          "name": "Auftragsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsnummer"
+          }
+        },
+        {
+          "name": "Rechnungsnummer",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Rechnungsnummer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_rechnungsnummer_vermerken",
+      "type": "task",
+      "label": "Rechnungsnummer handschriftlich auf dem Lieferschein vermerken",
+      "phase": "Fakturierung",
+      "activity": "Überträgt die vom System vergebene Rechnungsnummer (AR, Jahr, Hochzähler) per Hand oben auf den papiernen Lieferschein (bei mehreren Lieferscheinen auf jeden), als interner Nachweis, dass der Lieferschein berechnet ist.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'dann kommt vom System dann eine [Rechnungsnummer]. Die trage ich dann per Hand hier oben drüber' und 'dann würdet ihr einmal beide manuell abhaken, die Rechnungsnummern draufschreiben'",
+      "fields": [
+        {
+          "name": "Rechnungsnummer",
+          "direction": "transport",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Rechnungsnummer"
+          },
+          "writes_to": {
+            "system": "Papier (Ausdruck)",
+            "field": "Lieferschein (Handvermerk)"
+          },
+          "essential": true
+        }
+      ]
+    },
+    {
+      "id": "n2_rechnung_drucken",
+      "type": "task",
+      "label": "Rechnung mit Kopf und AGB als PDF drucken",
+      "phase": "Fakturierung",
+      "activity": "Druckt die Rechnung in der gewählten Druckart, grundsätzlich komplett mit Kopf und AGB, als PDF.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 1:41:46: dann proppt die Rechnung auf, die print ich als PDF, lege sie im Kundenordner ab und schicke sie per Mail",
+      "fields": [
+        {
+          "name": "Rechnungsnummer",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Rechnungsnummer"
+          },
+          "essential": true
+        },
+        {
+          "name": "Rechnung (PDF)",
+          "direction": "output",
+          "writes_to": {
+            "system": "Server (Kundenordner)",
+            "field": "Rechnung-PDF (Unterordner Rechnungen)"
+          }
+        },
+        {
+          "name": "Rechnungsversandweg",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Rechnungsversandweg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2_gw_versandweg",
+      "type": "exclusiveGateway",
+      "label": "Auf welchem Weg wird die Rechnung versendet?",
+      "phase": "Fakturierung",
+      "source_ref": "Teil 4: 'Wir haben auch ein Kundenname, der bekommt die Rechnungen nur noch per Post zugeschickt'",
+      "checks": {
+        "name": "Rechnungsversandweg"
+      }
+    },
+    {
+      "id": "n2_rechnung_mailen",
+      "type": "task",
+      "label": "Rechnung per E-Mail an die Rechnungs-E-Mail-Adresse des Kunden (E-Mail 3) senden",
+      "phase": "Fakturierung",
+      "activity": "Öffnet das Adressmodul des Kunden, entnimmt die Rechnungs-E-Mail-Adresse (E-Mail 3, Buchhaltung des Kunden) und sendet die Rechnungs-PDF per E-Mail an den Kunden.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'dann wieder ins Adressmodul ... E-Mail 3 ist immer dann die Mail aus der Buchhaltung von Kunden, wo die Rechnungen [hingehen]'",
+      "fields": [
+        {
+          "name": "Rechnung (PDF)",
+          "direction": "input",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "Rechnung-PDF (Unterordner Rechnungen)"
+          },
+          "essential": true
+        },
+        {
+          "name": "Rechnungs-E-Mail-Adresse des Kunden",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Kundenstamm E-Mail 3"
+          },
+          "essential": true
+        }
+      ]
+    },
+    {
+      "id": "n2_rechnung_post",
+      "type": "task",
+      "label": "Rechnung per Post an den Kunden senden",
+      "phase": "Fakturierung",
+      "activity": "Versendet die gedruckte Rechnung per Post an den Kunden.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Teil 4: 'der bekommt die Rechnungen nur noch per Post zugeschickt'",
+      "fields": [
+        {
+          "name": "Rechnung (PDF)",
+          "direction": "input",
+          "reads_from": {
+            "system": "Server (Kundenordner)",
+            "field": "Rechnung-PDF (Unterordner Rechnungen)"
+          },
+          "essential": true
+        }
+      ]
+    },
+    {
+      "id": "n_preise_anpassen",
+      "type": "task",
+      "label": "Positionspreise manuell um den Zuschlag erhöhen",
+      "phase": "Positionsbearbeitung",
+      "activity": "Erhöht bei Stückgut-Kunden den Preis jeder Position manuell um den vorgegebenen Zuschlag (zum Beispiel Preis mal 1,25) und trägt den erhöhten Preis ein, ohne den hinterlegten Kundenpreis zu überschreiben.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 41:02: da müsste für Stückgutkunde noch ein separater Fall abgehen, wo steht Preise manuell anpassen, der dann auf Statusänderung reservieren folgt",
+      "fields": [
+        {
+          "name": "Positionspreis",
+          "direction": "input",
+          "reads_from": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Preis"
+          },
+          "essential": true
+        },
+        {
+          "name": "Zuschlagsprozentsatz",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Zuschlagsprozentsatz"
+          },
+          "essential": true
+        },
+        {
+          "name": "Angepasster Positionspreis",
+          "direction": "output",
+          "writes_to": {
+            "system": "[ERP-System]",
+            "field": "Auftragsposition Preis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_stellplatzbedarf_einordnen",
+      "type": "task",
+      "label": "Stellplatzbedarf gegen die kundenübliche Bestellgröße einordnen",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "activity": "Schätzt ein, ob der ermittelte Stellplatzbedarf der für diesen Kunden üblichen Bestellgröße entspricht; manche Kunden bestellen regelmäßig deutlich weniger als einen vollen LKW.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 48:34: vielleicht da noch einen Unterpunkt, weniger als 38 Stellplätze, Kunde der immer so bestellt oder fehlerhafte Bestellung",
+      "fields": [
+        {
+          "name": "Gesamtstellplatzbedarf",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Gesamtstellplatzbedarf"
+          },
+          "essential": true
+        },
+        {
+          "name": "Stellplatzbedarf kundenüblich",
+          "direction": "output",
+          "writes_to": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Stellplatzbedarf kundenüblich"
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gw_kundenueblich",
+      "type": "exclusiveGateway",
+      "label": "Entspricht der Stellplatzbedarf dem kundenüblichen Wert?",
+      "phase": "Versandklärung (Mengen und Kosten)",
+      "source_ref": "Feedback 48:36: wenn das normal ist, dann läuft es einfach so weiter, wenn es nicht normal ist, dann muss ich mit dem klären",
+      "checks": {
+        "name": "Stellplatzbedarf kundenüblich"
+      }
+    },
+    {
+      "id": "n2_gw_aussenlager",
+      "type": "exclusiveGateway",
+      "label": "Beteiligt diese Auslieferung ein Außenlager?",
+      "phase": "Versandplanung",
+      "source_ref": "Feedback 1:29:34: an den entsprechenden Spediteur, falls einer davon betroffen ist, diese Pickliste für den Spediteur mit dem Frachtauftrag mitschicken",
+      "checks": {
+        "name": "Außenlager beteiligt"
+      }
+    },
+    {
+      "id": "n2_aussenlager_pickliste",
+      "type": "task",
+      "label": "Gesonderte Pickliste für das Außenlager erstellen und speichern",
+      "phase": "Versandplanung",
+      "activity": "Geht erneut in die Auftragspositionen, setzt über das Häkchen auf Pickliste übernehmen nur die aus dem Außenlager zu entnehmenden Positionen, erzeugt daraus die gesonderte Pickliste als PDF mit Barcode und setzt die Häkchen danach wieder zurück, damit die vollständige Pickliste für die Disposition unverändert bleibt.",
+      "role": "Auftragssachbearbeiter",
+      "source_ref": "Feedback 1:24:33 bis 1:25:10: ich geh in den Auftrag in die Position, da gibt es ein Häkchen auf Pickliste übernehmen, klicke die anderen aus, dann wird eine Pickliste nur über die Außenlager-Positionen gedruckt und gespeichert, danach mache ich die Häkchen wieder rein",
+      "fields": [
+        {
+          "name": "Lagerentnahme je Position",
+          "direction": "input",
+          "reads_from": {
+            "system": "Gedächtnis des Sachbearbeiters",
+            "field": "Lagerentnahme je Position"
+          },
+          "essential": true
+        },
+        {
+          "name": "Außenlager-Pickliste",
+          "direction": "output",
+          "writes_to": {
+            "system": "PDF (Ausdruck)",
+            "field": "Pickliste (nur Außenlager-Positionen)"
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "source": "start",
+      "target": "n_bestellung_sichten"
+    },
+    {
+      "id": "e02",
+      "source": "n_bestellung_sichten",
+      "target": "n_kunde_identifizieren"
+    },
+    {
+      "id": "e03",
+      "source": "n_kunde_identifizieren",
+      "target": "n_auftrag_anlegen"
+    },
+    {
+      "id": "e04",
+      "source": "n_auftrag_anlegen",
+      "target": "n_infotext_pruefen"
+    },
+    {
+      "id": "e05",
+      "source": "n_infotext_pruefen",
+      "target": "n_kopfdaten_erfassen"
+    },
+    {
+      "id": "e06",
+      "source": "n_kopfdaten_erfassen",
+      "target": "n_bestellung_ablegen"
+    },
+    {
+      "id": "o08",
+      "source": "n_kopfdaten_erfassen",
+      "target": "n_hb_referenz",
+      "obstacle": "Bestellung enthält keine Bestellnummer für die Zeichennummer/Referenz",
+      "source_ref": "Teil 3: 'Oder sonst würdest du sagen, Frau so und so ... einfach damit man das zuordnen kann'"
+    },
+    {
+      "id": "r08",
+      "source": "n_hb_referenz",
+      "target": "n_kopfdaten_erfassen"
+    },
+    {
+      "id": "e07",
+      "source": "n_bestellung_ablegen",
+      "target": "n_artikel_matchen"
+    },
+    {
+      "id": "e08",
+      "source": "n_artikel_matchen",
+      "target": "n_bestand_pruefen"
+    },
+    {
+      "id": "e09",
+      "source": "n_bestand_pruefen",
+      "target": "n_position_erfassen"
+    },
+    {
+      "id": "e10",
+      "source": "n_position_erfassen",
+      "target": "n_packweise_ermitteln"
+    },
+    {
+      "id": "e11",
+      "source": "n_packweise_ermitteln",
+      "target": "n_stapelbarkeit_feststellen"
+    },
+    {
+      "id": "e12",
+      "source": "n_stapelbarkeit_feststellen",
+      "target": "n_packweise_eintragen"
+    },
+    {
+      "id": "o01",
+      "source": "n_artikel_matchen",
+      "target": "n_hb_artikel_alt",
+      "obstacle": "Artikelnummer ist im System mehrfach vorhanden (alter und neuer Artikel, alter Artikel nicht gesperrt)",
+      "source_ref": "Teil 2: '4128 habe ich zweimal, welche nehme ich'"
+    },
+    {
+      "id": "r01",
+      "source": "n_hb_artikel_alt",
+      "target": "n_artikel_matchen"
+    },
+    {
+      "id": "o02",
+      "source": "n_packweise_ermitteln",
+      "target": "n_hb_packweise",
+      "obstacle": "Packweise ist weder in den Packweisen-Listen noch unter Position 9 gepflegt",
+      "source_ref": "Teil 2: 'Aber wieso ist das da beim Deckelstandard und beim einmal nicht?'"
+    },
+    {
+      "id": "r02",
+      "source": "n_hb_packweise",
+      "target": "n_packweise_ermitteln"
+    },
+    {
+      "id": "o03",
+      "source": "n_stapelbarkeit_feststellen",
+      "target": "n_hb_stapelbarkeit",
+      "obstacle": "Stapelbarkeits-Angabe im Artikelstamm nicht gepflegt",
+      "source_ref": "Teil 3: 'Bei den Deckeln müsste doch jetzt eigentlich stehen, nicht Stapelware. Ja, steht aber nicht'"
+    },
+    {
+      "id": "r03",
+      "source": "n_hb_stapelbarkeit",
+      "target": "n_stapelbarkeit_feststellen"
+    },
+    {
+      "id": "o05",
+      "source": "n_packweise_ermitteln",
+      "target": "n_hb_menge_packweise",
+      "obstacle": "Bestellmenge entspricht keiner ganzen Einheit der Standardpackweise",
+      "source_ref": "Teil 2: 'Es gibt viele, die bestellen nicht zu unseren Packweisen'"
+    },
+    {
+      "id": "r05",
+      "source": "n_hb_menge_packweise",
+      "target": "n_packweise_ermitteln"
+    },
+    {
+      "id": "o06",
+      "source": "n_artikel_matchen",
+      "target": "n_hb_artikel_unklar",
+      "obstacle": "Artikelbezeichnung des Kunden ist nicht eindeutig einem eigenen Artikel zuordenbar",
+      "source_ref": "Teil 2: 'wenn der also 2.880 bestellt und ich bin mir in meinem Eimer nicht sicher'"
+    },
+    {
+      "id": "r06",
+      "source": "n_hb_artikel_unklar",
+      "target": "n_artikel_matchen"
+    },
+    {
+      "id": "e13",
+      "source": "n_packweise_eintragen",
+      "target": "n_gw_versandart_zuschlag"
+    },
+    {
+      "id": "e14",
+      "source": "n_gw_versandart_zuschlag",
+      "target": "n_zuschlag_einfuegen",
+      "condition": "Ist LKW-Kunde",
+      "source_ref": "Teil 3: 'Das machen wir nur bei Großkunden'"
+    },
+    {
+      "id": "e15",
+      "source": "n_gw_versandart_zuschlag",
+      "target": "n_preise_anpassen",
+      "condition": "Ist Stückgut-Kunde",
+      "default": true,
+      "source_ref": "Feedback 41:02: separater Fall Preise manuell anpassen, der dann auf Statusänderung reservieren folgt"
+    },
+    {
+      "id": "e16",
+      "source": "n_zuschlag_einfuegen",
+      "target": "n_auftrag_reservieren"
+    },
+    {
+      "id": "e17",
+      "source": "n_auftrag_reservieren",
+      "target": "n_gw_versandart"
+    },
+    {
+      "id": "e18",
+      "source": "n_gw_versandart",
+      "target": "n_stellplaetze_je_position",
+      "condition": "Ist LKW-Kunde",
+      "source_ref": "Teil 3: 'bei den Kunden, die halt immer so LKW-Mengen bestellen, mit denen versucht man dann auch auf den LKW zu kommen'"
+    },
+    {
+      "id": "e19",
+      "source": "n_gw_versandart",
+      "target": "n_versandkosten_erfassen",
+      "condition": "Ist Stückgut-Kunde",
+      "default": true,
+      "source_ref": "Teil 2: 'Stückgut ist 1 bis 8 Paletten'"
+    },
+    {
+      "id": "e20",
+      "source": "n_stellplaetze_je_position",
+      "target": "n_stellplatzbedarf_summieren"
+    },
+    {
+      "id": "e21",
+      "source": "n_stellplatzbedarf_summieren",
+      "target": "n_gw_stellplaetze"
+    },
+    {
+      "id": "e22",
+      "source": "n_gw_stellplaetze",
+      "target": "n_versandkosten_erfassen",
+      "condition": "Entspricht vollem LKW (38 Stellplätze)",
+      "default": true,
+      "source_ref": "Teil 3: 'es gibt nur volle LKWs'"
+    },
+    {
+      "id": "e23",
+      "source": "n_gw_stellplaetze",
+      "target": "n_kunde_mengenklaerung",
+      "condition": "Mehr als 38 Stellplätze",
+      "source_ref": "Feedback 46:12: wenn ich mehr als 38 Stellplätze habe, dann muss ich dem Kunden sagen, was davon sollen wir rausstreichen"
+    },
+    {
+      "id": "e24",
+      "source": "n_gw_stellplaetze",
+      "target": "n_stellplatzbedarf_einordnen",
+      "condition": "Weniger als 38 Stellplätze",
+      "source_ref": "Feedback 48:36: bei weniger Stellplätzen muss ich die Prüfung machen, ist es normal für diesen Kunden oder nicht"
+    },
+    {
+      "id": "e28",
+      "source": "n_kunde_mengenklaerung",
+      "target": "n_auftrag_anpassen"
+    },
+    {
+      "id": "e29",
+      "source": "n_auftrag_anpassen",
+      "target": "n_versandkosten_erfassen"
+    },
+    {
+      "id": "e30",
+      "source": "n_versandkosten_erfassen",
+      "target": "n_pickliste_drucken"
+    },
+    {
+      "id": "o07",
+      "source": "n_pickliste_drucken",
+      "target": "n_hb_vorkasse_pickhinweis",
+      "obstacle": "Vorkasse-Vermerk ist im Pickhinweis des Kunden nicht gepflegt",
+      "source_ref": "Teil 4: 'steht drin in diesem Pickhinweis. Vorkasse, bei manchen nicht. Da muss ich dann extra gucken auf der AB'"
+    },
+    {
+      "id": "r07",
+      "source": "n_hb_vorkasse_pickhinweis",
+      "target": "n_pickliste_drucken"
+    },
+    {
+      "id": "e31",
+      "source": "n_pickliste_drucken",
+      "target": "n_gw_vorkasse",
+      "source_ref": "Feedback 1:02:15: wir drucken die Pickliste, dann gucken wir, ob es ein Vorkassenkunde ist oder nicht"
+    },
+    {
+      "id": "e34",
+      "source": "n_dispo_liefertermin_klaeren",
+      "target": "n_gw_machbarkeit"
+    },
+    {
+      "id": "e35",
+      "source": "n_gw_machbarkeit",
+      "target": "n_ab_erstellen",
+      "condition": "Termin machbar",
+      "default": true,
+      "source_ref": "Feedback 56:50: wenn machbar, dann geht es zur Auftragsbestätigung"
+    },
+    {
+      "id": "e36",
+      "source": "n_gw_machbarkeit",
+      "target": "n_liefertermin_behandeln",
+      "condition": "Termin nicht machbar",
+      "source_ref": "Teil 2: 'Und wenn nicht, dann bestätige ich den Auftrag ohne Liefertermin'"
+    },
+    {
+      "id": "e37",
+      "source": "n_liefertermin_behandeln",
+      "target": "n_ab_erstellen"
+    },
+    {
+      "id": "e38",
+      "source": "n_gw_vorkasse",
+      "target": "n_proforma_erstellen",
+      "condition": "Ist Vorkasse-Kunde",
+      "source_ref": "Teil 4: 'wir erstellen keine AB in dem Sinne, so eine Proforma Rechnung'"
+    },
+    {
+      "id": "e39",
+      "source": "n_gw_vorkasse",
+      "target": "n_dispo_liefertermin_klaeren",
+      "condition": "Ist kein Vorkasse-Kunde",
+      "default": true,
+      "source_ref": "Feedback 1:09:20: für nicht Vorkassenkunden direkt mit der Dispo den Liefertermin klären"
+    },
+    {
+      "id": "e40",
+      "source": "n_proforma_erstellen",
+      "target": "n_zahlung_abwarten"
+    },
+    {
+      "id": "e41",
+      "source": "n_zahlung_abwarten",
+      "target": "n_dispo_liefertermin_klaeren",
+      "source_ref": "Feedback 1:09:20: sobald die Zahlung eingekommen ist, mit der Dispo prüfen, ob das Lieferdatum passt"
+    },
+    {
+      "id": "e42",
+      "source": "n_ab_erstellen",
+      "target": "n_ab_versenden"
+    },
+    {
+      "id": "f27",
+      "source": "n2_gw_anmeldezeitpunkt",
+      "target": "n2_frachtauftrag_erstellen",
+      "condition": "Liefertermin nah (Anmeldung fällig)",
+      "default": true,
+      "source_ref": "Teil 3: 'ein, 2 Wochen vor Lieferdatum würde man das dann anmelden'"
+    },
+    {
+      "id": "f28",
+      "source": "n2_gw_anmeldezeitpunkt",
+      "target": "n2_merker_eintragen",
+      "condition": "Liefertermin fern (Anmeldung noch nicht fällig)",
+      "source_ref": "Teil 3: 'Wenn er jetzt für August bestellt, dann trage ich ihn im August auf den Sonntag ein'"
+    },
+    {
+      "id": "f04",
+      "source": "n2_merker_eintragen",
+      "target": "n2_gw_fehlmenge_nach_merker"
+    },
+    {
+      "id": "f29",
+      "source": "n2_gw_fehlmenge_nach_merker",
+      "target": "n2_fertigmeldung_abwarten",
+      "condition": "Produktionsbedarf vorhanden",
+      "source_ref": "Teil 4: 'Dritte ist ja produziert, [Person 11] meldet sich'"
+    },
+    {
+      "id": "f30",
+      "source": "n2_gw_fehlmenge_nach_merker",
+      "target": "n2_frachtauftrag_erstellen",
+      "condition": "Kein Produktionsbedarf",
+      "default": true,
+      "source_ref": "Teil 3: 'guck dann im August ein, zwei Wochen vorher mal drauf'"
+    },
+    {
+      "id": "f05",
+      "source": "n2_fertigmeldung_abwarten",
+      "target": "n2_frachtauftrag_erstellen",
+      "source_ref": "Teil 4: 'Mit Pickliste zurück und bestätigt Liefertermin ... Und danach machst du den Frachtauftrag, ja'"
+    },
+    {
+      "id": "f06",
+      "source": "n2_frachtauftrag_erstellen",
+      "target": "n2_gw_aussenlager"
+    },
+    {
+      "id": "p01",
+      "source": "n2_frachtauftrag_senden",
+      "target": "n2_hb_ersatzspedition",
+      "obstacle": "Spediteur lehnt den Frachtauftrag ab beziehungsweise kann den Transport nicht fahren",
+      "source_ref": "Teil 3: 'Wenn jetzt mir der [Firma J] sagen würde: Ey, tut mir leid, kann ich nicht machen'"
+    },
+    {
+      "id": "q01",
+      "source": "n2_hb_ersatzspedition",
+      "target": "n2_frachtauftrag_senden"
+    },
+    {
+      "id": "f07",
+      "source": "n2_frachtauftrag_senden",
+      "target": "n2_frachtauftrag_ablegen"
+    },
+    {
+      "id": "f08",
+      "source": "n2_frachtauftrag_ablegen",
+      "target": "n2_abholtermin_eintragen"
+    },
+    {
+      "id": "f09",
+      "source": "n2_abholtermin_eintragen",
+      "target": "n2_lieferschein_freischalten",
+      "source_ref": "Feedback 1:19:11 und 1:20:11: die Abholbereitschaftsmeldung ist überflüssig, von hier geht es direkt zur Lieferscheinerstellung"
+    },
+    {
+      "id": "f15",
+      "source": "n2_lieferschein_freischalten",
+      "target": "n2_verladung_abwarten"
+    },
+    {
+      "id": "p02",
+      "source": "n2_verladung_abwarten",
+      "target": "n2_hb_liefermenge",
+      "obstacle": "Gescannte Liefermenge weicht von der angemeldeten Menge ab (z.B. 18 statt 20 Paletten)",
+      "source_ref": "Teil 4: 'hat aber nur 18000 gescannt und dann würden hier 2000 offen bleiben'"
+    },
+    {
+      "id": "q02",
+      "source": "n2_hb_liefermenge",
+      "target": "n2_verladung_abwarten"
+    },
+    {
+      "id": "p03",
+      "source": "n2_verladung_abwarten",
+      "target": "n2_hb_nichts_zu_laden",
+      "obstacle": "LKW steht vor Ort, aber Ware ist nicht verladbar (z.B. Maschine nachts ausgefallen)",
+      "source_ref": "Teil 4: 'Dann hat der Kollege die Maschine abgestellt. LKW steht hier, wir haben nichts zu laden'"
+    },
+    {
+      "id": "q03",
+      "source": "n2_hb_nichts_zu_laden",
+      "target": "n2_verladung_abwarten"
+    },
+    {
+      "id": "f16",
+      "source": "n2_verladung_abwarten",
+      "target": "n2_abholung_abhaken"
+    },
+    {
+      "id": "g04",
+      "source": "n2_palettenkonto_eintragen",
+      "target": "n2_lieferschein_unberechnet_pruefen"
+    },
+    {
+      "id": "f18",
+      "source": "n2_lieferschein_unberechnet_pruefen",
+      "target": "n2_rechnung_erstellen"
+    },
+    {
+      "id": "f19",
+      "source": "n2_rechnung_erstellen",
+      "target": "n2_rechnungsnummer_vermerken"
+    },
+    {
+      "id": "f20",
+      "source": "n2_rechnungsnummer_vermerken",
+      "target": "n2_rechnung_drucken"
+    },
+    {
+      "id": "f21",
+      "source": "n2_rechnung_drucken",
+      "target": "n2_gw_versandweg"
+    },
+    {
+      "id": "f22",
+      "source": "n2_gw_versandweg",
+      "target": "n2_rechnung_mailen",
+      "condition": "Versand per E-Mail",
+      "default": true,
+      "source_ref": "Teil 4: 'E-Mail 3 ... wo ich die Rechnung hinschicken kann'"
+    },
+    {
+      "id": "f23",
+      "source": "n2_gw_versandweg",
+      "target": "n2_rechnung_post",
+      "condition": "Versand per Post",
+      "source_ref": "Teil 4: 'der bekommt die Rechnungen nur noch per Post zugeschickt'"
+    },
+    {
+      "id": "f24",
+      "source": "n2_rechnung_mailen",
+      "target": "end"
+    },
+    {
+      "id": "f25",
+      "source": "n2_rechnung_post",
+      "target": "end"
+    },
+    {
+      "id": "e16b",
+      "source": "n_preise_anpassen",
+      "target": "n_auftrag_reservieren",
+      "source_ref": "Feedback 41:02"
+    },
+    {
+      "id": "e24b",
+      "source": "n_stellplatzbedarf_einordnen",
+      "target": "n_gw_kundenueblich",
+      "source_ref": "Feedback 48:36"
+    },
+    {
+      "id": "e24c",
+      "source": "n_gw_kundenueblich",
+      "target": "n_versandkosten_erfassen",
+      "condition": "Ist kundenüblich",
+      "default": true,
+      "source_ref": "Feedback 48:36: wenn das normal ist, dann läuft es einfach so weiter"
+    },
+    {
+      "id": "e24d",
+      "source": "n_gw_kundenueblich",
+      "target": "n_kunde_mengenklaerung",
+      "condition": "Nicht kundenüblich",
+      "source_ref": "Feedback 48:53: wenn es nicht normal ist für diesen Kunden, dann muss ich mit dem klären"
+    },
+    {
+      "id": "f06b",
+      "source": "n2_gw_aussenlager",
+      "target": "n2_aussenlager_pickliste",
+      "condition": "Außenlager beteiligt",
+      "source_ref": "Feedback 1:29:34: falls ein Spediteur betroffen ist, vorher eine Pickliste für den Spediteur erstellen"
+    },
+    {
+      "id": "f06c",
+      "source": "n2_gw_aussenlager",
+      "target": "n2_frachtauftrag_senden",
+      "condition": "Kein Außenlager beteiligt",
+      "default": true,
+      "source_ref": "Feedback 1:23:05: nur wenn Ware vom Außenlager geht, kommt die gesonderte Pickliste dazu"
+    },
+    {
+      "id": "f06d",
+      "source": "n2_aussenlager_pickliste",
+      "target": "n2_frachtauftrag_senden",
+      "source_ref": "Feedback 1:22:50: zusammen mit dem Frachtauftrag verschicken"
+    },
+    {
+      "id": "e43",
+      "source": "n_ab_versenden",
+      "target": "n_gw_lt_in_ab"
+    },
+    {
+      "id": "e44",
+      "source": "n_gw_lt_in_ab",
+      "target": "n2_lieferumfang_festlegen",
+      "condition": "Liefertermin in der AB angegeben",
+      "default": true,
+      "source_ref": "Feedback 57:34, [Person 1]: der Kunde bekommt mit der Auftragsbestätigung zunächst keinen Liefertermin"
+    },
+    {
+      "id": "e45",
+      "source": "n_gw_lt_in_ab",
+      "target": "n_lt_von_dispo_erhalten",
+      "condition": "Kein Liefertermin in der AB angegeben",
+      "source_ref": "Feedback 57:34, [Person 1]: der Kunde bekommt mit der Auftragsbestätigung zunächst keinen Liefertermin"
+    },
+    {
+      "id": "e46",
+      "source": "n_lt_von_dispo_erhalten",
+      "target": "n_kunde_lt_informieren"
+    },
+    {
+      "id": "e47",
+      "source": "n_kunde_lt_informieren",
+      "target": "n2_lieferumfang_festlegen"
+    },
+    {
+      "id": "e_abholung_gw_pk",
+      "source": "n2_abholung_abhaken",
+      "target": "n2_gw_palettenkonto"
+    },
+    {
+      "id": "e_gw_pk_eintragen",
+      "source": "n2_gw_palettenkonto",
+      "target": "n2_palettenkonto_eintragen",
+      "condition": "Spediteur führt Palettenkonto",
+      "source_ref": "Feedback 2 13:14: Spediteure mit Palettentausch sind im Palettenkonto-Ordner eingetragen"
+    },
+    {
+      "id": "e_gw_pk_skip",
+      "source": "n2_gw_palettenkonto",
+      "target": "n2_lieferschein_unberechnet_pruefen",
+      "condition": "Spediteur führt kein Palettenkonto",
+      "default": true,
+      "source_ref": "Feedback 2 13:14: Spediteure ohne Palettentausch sind nicht im Palettenkonto-Ordner"
+    },
+    {
+      "id": "e_lieferumfang_anmeldezeitpunkt",
+      "source": "n2_lieferumfang_festlegen",
+      "target": "n2_gw_anmeldezeitpunkt",
+      "source_ref": "Feedback 2: es gilt das von der Disposition zurückgemeldete Lieferdatum, produktionsbedürftige Aufträge mit nahem Liefertermin (unter sieben Tagen) werden sofort angemeldet, daher entfällt die vorgelagerte Produktionsbedarf-Verzweigung"
+    }
+  ],
+  "field_glossary": [
+    {
+      "name": "AB-E-Mail-Adresse des Kunden",
+      "definition": "E-Mail-Adresse des Kunden (E-Mail 2 im Kundenstamm), an die Auftragsbestätigungen gehen."
+    },
+    {
+      "name": "Abgeholte Paletten",
+      "definition": "Anzahl der vom Spediteur bei der Auslieferung abgeholten Europaletten."
+    },
+    {
+      "name": "Abhol-Häkchen",
+      "definition": "Häkchen am Kalendereintrag, das die erfolgte Abholung bestätigt."
+    },
+    {
+      "name": "Abholtag",
+      "definition": "Der Tag, an dem der Spediteur die Auslieferung abholt, in der Regel der Tag vor dem Liefertermin."
+    },
+    {
+      "name": "Angepasste Auftragsmenge",
+      "definition": "Gemäß Kundenrückmeldung geänderte Menge der betroffenen Auftragspositionen."
+    },
+    {
+      "name": "Angepasster Positionspreis",
+      "definition": "Der bei Stückgut-Kunden manuell um den Zuschlag erhöhte Positionspreis."
+    },
+    {
+      "name": "Anmelde-Merker",
+      "definition": "Eintrag im Dispokalender auf den Sonntag vor dem Liefertermin, der die noch ausstehende Anmeldung der Auslieferung sichtbar hält."
+    },
+    {
+      "name": "Artikelattribute des Kunden",
+      "definition": "Im Adressmodul je Kunde hinterlegte Zuordnung von Kundenbezeichnungen und Kundennummern zu eigenen Artikeln."
+    },
+    {
+      "name": "Artikelbezeichnung laut Bestellung",
+      "definition": "Bezeichnung des Artikels, wie der Kunde sie in der Bestellung verwendet."
+    },
+    {
+      "name": "Artikelnummer",
+      "definition": "Eigene Artikelnummer im ERP, als Ergebnis des Artikel-Matchings je Position."
+    },
+    {
+      "name": "Auf Packweise gerundete Menge",
+      "definition": "An die Standardpackweise angepasste Bestellmenge (mehr oder etwas weniger)."
+    },
+    {
+      "name": "Auftragsbestätigung (PDF)",
+      "definition": "Als PDF erzeugte Auftragsbestätigung, im Kundenordner gespeichert und an den Kunden gesendet."
+    },
+    {
+      "name": "Auftragsbestätigung versendet",
+      "definition": "Kennzeichen, dass die Auftragsbestätigung des Auftrags an den Kunden versendet wurde; gesetzt vom jeweiligen AB-Versende-Schritt, geprüft zur Sicherung der Einmaligkeit beim Vorkasse-Kunden."
+    },
+    {
+      "name": "Auftragsmenge je Position",
+      "definition": "Die im Auftrag erfasste Menge je Position laut ERP, Grundlage des Lieferumfangs."
+    },
+    {
+      "name": "Auftragsnummer",
+      "definition": "Nummer des angelegten Kundenauftrags im ERP."
+    },
+    {
+      "name": "Außenlager beteiligt",
+      "definition": "Ob an der Auslieferung ein Außenlager, zum Beispiel Lager [Firma J], beteiligt ist."
+    },
+    {
+      "name": "Außenlager-Pickliste",
+      "definition": "Die gesonderte Pickliste nur für die aus einem Außenlager entnommenen Positionen, die dem dortigen Spediteur zusammen mit dem Frachtauftrag geschickt wird."
+    },
+    {
+      "name": "Bestand je Charge",
+      "definition": "Bestandsangaben des Artikels mit Chargen: verfügbar, reserviert und bestellt, je Lagerort."
+    },
+    {
+      "name": "Bestell-E-Mail",
+      "definition": "E-Mail des Kunden in Outlook mit der Bestellung, meist mit PDF-Anhang."
+    },
+    {
+      "name": "Bestelldatum",
+      "definition": "Datum der Kundenbestellung, Teil der Zeichennummer/Referenz."
+    },
+    {
+      "name": "Bestellmenge",
+      "definition": "Bestellte Stückzahl der Position."
+    },
+    {
+      "name": "Bestellnummer",
+      "definition": "Bestellnummer des Kunden, die als Zeichennummer/Referenz auf AB und Lieferschein angedruckt wird."
+    },
+    {
+      "name": "Bestellpositionen",
+      "definition": "Liste der bestellten Artikel mit Bezeichnung oder Kunden-Artikelnummer und Menge aus der Bestellung (E-Mail/PDF-Anhang oder Gesprächsnotiz)."
+    },
+    {
+      "name": "Bestätigter Liefertermin",
+      "definition": "Der im Auftrag bestätigte Liefertermin oder das Kennzeichen, dass ohne Liefertermin bestätigt wird."
+    },
+    {
+      "name": "Dispokalender-Eintrag",
+      "definition": "Der für die Abholung im Kalender des Spediteurs angelegte Termin."
+    },
+    {
+      "name": "Ersatz-Referenz",
+      "definition": "Behelfs-Referenz aus Ansprechpartner und Bestelldatum (z.B. 'Frau [Person 16] vom 18.05.'), die bei fehlender Bestellnummer als Zeichennummer geführt wird."
+    },
+    {
+      "name": "Ersatzverweis ersetzt durch",
+      "definition": "Verweis am alten Artikel, durch welche neue Artikelnummer er ersetzt wurde."
+    },
+    {
+      "name": "Fehlmenge im Auftrag vorhanden",
+      "definition": "Wahr, wenn mindestens eine Position des Auftrags eine Fehlmenge hat."
+    },
+    {
+      "name": "Fehlmenge je Position",
+      "definition": "Menge, die dem verfügbaren Bestand gegenüber der Bestellmenge der Position fehlt."
+    },
+    {
+      "name": "Frachtauftrag (Excel)",
+      "definition": "Die ausgefüllte Frachtauftrags-Excel für die Auslieferung im Kundenordner."
+    },
+    {
+      "name": "Frachtpreis",
+      "definition": "Der Frachtpreis für die Auslieferung laut Frachtkostensätze-Excel."
+    },
+    {
+      "name": "Frachtpreis laut Preisliste",
+      "definition": "Frachtpreis des Spediteurs für den Transport (Voll-LKW: fester Transportpreis je Spediteur; Stückgut: nach Palettenzahl und Region)."
+    },
+    {
+      "name": "Freigeschalteter Lieferschein",
+      "definition": "Der im Auftrag erzeugte, zum Scannen freigegebene Lieferschein für ein Lager der Auslieferung."
+    },
+    {
+      "name": "Frühere Transporte",
+      "definition": "Information aus alten Lieferscheinen, welcher Spediteur eine Relation bereits gefahren ist."
+    },
+    {
+      "name": "Gedruckter Lieferschein",
+      "definition": "Die vom Lager nach dem Scannen gedruckte Ausfertigung des Lieferscheins, die zur Sachbearbeitung hochgebracht wird."
+    },
+    {
+      "name": "Geklärte Artikelzuordnung",
+      "definition": "Vom Kunden bestätigte Zuordnung der Bestellposition zu einem eigenen Artikel."
+    },
+    {
+      "name": "Geplante Liefermenge je Position",
+      "definition": "Die je Position für die Auslieferung vorgesehene Menge."
+    },
+    {
+      "name": "Gesamtpalettenanzahl",
+      "definition": "Die Gesamtzahl der Paletten der Auslieferung über alle Positionen."
+    },
+    {
+      "name": "Gesamtstellplatzbedarf",
+      "definition": "Summe der Stellplätze aller Positionen, geprüft gegen die 38 Stellplätze eines Jumbo-LKW."
+    },
+    {
+      "name": "Gesprächsnotiz",
+      "definition": "Notiz des Sachbearbeiters zu einer telefonisch übermittelten Bestellung; dient anstelle der Bestell-E-Mail als Grundlage der Auftragsanlage."
+    },
+    {
+      "name": "Hinweis an Kunden",
+      "definition": "Kurze Information an den Kunden über die Mengenanpassung auf die Standardpackweise."
+    },
+    {
+      "name": "Hinweise aus Infotext",
+      "definition": "Für den Auftrag relevante Notizen aus den Infotexten des Kunden."
+    },
+    {
+      "name": "Klärung zur Mengenabweichung",
+      "definition": "Rückmeldung der Disposition zur Ursache einer von der Anmeldung abweichenden Liefermenge."
+    },
+    {
+      "name": "Kunden-Artikelnummer",
+      "definition": "Artikelnummer des Kunden für den Artikel, sofern in der Bestellung angegeben."
+    },
+    {
+      "name": "Kunden-Infotext",
+      "definition": "Notizbuch-artige Infotexte im Adressmodul des Kunden, z.B. zu Chargen, Preisen oder Packweisen."
+    },
+    {
+      "name": "Kundenname laut Bestellung",
+      "definition": "Name des bestellenden Kunden, wie er aus Bestellung oder Absender hervorgeht."
+    },
+    {
+      "name": "Kundennummer",
+      "definition": "Eindeutige Nummer des Kunden im ERP, als Zuordnungsergebnis der Kundenidentifikation."
+    },
+    {
+      "name": "Kundenrückmeldung zur Mengenanpassung",
+      "definition": "Antwort des Kunden, welche Mengen gekürzt oder aufgefüllt werden."
+    },
+    {
+      "name": "Lagerentnahme je Position",
+      "definition": "Die mit der Disposition getroffene Entscheidung, aus welchem Lager (Hauptlager oder Außenlager wie [Firma J]) die Ware je Position entnommen wird, wenn Bestand in mehreren Lagern liegt."
+    },
+    {
+      "name": "Lagerort je Position",
+      "definition": "Das Lager, in dem die Charge der Position liegt (Hauptlager oder Außenlager), beim Prüfen von Bestand und Chargen festgestellt."
+    },
+    {
+      "name": "Lieferlager",
+      "definition": "Lager, aus dem die Position geliefert wird (Hauptlager oder Lager [Firma J]), laut Lagerort der Chargen."
+    },
+    {
+      "name": "Liefermenge je Position",
+      "definition": "Die je Position tatsächlich verladene Menge, über alle Lieferscheine zusammengezählt."
+    },
+    {
+      "name": "Lieferort des Kunden",
+      "definition": "Ort der Lieferanschrift des Kunden (z.B. [Ort 1])."
+    },
+    {
+      "name": "Lieferschein unberechnet",
+      "definition": "Prüfergebnis, dass der Lieferschein in den offenen Lieferscheinen des Rechnungsmoduls noch erscheint und damit noch keine Rechnung zu ihm existiert."
+    },
+    {
+      "name": "Lieferscheine",
+      "definition": "Liste der für die Auslieferung entstandenen Lieferscheinnummern, je Lieferlager einer."
+    },
+    {
+      "name": "Lieferscheinnummer",
+      "definition": "Nummer des einzelnen Lieferscheins."
+    },
+    {
+      "name": "Liefertermin",
+      "definition": "Das aktuell im Auftragskopf hinterlegte Lieferdatum; gesetzt aus dem Wunschlieferdatum beziehungsweise nach Terminbehandlung aus dem Bestätigten Liefertermin, bei Folgelieferungen angepasst im Lieferumfang-Schritt."
+    },
+    {
+      "name": "Liefertermin an Kunden kommuniziert",
+      "definition": "Kennzeichen, dass der nachgereichte Liefertermin dem Kunden per E-Mail mitgeteilt wurde."
+    },
+    {
+      "name": "Liefertermin in der AB angegeben",
+      "definition": "Kennzeichen, ob die an den Kunden versendete Auftragsbestätigung bereits einen Liefertermin enthält oder ohne Liefertermin verschickt wurde."
+    },
+    {
+      "name": "Machbarkeit zum Wunschtermin",
+      "definition": "Rückmeldung der Disposition, ob Fehlmengen rechtzeitig zum Wunschtermin produziert werden können."
+    },
+    {
+      "name": "Materialpreiszuschlag",
+      "definition": "Zuschlag von 20 Prozent als eigene Auftragsposition bei LKW-Kunden."
+    },
+    {
+      "name": "Nachgereichter Liefertermin",
+      "definition": "Der von der Disposition ([Person 11]) nach dem Versand einer Auftragsbestätigung ohne Liefertermin später genannte Liefertermin, der dann im Auftrag eingetragen wird."
+    },
+    {
+      "name": "Offene Lieferscheine",
+      "definition": "In der Rechnungsverwaltung angezeigte Lieferscheine, zu denen noch keine Rechnung erstellt wurde."
+    },
+    {
+      "name": "Packweise",
+      "definition": "Stückzahl je Palette für den Artikel (Standard- oder kundeneigene Packweise)."
+    },
+    {
+      "name": "Palettenanzahl je Position",
+      "definition": "Anzahl Paletten der Position, berechnet aus Bestellmenge und Packweise."
+    },
+    {
+      "name": "Palettenkonto-Eintrag",
+      "definition": "Die in der Palettenkonto-Excel des Spediteurs angelegte Zeile mit den abgeholten Paletten."
+    },
+    {
+      "name": "Palettentausch-Regelung",
+      "definition": "Ob der Kunde die Europaletten kauft oder über den Spediteur getauscht wird; wird im Frachtauftrag festgehalten."
+    },
+    {
+      "name": "Pickliste",
+      "definition": "Ausdruck zum Auftrag mit Pickhinweisen, mit dem Lager und Disposition kommissionieren beziehungsweise die Produktion klären."
+    },
+    {
+      "name": "Positionspreis",
+      "definition": "Preis der Position, automatisch aus den Stammdaten gezogen."
+    },
+    {
+      "name": "Produktionsbedarf",
+      "definition": "Ob für die Auslieferung Ware nachproduziert werden muss, weil der Bestand nicht ausreicht."
+    },
+    {
+      "name": "Produktionsfertigmeldung",
+      "definition": "Rückmeldung der Disposition, dass die benötigten Mengen produziert sind und der Versand angemeldet werden kann."
+    },
+    {
+      "name": "Proforma-Rechnung",
+      "definition": "Rechnung vor Leistung an Vorkasse-Kunden; ersetzt zunächst die Auftragsbestätigung."
+    },
+    {
+      "name": "Rechnung (PDF)",
+      "definition": "Die gedruckte beziehungsweise als PDF erzeugte Rechnung an den Kunden."
+    },
+    {
+      "name": "Rechnungs-E-Mail-Adresse des Kunden",
+      "definition": "E-Mail-Adresse der Buchhaltung des Kunden (E-Mail 3 im Kundenstamm), an die Rechnungen gehen."
+    },
+    {
+      "name": "Rechnungsnummer",
+      "definition": "Vom System bei der Rechnungserstellung vergebene Nummer (AR, Jahr, Hochzähler)."
+    },
+    {
+      "name": "Rechnungsversandweg",
+      "definition": "Ob der Kunde die Rechnung per E-Mail oder per Post erhält."
+    },
+    {
+      "name": "Reservierungsstatus",
+      "definition": "Status des Auftrags nach der Reservierung der Ware über die Statusänderung."
+    },
+    {
+      "name": "Spediteur",
+      "definition": "Der für die Auslieferung tatsächlich vorgesehene Spediteur, beim LKW-Kunden der günstigste passende aus der Frachtkostensätze-Excel."
+    },
+    {
+      "name": "Spediteur mit Palettenkonto",
+      "definition": "Ob für den die Auslieferung fahrenden Spediteur im Palettenkonto-Ordner ein Palettenkonto geführt wird, also Tauschpaletten zu verrechnen sind."
+    },
+    {
+      "name": "Spediteur-Bestätigung",
+      "definition": "Rückmeldung des Spediteurs, dass er den Frachtauftrag annimmt und die Abholung fährt."
+    },
+    {
+      "name": "Spedition",
+      "definition": "Der im Auftragskopf hinterlegte Stammspediteur des Auftrags; Standardquelle für den Spediteur."
+    },
+    {
+      "name": "Stapelbarkeit je Position",
+      "definition": "Ob die Paletten der Position doppelt gestapelt werden dürfen; stapelbar heißt immer nur doppelt."
+    },
+    {
+      "name": "Stapelbarkeits-Angabe",
+      "definition": "Die im Artikelstamm gepflegte Angabe zur Stapelbarkeit des Artikels."
+    },
+    {
+      "name": "Stellplatzbedarf kundenüblich",
+      "definition": "Einschätzung, ob die ermittelte Stellplatzzahl der für diesen Kunden üblichen Bestellgröße entspricht."
+    },
+    {
+      "name": "Stellplätze je Position",
+      "definition": "LKW-Stellplätze der Position unter Berücksichtigung der Stapelbarkeit."
+    },
+    {
+      "name": "Tauschpaletten",
+      "definition": "Anzahl der vom Spediteur bei der Abholung mitgebrachten und dagelassenen Tauschpaletten."
+    },
+    {
+      "name": "Transportart",
+      "definition": "Die Transportart der Auslieferung, etwa die verwendete Palettenart, im Auftragskopf hinterlegt."
+    },
+    {
+      "name": "Versandart des Kunden",
+      "definition": "Ob der Kunde als LKW-Kunde in vollen LKW-Ladungen oder als Stückgut-Kunde mit 1 bis 8 Paletten beliefert wird; bestimmt zugleich, ob ein Materialpreiszuschlag anfällt."
+    },
+    {
+      "name": "Versandkosten",
+      "definition": "Die im Auftrag eingetragenen Frachtkosten."
+    },
+    {
+      "name": "Vorkasse-Vermerk im Pickhinweis",
+      "definition": "Vermerk 'Vorkasse' im Pickhinweis des Kunden, der auf der Pickliste angedruckt wird, damit das Lager nicht vor Zahlungseingang kommissioniert."
+    },
+    {
+      "name": "Wunschlieferdatum",
+      "definition": "Vom Kunden gewünschtes Lieferdatum aus der Bestellung."
+    },
+    {
+      "name": "Zahlungsart des Kunden",
+      "definition": "Im Kundenstamm hinterlegte Zahlungsbedingung, insbesondere ob Vorkasse vereinbart ist."
+    },
+    {
+      "name": "Zahlungseingang gemeldet",
+      "definition": "Meldung der Buchhaltung, dass der Kunde die Proforma-Rechnung bezahlt hat (Häkchen bezahlt im Auftrag)."
+    },
+    {
+      "name": "Zuschlagsprozentsatz",
+      "definition": "Der von der Geschäftsführung vorgegebene Prozentsatz, um den bei Stückgut-Kunden die Positionspreise erhöht werden."
+    }
+  ]
+}

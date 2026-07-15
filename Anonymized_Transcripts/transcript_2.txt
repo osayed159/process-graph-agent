@@ -1,0 +1,755 @@
+Orcapilot  Prozesserfassung Auftragsbearbeitung bei [Unternehmen]-20260601_113002-Meeting Recording
+June 1, 2026, 9:30AM
+2h 49m 1s
+
+[Sprecher] started transcription
+
+[Sprecher]   0:03
+Genau, und wenn Sie können Sie noch einmal auf Teams gehen.
+Genau, und da aufteilen.
+Weiter rechts, weiter rechts, genau, genau und da einfach den Bildschirm, dann sehen wir auf den ganzen Bildschirm.
+Ja, perfekt. Super.
+Genau, sehr good.
+O. K., genau, dann jetzt noch mal ganz kurz, also ich hab jetzt die Frage, ist das, passt das, dass wir irgendwie 23 Aufträge verschiedener Art, macht es Sinn, erst mal mit diesem so absoluten Standard, wenn es das gibt, ja anzufangen und dann vielleicht irgendwie.
+Ein, zwei andere Events, daran so Sommerfälle hätte. Wir gucken jetzt mal. Ich hatte auf jeden Fall schon proaktiv. Wir haben hier, also wir machen jetzt. Ich würde sagen, der erste, den wir machen, ist wirklich ein.
+wirkliche Auftrag, den wir einmal durchspielen. Ja, und da wirklich die Situation betrachten, wie sie jetzt ist. Ich will jetzt, klar, ich würd jetzt hoffen, alles ist da, geht schon geschmeidig durch. Wahrscheinlich wird's nicht der Fall sein. Das Gute ist, es sind auch direkt, sagen wir mal, 'ne Baugruppe ist jetzt nicht nur so ein Spitzgussteil und jetzt vielleicht nur 'ne simple
+Option ist dann schon ein bisschen komplexer. Okay, also wir haben jetzt hier im Outlook gibt's ein extra Posteingang und in dem Sinne die ganzen Bestellungen von unseren Kunden reinkommen. So und jetzt öffnen wir.
+Einmal die Bestellung.
+So.
+Gut.
+Da haben wir jetzt also, das kann ich ja mal ein bisschen rüberschieben. So, ja, so, jetzt haben wir hier die Bestellung vom Kunden. Oben sehen wir dann auch schon den Namen. Hier haben wir [Kunde A]. Wir haben die Bestellnummer von dem Kunden.
+Wir haben das Datum, wann die bestellt haben.
+Wir haben hier noch theoretisch Anlieferadresse. Kann natürlich sein, dass es irgendwo für einen Kunden unterschiedliche Anlieferadressen gibt. Hier unten haben wir dann den Bezug auf den Artikel. Wir haben hier einmal die
+Kundenartikelnummer und wir haben dann hier unten haben wir dann auch die Artikelnummer, die bei [Unternehmen] bestehen. Es gibt auch Bestellungen, wo es dann auch vorkommt, wo dann natürlich nur die vom Kunden dann eventuell drauf steht und nicht die von uns selber. Sie haben aber so 'n Matching, also man kann theoretisch anhand der
+Kundenartikelnummer immer auch die eigene Version. Es gibt aber so ein kleines Manko bei uns im ERP-System und das ist in Bezug auf die Kundennummer hier. Es gibt natürlich jeder Kunde schreibt irgendwo Kundennummern anders und wir haben hier bei uns ein Problemsystem mit dem Punkt. Deswegen müssen wir die Artikel immer ohne Punkt schreiben. Das ist eine Leerzeit.
+Seite bei uns. O. K., ja, so, ja, haben die Artikelnummer, wir haben die Menge, wir haben natürlich noch die Bezeichnung von dem Artikel, wir haben den Preis und wir haben natürlich auch einen Wunschliefertermin. Eine kurze Frage, das ist quasi
+Ist das ein Template von Ihnen oder schickt der Kunde immer so? Das ist ja das Formular von dem Kunden. Und das heißt, vom nächsten Kunden kann es sein, dass diese Adresse hier nicht drin ist, weil es ist erwartet, dass Sie bei sich im System sowieso wissen, an welche ERD immer geliefert haben.
+O. K., das ist jetzt von Ihnen 'n Service, falls es irgendwie, falls er 3 Werke hat oder so, dann sagt er, ja, das will ich so, genau richtig. O. K., verstanden. Ihre, die fahren wir bei uns, Bestellnummer, O. K., ja, erstmal verstanden.
+eine Position. Kann aber sein, dass man irgendwie noch 10 Positionen hat, ne? Das ist dann auch wieder so eine Sache, die von Kunde zu Kunde variiert. [Kunde A] ist ein Kunde, der eigentlich immer einen Artikel bestellt pro Bestellung. Es gibt natürlich Kunden, die dann eventuell mehrere Positionen
+Vorbestellung machen. Zum Beispiel [Kunde B] ist ein Kunde, wo wir eigentlich nach Make to Stock machen. Das heißt, wir sorgen eigentlich immer dafür, dass wir eigentlich die Ware immer da haben. Und es kommt freitags, kommt der
+Abruf und da wird natürlich dann je nachdem zwischen 28 Artikel bestellt und die werden dann natürlich in ein in einem Auftrag oder in einer Auftragsbestätigung zusammengefasst und das läuft dann alles über einen. Das ist dann aber im ERP. Ich meine, wir sehen es wahrscheinlich gleich,
+würde man dann auch in einem Auftrag dann in 5 Positionen anlegen oder wie auch immer. So genau, der Preis, den er da angibt, Preis pro Einheit, das ist ja das, was er bei sich im System hat. Das ist ja dann was wahrscheinlich, was sie ja wahrscheinlich auch bei sich im System haben, ne, idealerweise.
+Wenn das nicht so ist.
+hoffe ich, dass meine Disponenten das sehen. Und aber im Zweifel wird ja dann der Preis aus dem ERP-System genommen, wahrscheinlich, ne, weil bei uns wird natürlich immer das genommen, was im System drin steht, abhängig natürlich davon, ob man eventuell Staffeln hinterlegt hat. Kann sein, dass vielleicht nur ein
+wirklich ein Preis gibt oder gesagt wird, ab zweieinhalb 1000 greift der, ab 5000 greift der, kann natürlich ist so, ist so der Klassiker, wo dann eventuell mal ein Preis vereinbart worden ist. So, hier für zweieinhalb 1000 müsst ihr das zahlen, 5 das für 10000 das.
+Dann ja, OK, dann Zehntausende den Preis, den kriegen wir hin, stellen sich bei sich das so ein, bestellen dann immer die 10000 irgendwann meinen die mal, ah, wir bestellen jetzt nur 5000 aus irgendeinem Grund, haben bei sich das gar nicht hinterlegt, weil die ja immer mit dem so und bei uns wird dann eventuell dann natürlich dann der richtige Preis und so kann es natürlich dann schon mal
+zu Unterschieden kommen. Es muss natürlich dann im Bestfall natürlich direkt am Anfang gemerkt werden, weil ich sag mal am Anfang ist es einfacher zu händeln, weil wenn dann nämlich im Nachgang die ganzen Rechnungen alles erzeugt worden ist und dann wieder Gutschrift und das ganze Prozedere.
+Da ist natürlich tausendmal besser, bevor man das alles gemacht hat, vorher sicher ist, dass der richtige Preis auch gezogen wird. Ja, das ist ein einfacher Check, den man also, wenn man, wenn wenn wenn wir jetzt quasi systemisch auf das ERP Zugriff haben, ist das ja ein sehr, ist es sehr viel, wenn man von einem also von so einem Tool.
+sehr einfacher Check. Musst einfach nur reingehen, Preistool zu dieser Artikelnummer, gucken, ob das auch dann drin steht. Verstanden, nee, passt. O. K., ja, gut, Datum, ja, O. K., genau so, das, das ist jetzt quasi, das kommt rein per E-Mail, vielleicht auch kommentarlos und das muss jetzt verarbeitet werden. Ja, O. K., es kommt in in in Men in Scires kommt es auch wirklich so.
+Kommentarlos kommt das so rüber in der zweiten Seite. Ah, da ist jetzt nur noch halt das standardmäßige Halt, ne? Was drin ist, da ist jetzt keine weiteren wichtigen Informationen. So, dann wäre jetzt der nächste Gang ins.
+ERP-System. So, das wäre jetzt hier das Dashboard und dann werden wir natürlich hier oben hingehen und sagen, okay, Geschäftsfälle. So, jetzt brauchen wir natürlich einen neuen Geschäftsfall, den wir anlegen müssen.
+So, und wir machen natürlich eine Auftragsbestätigung. Was sind die anderen Sachen, so Bestellung? Ich meine, ich hätte es jetzt als Laie auch Bestellung genannt, im Zweifel. Was ist der Unterschied zwischen der Auftragsbestätigung und der? Nein, wir, wir. Nein, die Bestellung ist ja von den Kunden gekommen.
+Wir mìssen jetzt eine Auftragsbestätigung okay machen. Wir mìssen ja jetzt den bestätigen. Alles klar, wir haben den Auftrag erhalten und wir bestätigen das zu dem und dem Preis und zu dem und dem Termin. Verstehe, es war nur quasi die Bestellung suspensiert. Also, wir hätten hier natìrlich ganz klassisch.
+Anfrage, ne, dass wenn wir irgendwo was anfragen hinsichtlich Werkzeug. Ja, Angebot, ne, beim Kunden halt auch wieder klassisch, zum Beispiel, wenn es halt ein neuer Artikel ist oder auch direkt fürs Werkzeug, ein Angebot. Man kann natürlich, das System ist dann eigentlich auch so gestaltet, dass man aus der Anfrage
+dann zum Beispiel das Angebot dann erstellen kann. Genau, Lieferschein, Bestellung ist klassisch, wenn wenn ich halt irgendwas benötige an Zukaufteilen, ja Rechnung, Lieferschein, Rahmenauftrag, das heißt abrufen und so, ne.
+Genau das ist es. Es gibt einmal die Rahmenauftrag und Rahmenbestellung. Rahmenbestellung ist dann wieder das bei uns, dass wir beim Augenlieferanten sagen: 'Hier, wir bestellen 100 Tonnen Material, aber wir rufen die immer nur irgendwie mit 5 Tonnen ab.' Und dasselbe natürlich beim Kunden, der sagt: 'Hier.'
+Ich will 10000 Teile, ich ruf die aber immer nur in zweieinhalbtausend Schritten ab. Ne, muss aber auf Lager liegen. Haben Sie denn selber, also quasi von Kunden aus, Rahmenaufträge? Ja, das machen Sie viel. O. K., gibt es auch. Ja, macht aber, weiß nicht, wie viel Prozent aus, sagen Sie, also nur so von der Größenordnung her, dass ich.
+weiß wie viel. Es ist, es ist jetzt, boah, möchte ich jetzt noch mal einschätzen, weil es ist jetzt deutlich weniger geworden, weil wir haben die Baugruppen abgegeben, wo die ganzen Teile drin waren, die aus Asien kamen. Die hatten natürlich
+Eine super lange Vorlaufzeit und war natürlich auch mit erheblichen Kosten verbunden. Da haben wir natürlich schon zum Kunden gesagt: 'Hier, wie sieht schaut's aus? Wir wollen so und so viel. Das muss abgedeckt sein. Werden die abgenommen? Wir machen Rahmen da drüber.' Ne, also es wurde dann schon in Rücksprache mit dem
+Mit dem Kunden gemacht, aber ich würde sagen.
+Rahmen haben wir jetzt nicht so viele auf Kundenseite. Es ist dann oftmals eher so, dass wir dann eventuell Kontrakte haben bei den Materialien, dass wir die einfach macht Sinn. OK, das heißt aber, dann können wir uns auf Aufträge komplett fokussieren. Ja, verstehe genau.
+So, jetzt können wir hier noch direkt den Kunden schon mal raussuchen. Und würde dann suchen. Ah, da hab ich verschiedene [Kunde A]. So, und wir brauchen. Woher weiß ich jetzt, dass der, weil ich bei der Lieferadresse jetzt wahrscheinlich Sortor Ja, das ist natürlich jetzt für für uns so natürlich so ein
+Ich weiß es, aber wie man sieht, hier sind natürlich viele Sachen angelegt worden. Und ja, wir sehen es jetzt natürlich schon mit der [Lieferadresse]. Kann es eigentlich nur einer von von den beiden sein und ich weiß, dass es halt der hier oben halt. Also nicht wundern, ich werde den Leuten weiter verlaufen, sehr häufig fragen: Woher wissen Sie das jetzt? Da merken Sie auch schon
+Und so, das sind vielleicht Sachen, die nicht irgendwo drin stehen. Die genau hier sehen wir dann aber auch noch mal mit dem [Anlieferstelle]. Das müsste, glaube ich, genau hier sehen wir das auch so. Müssen wir dann. Das ist genau der hier und dann gehen wir auf OK.
+Und jetzt hat er in dem Sinne schon die AB schon mal kreiert. Wir haben schon eine Auftragsnummer. Hat jetzt in dem Sinne die Kundendaten schon mal reingeladen, die der halt hat, ne mit dem Umsatzsteuer Adresse.
+und jetzt würden wir natürlich anfangen, die Sachen zu pflegen. Jetzt müsste hier Geschäftsfallnummer extern, das ist natürlich immer für die wichtig, dass die 'n Bezug bei sich haben muss hier in dem Sinne. Dieses W. S. L. muss da nicht mit rein? Da jetzt müssen wir das doch, das müssen wir am besten mit rein machen, genau. Das wahrscheinlich kommt jetzt von der
+An dem komplett mit rein, so Bestelldatum 31.5.
+So, und dann haben Sie natürlich einen Wunschliefertermin, den 28.7. 26. So, ich werde jetzt natürlich bestätigen, das guck ich jetzt gleich. Ich muss natürlich jetzt erstmal die Situation
+bewerten. So, das ist jetzt alles, was wir jetzt erstmal zum Kopf eintragen. Wie gesagt, hinten raus müssen wir dann noch sagen, bestätigen wir den Wunsch-Liefertermin oder geben wir einen anderen Termin in dem Sinne raus. Das bestätigt man auf welcher Basis, also auf welcher Druckinformationsgrundlage. Also, wenn Sie jetzt sagen, später dann.
+Ja, ich, ich würd jetzt natürlich reingehen und und und schauen, was was ist da eventuell Sache, weil na ja, man, man sagt jetzt so, so, so einfach, wir haben natürlich irgendwo schon gewisse.
+Zeiten definiert, aber das ist jetzt natürlich so, so, so ein richtig spezieller, schöner, wo der Kunde immer versucht, wie flexibel sind wir und das Problem sind oftmals die Zukaufteile. Da will ich jetzt noch gucken, haben wir noch irgendwas auf Halde, müssen wir wieder proaktiv bestellen.
+Weil das kann oftmals dazu führen, dass einfach durch die, aber das muss man dann wahrscheinlich im Nachgang eventuell noch mal anpassen, wenn dann die Bestätigung kommt, dass der noch mal angepasst wird. OK, solche Geschichten sind erst mal irgendwie automatisch dann.
+Genau, weil es aus, dass diese Nummer, das zieht er sich wahrscheinlich aus dem Kunden hier und so, oder diese Rechnungsinformationen und so weiter. Ja, ja, da sind Stammdaten hinterlegt, genau. So, dann würden wir jetzt in die Position eingehen und jetzt müssten wir in dem Sinne natürlich
+Hier diese Artikelnummer nehmen. Wir könnten jetzt einmal hier so die Artikelnummer reinziehen, da lädt er sich. Ich hätte natürlich jetzt auch die Möglichkeit. Wir haben hier immer die Möglichkeit, über Plus mit der Kundenartikelnummer zu arbeiten. Das geht auch.
+Ich könnte jetzt hier den jetzt da muss ich natürlich jetzt mit der.
+Leerzeile
+Momentan, so sagt er auch. Dann sagt er auch hier, wenn die Artikelnummer passt. O.K., so jetzt müssten wir noch gucken wegen der Menge. Zweieinhalbtausend Stück möchte der Kunde haben.
+So.
+Und dann sehen wir schon direkt, hier gibt's auf jeden Fall, gibt's auf jeden Fall. Ich speichere den jetzt erstmal ein. So, und jetzt ist der erstmal drin. Und ja, jetzt sehen wir schon direkt, Preis ist auf jeden Fall ein Unterschied. Jetzt würde ich jetzt erstmal.
+Gucken, was gibt es überhaupt bei den Preisen? Dann gehe ich in den Artikel nämlich rein. Also Artikelstamm da in den Artikelstamm gehe ich jetzt rein und gucke mir jetzt an.
+Was haben wir überhaupt hinterlegt? Und dann sehen wir auf einmal, dass.
+Der sich einen Preis zieht, der gar nicht widergespiegelt wird.
+Ja, ich sehe, hier ist auf jeden Fall irgendwas ganz neu eingetragen worden von dem [Leiter Einkauf/Vertrieb].
+Was hat der [Leiter Einkauf/Vertrieb] gemacht? Das ist ja, das ist ja ganz frisch, das hat der [Leiter Einkauf/Vertrieb] ist wer? [Leiter Einkauf/Vertrieb] ist der Leiter vom Einkauf und vom Vertrieb. Ja. So, und was ich jetzt hier sehe, ist .
+Das
+No.
+Und die 137-68 sind das, die wir wiederfinden.
+Eigentlich.
+Ja, nee, 123 der hat ihn komplett. Also jetzt frage ich mich A. erstmal, wo macht er wahrscheinlich da, der hat sich den Verkaufspreis 1 gezogen. Das ist eigentlich gar nicht gut.
+Das ist, das ist eigentlich so dieser ultimative Preis höchste Preis, der dann irgendwo, wenn hier die Bude abfackelt, dann hast du nicht gesehen irgendwo dann.
+Hm, 205 der zieht sich den, der hat zweieinhalbtausend bestellt. Eigentlich schätzt der Verkaufspreis Pflicht.
+Ah, nee, ich sehe es aber gerade, was der Punkt ist, der hat den über, wir haben den anderen Kunden drin, 47473. Wir haben den 481 genommen. Deswegen kriegt der nämlich nichts, findet keinen Preis.
+Also habe ich den Fehler gemacht. Das ist die Da hatten wir, wir hatten den noch richtig eingeladen. Also ich meine, wir hatten den ja nach Adresse zu. Da müssten wir.
+OK.
+Komm auf.
+Lasse das überhaupt zu.
+Nee, kann ja nicht sein, ist ja ganz was anderes jetzt hier.
+So.
+Punkt.
+8478
+473, das war der andere, ja.
+Nur da fehlt jetzt in dieses [Anlieferstelle] Dings. Da steht jetzt natürlich nicht drin. Jetzt müssten wir aber mal gucken.
+Den mal kurz erstmal auf einmal kurz abändern.
+Ja.
+Ja, was auch nicht ganz richtig ist. Ja, er erzieht sich jetzt auf jeden Fall den richtigen Preis. Ja, jetzt erstmal danach. Das ist ja jetzt in dem Sinne.
+Richtig, die 106. Warum hat er das jetzt nicht übernommen?
+Verstehe ich jetzt gerade nicht.
+Ah, ich hab.
+Speichern. Das war's. So, aber da das im System drin steht, würde ich das auf jeden Fall nehmen, weil anscheinend hat ja, ich vermute mal, Verkaufspreispflege.
+Nee, das ist ja für China. China, siehst du, China hat einen anderen Preis, aber ja. Nee, das ist der Preis, der hinterlegt ist und der ist auch schon seit dem. Was ist denn hier der Unterschied? China, nur dass auch bei der Menge er dann den Preis abrufen kann. Nee, ist ein anderer, ist ja wie der China.
+Automatik Das ist diese die mit den 50000 das ist wohl die Kalkulationsgrundlage hinsichtlich die die Menge, die der Kunde durchgegeben hat, was er prognostiziert, was da das ja ablaufen soll so.
+Gut, jetzt müssten wir hier nochmal zurückgehen. Jetzt haben wir den Artikel hier drin. Jetzt müssten wir natürlich gucken.
+Was ist Sache bei dem Artikel? Jetzt sehe ich hier, wir haben von diesem Artikel 257 Stück fertig auf Lager liegen. Also fehlen uns 2243 Stück. So, das ist ein, damit man am besten auch
+vor Augen hat, haben wir hier, haben wir doch was. Sehr schön. Ich weiß jetzt nicht, ob es genau der ist, aber einer in dieser Richtung, einer von diesen Artikeln ist das. So, ich mach natürlich das Spritzgussteil und dann eventuell noch einen Deckel.
+Und dann werden hier unten werden dann nachher Siebe reingepresst in der Montage. Also wird dann noch weiterverarbeitet. Das heißt, das ist natürlich jetzt ein Endprodukt, was aus der Montage kommt. Somit müsste ich jetzt hingehen.
+Und gehe auf Artikel warten.
+und lege jetzt in dem Sinne ein Montageauftrag an für diesen Artikel, weil wir wissen, wir brauchen ungefähr 2253 oder was das jetzt da bräuchten wir noch zur Verladung. Ich schmeiß erstmal glatt auf 2300 erstmal.
+So, jetzt hat der Kunde ja gesagt, er möchte am 28.7. möchte er die Sachen haben.
+So, dann würd ich jetzt sagen, 28.7. ist hier, sollte man im besten Fall 'ne Woche vorher fertig sein. So, dann sag ich ihm jetzt, er soll mir jetzt 'n Vorschlag erstellen. Jetzt sieht das System
+Ah, OK.
+Du hast hier von dem 01er-Teil hast du nichts auf Halbes, seh ich schon direkt. Von dem anderen, von dem Briefvergussring, habe ich auf jeden Fall Sachen da.
+So, dann sage ich: "OK, erstell mir bitte den Auftrag."
+So, und jetzt hab ich hier den Produktionsauftrag fertig. Jetzt hab ich noch passend Termin 21.7. So, dieser Produktionsauftrag hat jetzt natürlich eine Stückliste. Das ist jetzt die Stückliste, die ich benötige.
+um diesen Auftrag zu fertigen. So, und jetzt ist natürlich jetzt die die Aufgabe vom vom Planer zu gucken, okay, was wird alles benötigt. Jetzt werden wir in den ersten reingehen. Das ist auch der Hauptartikel hier, den wir hier sehen.
+Der gespritzt wird und dann sehen wir.
+Aber für dich ist es aber interessant. Hat [Produktionsleiter] den jetzt versehen? Hat [Produktionsleiter] den jetzt eben angelegt? Och [Produktionsleiter], ich hab dir auch gesagt, du sollst nichts machen. Ich wundere mich gerade, das ist jetzt hier der Bedarf von dem Montageauftrag, den ich angelegt habe. 2300 Stück.
+Was ich mich jetzt wundere, wo jetzt der Produktionsauftrag war, eigentlich hätte der jetzt noch gar nicht drin sein dürfen und der hätte von mir angelegt werden müssen.
+Ach.
+Entschuldigung, das System ist automatisch. Der hat jetzt, sorry, das war ich gerade, weil ich den Montageauftrag ausgelöst hab, hat er jetzt gesagt, alles klar, die 2300 fehlen mir, die müssen wir natürlich dann auch im Nulleinserteil produzieren. O. K.
+So.
+Das Teil hat natürlich dann wiederum eine Stückliste und jetzt müsste in dem Sinne hier natürlich geguckt werden, sind die ganzen Materialien dafür da. So, jetzt sehen wir hier, das ist so ein ein Standardartikel, der immer wieder dann mit so 20 Tonnen bestellt wird. Sehen wir aber, da muss jetzt der [Leiter Einkauf/Vertrieb] eigentlich wieder bestellen.
+Das wäre jetzt so ein Artikel, den müsste ich mir jetzt aufreiben, mit dem [Leiter Einkauf/Vertrieb] sprechen, weil das ist so einer von den Artikeln, die werden immer mit.
+Ich glaub recht.
+Oh more.
+10 Tonnen.
+Wird immer mit 10 Tonnen angelegt. Das macht der Herr, der denkt das. Also, was ist das alles jetzt hier? Das sind in dem Sinne, das sind alles Bedarfe. Das sind alles Produktionsaufträge, die im System vorliegen, die dieses Material benötigen.
+Hier sehen wir oben, sehen wir unseren Bestand, den wir aktuell haben. Das sind theoretisch die Mengen, die die einzelnen Aufträge am Bedarf haben. Ja, respektive, wenn das dann alles so stattfinden würde, ja, bräuchten wir zum Ende des Monats.
+Auf jeden Fall.
+Jetzt steht hier immer Maschinengruppe, ja. Das sind also quasi Maschinenaufträge, oder wie? Ja, nein, ich sag mal, wie soll ich das erklären? Das ist die Ressource. Okay, das ist die Ressource. Die haben jetzt auch hier, kann ich kurz zeigen.
+Einen Artikelstandard. Es ist, man kann es so sehen, als.
+Mach ich auch groß. Genau, er ist der Lieferant. Also, wo das Produkt quasi herkommt, wo beziehe ich das Produkt her? Es wird produziert und da gibt es hier eine Unterteilung zwischen klein, mittelgroß, mittel.
+So, und die wurde jetzt eingeteilt in Maschinengruppe 4. Wenn jetzt natürlich hier ein Material wäre, dann wird jetzt hier Lieferant A, Lieferant B. Ja, ja, verstanden. O.K., das macht Sinn. Ja, O.K., ich versuche noch mal kurz in die Köpfe zu polieren. Also, wir kommen.
+Daher, dass wir quasi diesen Artikel eingeben, also die Artikelnummer, dann haben wir den Preis, müssen wir einmal checken und so weiter und sagen: 'OK, Preis passt, passt vielleicht nicht.' Wenn er nicht, also jetzt nicht ganz genau passt, wir laufen erstmal mit dem Preis weiter, den wir bei uns drin stehen haben, weil genau, wir verkaufen jetzt nicht einfach billiger, nur weil er es sagt.
+OK, und dann müssen wir eigentlich, wenn wir merken, dann haben wir ja zwei Möglichkeiten. Entweder wir haben komplett alles auf Lager. Ich weiß nicht, wie häufig das der Fall ist.
+gibt schon auf der Fall. Und dann würde ich eigentlich direkt zum, dann würde ich das quasi so, können wir auch gleich noch mal kurz besprechen, aber quasi dann läuft das so weiter, dass ich eigentlich, dass er nur noch anlegen muss. Ich muss ja nicht mehr produzieren, ich sag einfach ja, perfekt.
+Den Lagerbestand reserviere ich dafür und dann geht es ja eigentlich schon direkt Richtung Versandplanung, Richtung und so weiter. Ne, genau. OK. So, jetzt habe ich hier aber gemerkt, uns fehlen irgendwie 2300 Stück. Jetzt muss ich quasi direkt, also bevor ich irgendwie eine Auftragsbestätigung rausschicke, also da.
+In dem Moment beim Anlegen sind Sie eigentlich schon bei "Ich muss eine Produktion auslösen". Ja, OK, gut.
+Und dann haben Sie ja eigentlich schon direkt die Stückliste, oder wissen Sie ja auch, OK, das ist das Produkt, das besteht irgendwie aus 5 Teilen. Die bestehen meinetwegen wieder aus unterschiedlichen Unteraufträgen. Auf der und der Maschine muss dann das und das laufen, so und so viel. Also Maschinenressourcen, ja eigentlich, aber ist ja eigentlich erst mal.
+Also ist das in irgendeiner Weise für jetzt Sie relevant, weil ich meine, Sie, Sie gehen ja jetzt nicht jeden einzelnen Eintrag in dieser Ressourcenliste durch und gucken, ob also ob es da verfügbar ist, sondern Sie reservieren ja einfach wahrscheinlich Zeit auf den Maschinen quasi dadurch. O. K., also was prüfen Sie sozusagen? Ich, ich, ich prüfe jetzt
+überall, wo fehlt mir da Material, wo muss ich Bestellungen auslösen, damit diese Produktion abdeckt. O. K., damit es produziert wird. Ja, verstanden. Das heißt, man, sie machen es aber nicht auf der Produktebene, sondern sie machen das auf dem, auf den, auf den, auf der Komponentenebene, also da drunter sozusagen. Ja,
+Natürlich, weil, weil, weil oftmals vor allen Dingen bei Material ist, ist dann die Frage, ist das Material, was in zig Teile reinkommt? Ist es ein Material, was nur in Bezug auf dieses eine ist? Ich hatte jetzt zum Beispiel eben einen, wo ich gesagt hab, als Kater möchte ich das Material einfach auffangen, weil es nur in diesen Artikel halt reinkommt.
+Ja, okay, das das kann man jetzt.
+Aber ich würd immer sagen, dass es eigentlich eher auch Bezug von von dem jeweiligen benötigten Material ist und nicht, weil man es im Ganzen betrachten muss. Also, ich überleg grad so ein bisschen, an welcher Logik man das festmacht. Also, vielleicht können wir nochmal ganz kurz zurückspringen zu dem Schritt, wir ziehen uns den Artikel.
+Halt mit Preis und so weiter, die einzelnen Schritte.
+Genau so. Jetzt hab ich die Position angelegt, also die Artikelnummer, Menge und mit der Passung. So. Und jetzt hatten Sie auch, nee, hier sehen Sie jetzt noch nicht, was verfügbar ist, sondern wie.
+Wie gehen Sie da noch mal weiter? Jetzt müssen Sie ja gucken, O. K., hab ich dafür genug Lager oder nicht? Genau, das sehen Sie dann, wenn Sie hier Artikel hier zum Beispiel bei Lagerstand E. Center, geh ich rein und dann seh ich, alles klar, ich hab nur 257 Stück. Ja, ne.
+Nee, sehen Sie ganz oben. O. K., so und dann muss ich quasi so und dann muss ich so und so viel produzieren. O. K., das sehen Sie, muss man prüfen und jetzt genau, also weil ich ja so ein bisschen regelbasiert und dann, wenn quasi Ihr Lagerbestand nicht ausreicht,
+Wo gehe ich dann hin? Muss, Muss eine Produktion ausgelöst werden? Das habe ich quasi dann auch gemacht. Wir gehen in den Artikel selber rein, in den Artikelstamm und gehen dann hier auf Produktionsverwaltung und löse dann quasi für diesen Artikel jetzt genau und löse dann hier dann eine Produktion quasi aus. Ah, verstanden.
+Und Menge ziehen sie sich natürlich aus dem aus dem aus dem Fehlbetrag genau richtig so und die hat dann wie gesagt die Montage die Montage hat dann ihre Stückliste, das ist quasi automatisch ich weiß für den Artikel XY genau das ist eine Stückliste verstanden und.
+Prüfen Sie dann auch schon hier die Lagerbestände, oder also einfach nur, wie Sie quasi denken. Wie gehen Sie dann da jetzt vor? Jetzt haben Sie die Stickliste und jetzt müssen Sie in jeden einzelnen von diesen 5 Artikeln reingehen. Genau, natürlich jetzt hier zum Beispiel Ring für Bürstenring, weil ich, ah, okay, hab ich noch abgedeckt.
+Woher wissen Sie das? Sehe ich ja hier. Ich habe noch 64.000. Und habe aktuell nur Bedarfe für 62.000 vorliegen. Das heißt, hier müsste ich aktuell. Aber wir hatten ja vor 2300 irgendwas, ne, als Bedarf. Ja, die sind aber schon hier drin.
+isn der hier drin?
+Das sind die 2300, die sind ja schon drin. Wo? Ah, wieso, wie kommen die da jetzt rein? Durch den Montageauftrag. Ich habe ja soweit und weil der Montage, der genau der Montageauftrag hat den ja als Bedarf drinne für die 2000, deswegen ist der jetzt hier schon mit drin. Können Sie auch mal zurückgehen? Ja.
+Bürstenring.
+Aber das sehe ich ja hier eigentlich schon. Oder sehe ich dich jetzt hier eigentlich?
+Also, was ich nur sagen will, ist, Sie legen den Montageauftrag an.
+Und warum gehen Sie jetzt in jeden, wenn Sie doch wissen, dass es eigentlich jetzt das überall schon angelegt ist als Montageauftrag, in jedem als Artikel? Was prüfen Sie jetzt noch oder wie meinen Sie das genau? Also, OK, bei den beim Bürstenring haben wir gesehen, also woher seh ich jetzt beim Bürstenring?
+dass da noch genug verfügbar ist. Also ich sehe es jetzt natürlich hier am Lagerbestand und den Abgang. Da sehe ich natürlich passt. So, jetzt sehen wir natürlich hier, aber da sorry, aber Sie sehen es, weil ich
+Ich meine, ich sehe jetzt hier nur 2:2. Ich sehe quasi den Lagerbestand heute und den geplanten Abgang und die Zeit ist aber schon inklusive der. Genau. Ja, ja, Bestand. So, dann meine ich natürlich hier, okay, bei 01, da sehen wir, haben wir nichts im Bestand. Jetzt müsste man natürlich bei dem hier
+Gucken, ich sehe jetzt hier einen Lagerbestand von 44.000 und in Summe sehen wir, deckelt sich das sind dann ne der Träger und der Ring, der kommt eigentlich immer ganz egal welcher Tray verwendet wird. Wir haben verschiedene Varianten, so haben wir genau diesen Bedarf, das heißt.
+Der zeigt Ihnen jetzt grün an. Das heißt natürlich, da wird irgendwo eine Produktion schon irgendwo drin sein. Wir müssen natürlich zur Not mal kurz kontrollieren. Jetzt gehen wir rein.
+Jetzt sehen wir, OK, das ist, ah, das ist ein Zukaufteil. Das ist ein Zukaufteil. OK, dann sehen wir, wir haben die 44.000.
+Und wenn wir eigentlich zu wenig haben, 18.000 finden uns ja für die komplette Menge. Wir sehen aber, dass am.
+ist es am 19.6. kommen 10.000 neue an, die auch schon bestätigt sind. Wenn in der Bestellnummer was drin steht, dann ist der Termin auch bestätigt und es sind weitere 10.000 bestellt für den. Da kommt jetzt dieser Bestand her. Genau.
+der aktive Bestand ist schon inklusive der 2300 genau. O. K. und die kann ich auch, kann ich das irgendwie, also wenn ich jetzt, wenn ich jetzt quasi, wie gesagt, irgendwie so 'n bisschen regel, weil ich jetzt sowas prüfen muss, welch, was kann ich denn nutzen als
+einfach um zu checken, also oder es ist auch nicht automatisch, sozusagen, oder sagen wir mal anderswo, vielleicht können wir in einen anderen Artikel reingehen, wie es ausschaut, wenn ich sozusagen, wenn mein Bestand hier zu klein ist, sozusagen, also wenn ich, wenn nicht genug reinkommt, dann haben wir ja gerade das, was rot angezeigt wird, ne, da seh ich dann.
+Das ist ja der einzige, ne, wo ich sag, wo ich jetzt ein Problem hab, weil hier ist grün, da ist grün, da weiß ich wahrscheinlich, dann sind ja wahrscheinlich Zugänge geplant. So, und hier können wir auch noch Filtersieb, der passt ja vorbei.
+Der müsste jetzt Lagerbestand, dann wird wahrscheinlich eine Bestellung wieder drin sein. Ja, bei 50.000, wobei eigentlich sehen wir hier, müsste ja das System schon.
+Mopper, ja, okay, der, der, der, ja, jetzt hier für unseren Mopper, der natürlich nicht, weil der natürlich in der Timeline noch genügend hat. Der hier, der müsste jetzt wahrscheinlich, den können wir uns dann mal angucken. Der müsste jetzt nämlich jetzt eigentlich.
+Wo haben wir das Filtersieb? Nein.
+Den Bezug stellt er nicht her.
+Wenns sauber wär, müsste er eigentlich ja den hier anzeigen, von wegen 'Hör mal, eigentlich für den Termin, wann wann ich den Bedarf hab, hab ich nichts da.
+Weil das ist ja genau der hier unten und das sehen Sie ja dann da drin 390 genau.
+Ah.
+Mhm.
+Das ist ja ein Problem, dann zu dem Zeitpunkt hier. Ja, OK, und was machen wir dann?
+Das spielt jetzt erstmal für diesen spezifischen Auftrag keine Rolle, weil den Krieg ich ja abgefrühstückt. Aber was, was würden Sie denn jetzt da machen?
+Weil das muss ja theoretisch auch, also es fällt ja Ihnen jetzt auf, das muss ja theoretisch dann auch hier in dem System, also ich sag mal jetzt so einem Agenten auffallen. Fairerweise ist das dann auch was, was einfach geflaggt wird, erstmal und sagt, hier pass mal auf und dann müssen Sie ja überlegen, was Sie machen, ne? Genau, das ist natürlich der Punkt.
+Noch ist ja jetzt nichts passiert. Ich, deswegen ist das Wichtige, dass man es sich halt auch im Detail anguckt. Weil ich bin ja trotzdem der Auslöser. Weil nämlich, ich habe ja jetzt erst die 23 reingesetzt, wo die noch nicht drin waren. Absolut. Wäre nämlich noch alles quasi Paare gewesen. Nee, absolut, absolut. Aber genau. Also man muss es sich angucken.
+Keine Frage, nur ach so, deswegen muss man sich eigentlich jede einzelne Position doch einmal angucken. Also man könnte jetzt nicht auf der Sicht davor gucken, ja, OK, ist ja alles grün, weil vielleicht überfahr ich irgendeinen anderen Auftrag. Genau, OK, so und hier wäre ja jetzt in dem Sinne.
+Wenn ich das jetzt machen würde, gäbe es ja eigentlich nur zwei Optionen.
+Option A.
+Wir mìssen gucken, dass der hier frìher.
+Kommen kann, zumindest brauchen wir einen Teil. Wir brauchen natürlich jetzt keine 50.000, ist die Frage. Kriegen wir den früher? Wir sehen jetzt, es geht jetzt um den 5.8. 2 Monate, wobei die sind schon speziell. Das hat schon einen Grund, warum der da auch platziert ist. So, also es gibt eigentlich 2 Optionen. Option 1.
+Der wird vorgezogen und wir wissen auch, wir kriegen ihn definitiv früher. Aber wir sehen, wir müssen den mindestens 2 Monate vorziehen, oder? Sie können den Artikel halt nicht so bestätigen und zumindest nicht für den 28.07., sondern
+Wenn wir es jetzt knüppelhart spielen würden, rein, rein auf Verfügbarkeit Verfügbarkeit und das, was im System drin steht und das ist jetzt Gesetz am 21.9. Müssen wir natürlich hingehen und sagen, alles klar. 21.9. kann kommen erst die Zukaufteile.
+Wir haben natürlich für die Baugruppe irgendwelche Zeiten hinterlegt. Ich sag jetzt einfach mal, der Auftrag hat eine Produktionsdauer von 2 Schichten, also 2 Tage. Dann hat man vielleicht noch diesen einen Tag Puffer drin, sondern wird mal gucken so am
+21.9. kommt das, dann der 22. 23.24. und dann kann es am 25. rausgehen. O. K., verstanden, aber das ist ja was, was man jetzt ja erst mal quasi, was ein Agent jetzt erst mal einfach nur signalisieren müssen, dass sie da quasi manuell, weil das, das ist ja absolute Ausnahme, also nicht Ausnahme, aber das ist
+ein harter Sonder, wie soll man sagen, ein ein Extremfall, der ja dann irgendwie Kunden anrufen, wie auch immer dann geregelt werden muss. Insofern, das kann jetzt eine Agenda nicht, aber man muss es auf jeden Fall checken und flaggen und sagen, da gibt es dann ein Problem. O. K., verstanden. Das heißt, ich muss dann.
+Wenn wir nochmal zurückgehen, also das heißt, ich muss meinen Artikel raussuchen und dann geh ich in, dann mach ich nen Montageauftrag und dann muss ich aber die einzelnen Montageauftragspositionen aus der Stückliste, die muss ich nochmal checken lagerbestandsmäßig, um zu gucken.
+muss irgendwo bestellt werden oder muss 'ne Produktion in der Spritzgussfertigung auch ausgelöst werden? Also müssen nämlich, also mein Zugkaufteile bestellt werden, sozusagen. Ja, das muss bestellt werden. Ja, Zugkaufteile, Materialien, ja, oder eben genau Produktion.
+Ähm.
+Können wir nochmal, also verstanden. und Und ich muss halt prüfen, ob ich damit irgendeinen anderen Auftrag überfahre, weil ich den ja jetzt vorziehe sozusagen, und ob ich dann solche Probleme hier bekomme. Okay, können wir nochmal zurückgehen? Hier, jetzt hab ich ein, also jetzt bin ich hierdurch gegangen, das passt.
+Wir können da noch einmal ganz kurz rein, das ist die Träger. Aber da hatte ich jetzt, wollte jetzt nur, da stand ja jetzt hier, [Kunde A] schickt jetzt die 10.000, weil sie quasi sagen, das Produkt bestellen wir und hier sind die Zukunft, die da rein sollen. So funktioniert das. Ja, okay, die schicken dann quasi mit.
+was da noch eingebaut werden soll, das nicht von Ihnen. Ja, wir, wir müssen es natürlich in dem Sinne abrufen, aber der der Kunde selber stellt uns diese Komponente zur Verfügung. Also eigentlich ist mir egal, woher es kommt, ich will eigentlich nur wissen, ob ich am Ende irgendwie mit den mit den Mängeln sozusagen hinkomme.
+O. K., so, aber das heißt, wenn wir nochmal kurz zurückgehen, ich prüfe sozusagen, wenn ich jetzt mal von unten anfange, also hier prüfe ich und merke, da gibt es ein Problem. Hatten wir gerade geguckt, irgendwie muss ich dann neu planen, Kunden anrufen, wie auch immer, weil ich da eine Fehlmenge erzeuge bei einem anderen Auftrag. Oder halt eine neue Bestellung auslösen.
+Ja, ja, ja. Muss halt gucken, was dann passiert. Das sagen wir mal, diese drei passen und dann ganz oben sehe ich jetzt, rot passt irgendwie nicht. Mhm.
+Was mache ich dann?
+So, da wurde jetzt automatisch quasi vom System quasi dann auch gleichzeitig eine Produktion für das 0-1er Teil ausgelöst.
+wird immer, wenn ich jetzt für meinen aktuellen Auftrag, nicht für einen anderen, haben wir gerade gesehen, dass dann erstmal irgendwie eine Fehlmenge erzeugt wird, bei einem anderen Auftrag, aber für den Auftrag, den ich gerade angelegt hab, immer automatisch ein Produktionsauftrag erzeugt, wenn ich eine Fehlmenge habe. Ja, also man, man kann es auch verneinen, man kann auch sagen, nein, nicht meine Unterbaugruppen auslösen, nur den Hauptauftrag.
+gefragt oder wie? Ja, hab ich nicht gesehen. Und das kann man dann aussuchen. Man kann natürlich sagen, hier, ich hab hier einen Montageauftrag und ich will zweieinhalbtausend und lös mir für alles, wo mir Fehlmengen sind, lös mir einen Produktionsauftrag, aber nur einen Produktionsauftrag für Nulleinser. Der macht jetzt keine Nulleinser.
+der Entschuldigung, Spritzgussteil. Wir sagen immer, in Spritz für Spritzgussteile werden die Produktionen dann ausgelöst. Alles was Zukaufteil oder so ist, da passiert dann nichts von von Systemseite. O. K. 0 Einser sehe ich, woran sehe ich das?
+Die ersten beiden, ja, ja, die ersten beiden Zimmer. Wir haben es von bei uns in der Nummernklatur, das sagt dann immer 01 steht für Spritzgussteil, zum Beispiel 20 steht immer für Baugruppe aus der Montage, 05 steht immer für Zukaufteile. So haben wir so ein bisschen die die
+Und das ist der Ring hier, der aber da hatten wir doch gesehen, dass der geliefert wird. Nee, das ist ein Spritzgussteil, den produzieren wir. Da kann man auch noch mal reingehen. Da müssen wir ja aktuell nichts machen, weil haben wir alles im Bestand liegen. Ja, ja und seh ich. O. K., den Anstz habe ich, das beim anderen war es eigentlich.
+O. K., verstanden. Gut, und das, oder muss ich, können Sie irgendwie hier noch einmal so freigeben im ersten? Ja, ah, jetzt hab ich natürlich hier.
+Wir meinten den hier so.
+Und da sehe ich jetzt hier Produktionsauftrag.
+Genau, hast ja. OK, OK.
+Das heißt, ich.
+OK, ich muss aber eigentlich schon durch diese fünf Positionen einmal durchgehen und checken.
+Also eigentlich, ich meine, gut, Produktionsaufträge werden ja automatisch ausgelöst, weil es ist eher eher Standard, dass man einfach sagt, ja, löst auch für alle unter unter Teile aus. Ja, das macht man eigentlich so normalerweise. O. K., also löst man, man muss natürlich dann gegebenfalls hinten noch mal.
+Hingehen und anpassen. Das System ist natürlich jetzt aktuell noch so rudimentär, dass der aktuell hingeht und natürlich dann sagt: 'Okay, mir fehlen 341 Teile. Also mach ich 341 Teile, wo dann eventuell die Produktionsgröße eigentlich 500 wäre oder 1000. Die müsste man dann natürlich dann nochmal.'
+Auf welcher Basis passt man rein? Also, wer weiß das oder wo steht das? Das sollte eigentlich abhängig von den von den Mindestbestellmengen kommen, die im System sind. Genau.
+Aber dann müsste es doch eigentlich im System automatisch irgendwie gekappt oder dass man halt sagt: 'OK, das heißt, Sie können 341 bestellen.'
+Und wie kommt es dann auf die 500 sozusagen? Also geht da einer aus der Produktion dann durch oder wie sie oder oder wie? Also irgendwann muss ich ja dann quasi umstellen auf die 500, wenn ich sage, das ist meine Mindestbestellung. Nee, das das müsste natürlich schon im Vorgang. Das muss natürlich dann hier beim Anlegeprozess muss das dann natürlich passieren. Ja, das System sagt.
+Okay, Index müsste es dann okay, wie wie würde ich das jetzt machen, theoretisch?
+Also jetzt, es ist, es ist ja mehr, wie soll man das sagen? Es ist natürlich generell so, so eine gewisse.
+Ja, wie soll man das sagen?
+Da ist halt dann immer noch so, so, so der Faktor Mensch, der da einfach mit mit reinspielen muss. Also es gibt halt dann, ich sag mal, Kunden, wo man dann sagt: 'OK, jetzt wie bei dem hier, sind die zweieinhalbtausend, das ist auch die Verkaufsmenge, da machen wir dann auch, gucken wir
+Zwei, drei müssen wir machen. Dann machen wir auch nur die zwei, drei. Wäre natürlich jetzt ein Artikel. Nehmen wir mal ein gutes Beispiel, eventuell.
+Wie nehmen wir denn mal das hier?
+Nehmen wir den.
+Oh Mist.
+Er ist jetzt natürlich, hat er das jetzt einer der der im Vorcast ist, aber einer um um um das zu zeigen, wir gehen jetzt halt, wie man sehen kann, kontinuierlich eigentlich immer Mengen raus, wöchentlich, deswegen brauchen wir auch so und das ist jetzt natürlich dann hier
+So eine Sache. Es wird null Sinn machen, wenn jetzt das System hingeht und wir würden das so akzeptieren. Der Kunde bestellt jetzt das 432 in zwei Paletten. Zwei Paletten. Die eine Palette fehlt jetzt gerade, weil sie gerade nicht imstande ist und wir lösen einen Auftrag für 216.
+Stück aus. Das wird hier keinen Sinn machen. Da würde natürlich jeder hingehen und sagen, nein, wir machen eher 2000 einfach, also 10 Paletten. So, bei dem anderen würde man sagen, ist dann so ein bisschen, ja, hier, hier sagen wir mal, ist natürlich der Vorteil, wir haben natürlich eine Vorcast Geschichte
+Da kann man natürlich immer noch irgendwo dem dem dem sagen, hier Reichweite so und so lang, ne? Ja, im System jetzt selber hier, hier haben wir angefangen, das das war denen.
+Was drin? Das muss halt irgendwer dann irgendwann entscheiden. Ja, wir, wir haben ja eigentlich, da haben wir noch nicht so viel mitgearbeitet. Wo haben wir es, Artikel?
+Ich glaub bei dem.
+Nee, bei dem ist es noch nicht drin.
+Bei welchen was?
+No.
+Wir müssen es halt hier drüber können wir es nur machen.
+Also, ich habe jetzt angefangen, so sukzessive, weil halt aktuell ist oftmals so, dass oftmals wirklich von der Disposition.
+Im Bezug einfach nur auf den Auftrag, die Mengen rein klar, wenn wenn die sehen, da sind wer weiß wie viele noch drin, da wird das ein bisschen angepasst, aber oftmals muss ich halt noch mal hingehen und sie anpassen, so dass ich jetzt halt angefangen hab. In den Stammdaten ist natürlich bei weitem noch nicht alles gepflegt.
+Die halt zu kreieren. Jetzt zum Beispiel, jetzt bei diesem Artikel, führt das dazu, dass eigentlich, wenn der Auftrag angelegt wird, direkt 1.800 drinstehen. Weil das ist ja, du musst mindestens 1.800 machen, kann es hochgehen bis 27.
+Jetzt ist natürlich die Frage, ob man dem System jetzt sagen muss: 'Okay, wir haben nur eine feste Größe.' Ja, ja, aber ich glaub da, das ist die einzige Möglichkeit, um zu definieren, wo das die KI dann für sich dann sagen kann: 'Als K, ich brauch ne Produktion.' Also muss ich 1800 reinmachen.
+Ja, weil sonst hätte man ja, müssten mal ja gefühlt Zehntausende Fallbeispiele konstruieren, damit die K. I. darauf reagieren kann. Ja, oder kundenspezifisch. Also die Frage ist heute, also wenn ich jetzt, wenn jetzt heute jemand aus dem Team einfach so einen Auftrag erstellt.
+und dann auch im Produktionsauftrag da die 400 oder die 216 einträgt, sozusagen. Fällt das dann irgendwo auf, dass man das, wo, wo, dass sie dann sagen, nee, sorry, das passt nicht, wir müssen mindestens 500 bestellen oder so, in welchem Moment fällt das auf? Also gehen Sie ja noch mal alles durch, oder?
+Ja, würde ich jetzt gleich noch mal zeigen, wie das dann in in es wird bei mir spätestens auffallen, wenn ich den Auftrag dann auf der Anlage verplane. Für für den Wahnsinn, ne.
+und dann würden sie im Zweifel einfach noch mal anpassen. Genau, ja, O. K. O. K. Das heißt, im Zweifel könnte auch jetzt für den ersten Wurf der Agent im Zweifel erst mal einfach das anlegen, was quasi im Kundenauftrag drin steht. Ja, das ist jetzt Worst Case, aber ist ja mal so Grundlage. Und im Zweifel, wenn sie planen, sehen sie ja dann direkt, ja, O. K., macht irgendwie keinen Sinn, pass ich halt noch an. Ist jetzt natürlich dann, wie heute, bisher
+Monat Arbeit, aber das und ja, der nächste Schritt wäre dann zum Beispiel, diese Mindestbestellmengen so Stück für Stück anzupassen, damit dann der Agent einfach das nimmt und sagt, und dann können Sie den Teil immer noch anpassen oder halt nicht. O. K., ich dachte, das müsste, müsste sich dann halt jedes Mal irgendwie dann wirklich hart überlegen, weil es danach zu spät ist oder so. Nein, nein, nein, das, das ist, das ist ja nicht.
+Also, es sollte dann in der Regel eigentlich auch in in vielen Fällen den den den Darm dann auffallen, wenn sie dann wieder drin sind und 341 Stück sowas produzieren oder nicht. Also generell bei so krummen Zahlen, also wir, wir sind jetzt vielleicht nicht diejenigen, die immer irgendwo
+10.000, 20.000, 30.000 machen, aber ich sag mal, also zumindestens die ersten 2 Ziffern sollten eigentlich Nullen sein und nicht irgendwelche 5172 oder nee, macht Sinn, macht Sinn. O.K., verstanden.
+Ähm.
+Ah.
+O. K., also ich fass noch mal für mich zusammen, bei diesen, bei den, bei den 1, also ich hab ja einen Zusammenbau und da hab ich jetzt irgendwie 5 Komponenten und dann muss ich jetzt ja bei jeder, bei jeder Komponente durchgehen und gucken, ob quasi
+Ich produzieren muss oder bestellen muss oder bestellen muss.
+Oder ob ich irgendeinen anderen Auftrag überfahre, wie wir es ja gerade gesehen haben. Das kann ja auch passieren. Wenn ich produzieren muss, dann ist es eh schon, ist eh schon ein Produktionsauftrag angelegt. Ne, auch schon mit der Mindestbestellmenge, wenn's eine gibt. Das heißt, da muss ich eigentlich nichts prüfen.
+so wirklich oder? Also ich muss trotzdem reingehen, aber ich, ich frag nur so 'n bisschen, wenn wir, können wir noch mal einen einzigen in Auftrag geben? Ich versuch einfach noch mal so 'n bisschen diese, die Regeln, anhand derer man diese 5, diese 5 Positionen, die wir da gerade gesehen haben, aus den.
+Aus dem.
+Genau.
+diese
+Yeah.
+Wo ich eigentlich quasi eine Menge offen die grüne Zeit kann ich natürlich nicht auslesen als Agent. Also ich sehe da einfach nur eine Zahl. Ist da irgendwie ein Status oder so?
+Ich glaub, sonst gehe ich da halt rein. Da haben wir wahrscheinlich jetzt so nichts, dass man
+Ja.
+Ich frag einfach quasi anhand von welchen Checks man das sozusagen validieren kann. Ich mein, wir haben es ja grad so 'n bisschen qualitativ gemacht, dass wir halt da reingeklickt haben und irgendwie geguckt haben, erzeug ich damit jetzt 'ne Fehlmenge oder so, ne? Es ist ja eigentlich der Check, erzeug ich damit 'n.
+Die Frage ist, ob nicht
+What is with issue of course?
+Jetzt müsste ich mal ganz kurz rausgehen, aber die schreibe ich mir mal kurz auf, die Nummer.
+Wie geht das? Ist die da?
+This extension.
+152
+Ich hoffe, dass ich das auch finde, weil die Frage ist, ob die KI zwangsläufig darüber auch unbedingt einsteigen muss.
+ist die Frage, ob ich die finde, weil es gibt nämlich eine Auswertung, die eigentlich ganz klar, wo das über System geht und sagt, an dem und dem Tag fehlt das und das, an dem und den Tag fehlt das und das und da könnt ihr
+Eigentlich könnte ich muss mal gucken, ob ich sie finde. Ich denke, das wär wär vielleicht sogar einfacher, wenn die KI einfach nur da drüber geht und sagt: 'Ja, hier musst du bestellen, Artikelnummer, eine super Artikelnummer, ja.
+Ja, aber.
+Inklusive. Also, es ist quasi eingeplant und dann gucke ich halt, ob es irgendwie ob es dann eine Fehlmenge gibt oder nicht oder wie.
+How far this?
+Ah, wie hieß die? Hier hat sich auch jeder selbst verewigt.
+Of.
+Frage stand.
+Ist jetzt nicht jeder auf einer Option? Ich bin in Artikel nur noch hier in die Spur.
+Ohne Repetieren.
+Ist ja alles nur auf das nur auf Besuch vom.
+Uh.
+Der nimmt nur Bezug auf den Verkaufsartikel. Der sagt jetzt nicht: "Mir fehlt Material XY".
+Hm.
+I must see.
+Da muss ich mich echt noch mal schlau machen. Was machen eigentlich die Mädels? Ja, dafür kann ich das leider nicht sagen. Es muss ja aber eigentlich . An dem anderen, wo wir gerade waren, da macht der ja quasi diese Abfrage. Genau. Nee, das ist ja eigentlich .
+So, jetzt sind wir wieder hier. OK, ist der hier irgendwo eigentlich stehen?
+weiß ich nicht. Nee, teilweise bei manchen Systemen hat man immer rechts unten so die Quelle, dann steht da irgendwie S.Q.L. A. und G.M.S. und so weiter. Jetzt hier nicht, aber das können wir in teilweise auch dann, das sind vielleicht so Sachen, die man dann auch mit mit mit [IT-Partner] noch mal besprechen muss.
+Das sagen wir nochmal so, okay, wir wissen ja jetzt, wie wir vorgehen. Wir müssen halt nur verstehen, wo kriegen wir jetzt, wenn wir da jetzt mal reingehen, wo kriegen wir quasi diese Subposition her und wo lesen wir dann für jeden Artikel den Lagerbestand aus? Welche Abfrage müssen wir machen, damit wir quasi diese Übersicht dann kriegen, die wir da ja gerade sehen, ne?
+Yeah.
+Können wir da nochmal eintippen? Das ist doch dann die Artikelverwaltung, mindestens.
+Equity.
+So.
+Fliegen.
+OK, also eigentlich will ich prüfen.
+Passt alles, muss ich produzieren.
+und muss ich irgendwas bestellen. Aber das, aber das macht er ja automatisch, ne. Also ich meine, es ist hätte, worauf ich hinaus will. Also was muss ich hier eigentlich wirklich prüfen? Das ist so eigentlich meine Frage. Und was läuft automatisch, weil zum Beispiel die, die Mindestbestellmenge oder Mindestproduktionsmenge, die muss er ja hier gar nicht prüfen, weil das machen sie teilweise am Ende, wenn sie den Auftrag planen. So, also wenn sie den
+So.
+Das äh.
+Das einzige, was ich prüfen muss, ist quasi: Überfahre ich einen anderen Auftrag?
+Mhm, also hab ich irgendwo 'ne Vielmenge unten unterm Strich. Das ist das Einzige, was ich prüfen muss, oder? Muss ich noch irgendwas anderes prüfen? Ja, man darf nicht nur unten unterm Strich, weil wenn man davon ausgehen würde, würde der ja das Filtersieb, wo wir jetzt das Problem haben.
+Dann wird der ja jetzt, äh, sagen, ich bin safe, weil ganz unten unterm Strich hab ich en Plus. Der muss ja meckern, dass wir jetzt hier dat Minus haben.
+Weil hier ist ja das Problem, dass das ja schon ne Bestellung quasi ausgelöst worden ist proaktiv.
+Ja, ja, also das mein ich damit. Also quasi, hab ich da irgendwo ein Problem in meinem Lager Lagerbestand? Ja, aber das ist doch eigentlich in meinen Positionen für diesen 5 von den 5 Komponenten eigentlich auch das Einzige, was ich wirklich prüfen muss, weil der Rest wird ja in Auftrag gegeben. Also ich werd den Produktionsauftrag geben.
+Ich werde inzwischen, oder was ist, wenn ich irgendwie bestellen muss? Also, wenn ich jetzt zum Beispiel beim anderen da nicht von [Kunde A] die 10.000 bestellt hätte, dann hätte ich ja hier auch wieder einfach diese Fehlmenge und würde ja auch wieder ein Signal geben, eigentlich.
+Und dann muss sowieso erst mal händisch gehandhabt werden. Ja, dann muss, muss, müssen Sie vielleicht dann in der in dem in dem Sinne muss, muss, muss ja dann ganz normal Bestellung auslösen. Und das machen Sie dann, aber das macht der ja eigentlich erst mal so. Ich würd's mir natürlich so vorstellen, dass jetzt.
+Filtersieb oder so. Hierbei müsste der entweder sagen: 'Hier Bestellung auslösen, hier vorgefertigt, hier Abruf machen für dann und dann.' Oder jetzt in diesem Fall müsste er sagen: 'Hör mal, deine Bestellung kommt zu spät. Bitte versuchen vorzuziehen.' Ja, ja, also also.
+Im ersten Schritt, wir versuchen ja so ein bisschen iterativ, dass wir jetzt nicht irgendwie direkt die direkt alles erschlagen, sondern im ersten Schritt wäre für mich ja schon mal schön, wenn der Agent halt checkt, da geht da, da kommt ein Problem auf, wenn wir das jetzt so planen, weil ich irgendwo später nicht mehr genug Lager hab für irgendeinen Auftrag.
+Und erstmal einfach die Hand hebt und dann müssen sie halt manuell reingehen und halt dann gucken, was sie machen.
+In der Evolutionsstufe 3 kann man dann meinetwegen sagen: OK, man man befähigt den Agenten schon mal 'ne Bestellung vorzuschlagen, wo sie dann sagen: 'Ja, OK, passt, schick ab.' Aber das wäre für mich dann 'Nee, aber verstanden. OK, nee, dann das macht Sinn. Also, ich muss eigentlich nur gucken, komm ich mit dem Lagerbestand irgendwo nicht hin.
+und da, wo ich aber heute, wo ich aber
+Da wo ich.
+Heute schon keinen Lagerbestand habe, das ist ja eigentlich der Unterschied, weil bei manchen produziere ich ja automatisch ne oder das ist halt ein Zukaufteil, meinen Sie ne, das ist ein Zukaufteil OK, das heißt eigentlich muss ich ja sagen, bei allen Teilen mit 20.
+Muss ich dann halt irgendwie gucken, dass ich das zukaufe, sobald es ein Teil mit, wie wäre es denn mit einem Teil mit 01, also einen Spritzgussteil, wenn ich da jetzt
+Ich weiß nicht, wie wahrscheinlich das ist, wie häufig das passiert, aber wenn ich da jetzt im weiteren Verlauf merke, das reicht nicht mehr, da überfahr ich jetzt einen anderen Auftrag, wenn ich das so plane, wird dann auch automatisch ein Produktionsauftrag ausgelöst oder ist dann auch wieder ein eigentlich, ah, weil da denkt er dann auch.
+Nein, passt doch. Da muss, muss, muss händisch reingegangen, so wie ich jetzt händisch den Montageauftrag ausgelöst hat, der natürlich jetzt vom System her hingehen kann mit seiner Stückliste, sagt, hör mal, mir fehlt das, soll ich da für die Produktion, muss ich natürlich proaktiv, wenn 0 Einser Teil bestellt wird, muss natürlich auch proaktiv dann der Auftrag
+dafür reingesetzt werden. Also das System würde jetzt nicht sagen, beim Erstellen von von von Auftragsbestätigung hier ist kein Bestand, soll ich 'n Produktionsauftrag anlegen. Das passiert nicht. Aber wurde doch hier automatisch angelegt, oder nicht? Ja, bedingt durch die Anlage von der Montage.
+Und dann, halt in Kombination mit der Stückliste, kann er ja dann sagen: 'OK, mir fehlt jetzt aber für deinen Auftrag, den du erstellt hast, fehlen mir 2.300 Teile für das Null-Einser-Teil. Soll ich die mit anlegen?' Ja, OK, also Sie sind jetzt nochmal einen Schritt weiter vorne. Ich merke, dass ich für meinen gesamten Artikel.
+Mir fehlen irgendwie 2300 Stück. Deswegen muss ich natürlich manuell 'n Montageauftrag angelegt anlegen. Wenn ich in in in im Zuge, aber wo ich den anlege, erstellt er halt für die Subkomponenten. Da, wo was fehlt, 'n Produktionsauftrag, in Zweifel. Genau, Spritzgussproduktion. Spritzgussproduktion. Genau, für den ganzen Rest
+muss man manuell im Teufel zu und zu bestellen. Aber was ich meine ist, was ist, wenn ich quasi für den Spritzgussteil denselben Fall hab wie hier für dieses Zukopfteil Filtersieb?
+Mhm, ja, wo ich quasi sage in.
+Ah, warte, ich glaube, nehmen wir mal ein schönes Beispiel.
+Richtig.
+Ja, aber stimmt.
+Ah.
+Müsste eigentlich aufgehen. 1723.
+34 ich bin ja eigentlich mit dem hier, bin ich ja kaputt. So, dieser Auftrag hier kann nicht mehr abgedeckt werden in dem Sinne, wir haben hier eine laufende Produktion.
+Da kommen noch 11.908 quasi hinzu.
+Und da haben wir den Bestand, so und dieser Auftrag.
+Produktionsauftrag musste in dem Sinne händisch eingestellt werden von der Disposition. Es würde niemals ein Kundenauftrag jetzt dazu führen, dass wir das muss dann gesehen werden. Wir haben zu wenig, wir müssen eine neue Produktion einstellen. Das ist einer, der eigentlich 24/7 am Laufen ist, der Artikel.
+Wie sehen Sie das? Also, das muss ja irgendwie auffallen, ne?
+dass quasi nicht genug da ist und sie da jetzt manuell noch einen Produktionsauftrag machen müssen. Halt durch das Reingehen und wirklich effektiv reinschauen, was haben wir am Bestand da, was geht da noch ab, wann brauchen wir einen neuen Auftrag. Also das ist quasi nach derselben Logik wie
+Bei dem Filtersieb, wo ich halt merke, ich komm irgendwann nicht mehr hin. Genau, für meinen aktuellen Auftrag läuft es, aber ich überfahre irgendeinen Auftrag später. Das heißt, ich komm mit meinen allen Aufträgen nicht hin am Ende. Das heißt, da müsst ihr dann auch die Hand heben und sagen, da passt was nicht.
+In dem Fall, wo ich aber heute 0 Lagerbestand habe und quasi heute schon sehe, dass ich was produzieren muss, würde er automatisch einen Produktionsauftrag anlegen. Und das ist der Unterschied, sozusagen, wenn ich später erst was überfahre, das checkt er nicht. Wenn ich heute schon nicht genug habe für meinen Auftrag jetzt, dann löst er automatisch einen Produktionsauftrag aus. Ok, verstanden.
+Verstanden, das heißt für 0,5er Teile, aber auch für 0,1er Teile.
+Muss ich sozusagen trotzdem immer reingehen und schauen, überfahre ich irgendeinen anderen Auftrag? Also komme ich irgendwie mit allen Aufträgen, die geplant sind, lagermäßig?
+Hinten raus nicht hin oder doch? Wenn doch super, wenn nicht, muss ich die Hand heben und dann müssen Sie manuell irgendwie dagegen steuern. Verstanden. O.K., jetzt müssen wir uns nur überlegen mit [IT-Partner], wie krieg ich diese Auswertung sozusagen hier, die Lagerbestandsinformationen auf Artikelebene? Das soll doch auch kein Problem sein.
+Ja, OK, verstanden, cool. Ja, verstanden, verstanden. Sehr gut. So, jetzt gehen wir noch mal.
+Ich weiß, es ist langwierig, das alles zu erklären, aber das sind genau diese Themen, die man verstehen kann. Lieber einmal gescheit als genau, genau deswegen wird auch schön.
+So.
+Ja, so jetzt, jetzt wäre natürlich der Punkt jetzt, jetzt, jetzt ist die ganze Sache erstmal von von der AB Auftragserstellung erstmal fertig. Jetzt wäre natürlich die einzige.
+Entscheidung, die man jetzt zu treffen hätte, jetzt für für die für die Dispositionsseite, was bestätigt man? Bestätige ich die jetzt sofort oder prüfe ich jetzt? Ich würd jetzt natürlich erstmal proaktiv jetzt den erstmal mir notieren, den jetzt noch nicht rausschicken und werd jetzt in dem Sinne gucken, OK,
+Was ist mit den Filtersieben? Krieg ich die früher? Oder ja, dann würd ich, wenn ich jetzt weiß, ich ah, haben wir auf Halle liegen, ist ein Rahmen, kannst du abrufen. Dann würd ich sagen, alles klar. Dann würd ich den wahrscheinlich, wenn ich die Information morgen kriege, würd ich den den 28.7. bestätigen.
+Wenn die jetzt sagen, nee, 21.9. ist geliefert, dann würde ich jetzt auch, weil klar, am Ende des Tages, wenn wird der Kunde irgendwo um die Ecke kommen und hier und der eine ist nicht so ganz so wichtig und kümmer. Ja, aber ich fang nicht an für den Kunden jetzt.
+Wir könnten das machen. Wir könnten den. Nein, du hast jetzt was bestellt. Dafür krieg ich jetzt gerade meine Filtersiebe nicht rechtzeitig. Also, wir hatten ja gesagt, 21.09. um Hochrechnung würde ich den jetzt 27.09. sag ich jetzt einfach mal bestätigen. Das heißt, bevor ich quasi das Lieferdatum bestätige.
+habe ich eben wahrscheinlich ab und zu dann eben den Fall, dass ich eben meine Lager, also meine quasi, ich muss meine Kapazitäten noch irgendwo organisieren, wenn ich halt merke, dass ich irgendwo Fehlmengen hab. Ja, wir haben, wir haben natürlich, wir haben natürlich bei allen Sachen eigentlich unsere klaren.
+Zeitvorgaben und die hat der Kunde auch. Also, der Kunde weiß eigentlich ganz normal, dass der Spritzgussteile innerhalb von 6 Wochen geliefert bekommt und dass der Baugruppen innerhalb von 8 Wochen geliefert bekommt. Es sei denn, diese Ausnahmen, irgendwas, was aus China ist, dann müssen sie natürlich dann eventuell mit 4 Monate Bestellvorlauf bezahlen.
+Bestellen? Nee, das muss und das muss natürlich irgendwo mit den Lieferanten überein. Wie gesagt, in den meisten Fällen passt das auch irgendwo miteinander überein, aber das ist jetzt wirklich so ein Punkt wie mit den Filtersieben. Der Kunde will eigentlich am liebsten bei den Trays, dass der.
+Ne Bestellung auslöst und in 2 Wochen die Trace bekommt, weil der Kunde sich so spät erst entscheidet. Ah, nehmen wir jetzt die Grünen, nehmen wir die Blauen, nehmen wir die Dünnen, nehmen wir die Langen. Beißt sich dann natürlich, wenn dann wir, wer weiß, wie viele unterschiedliche Trace haben. Jede andere Filter sie bekommen, wir auch sagen, wir legen uns hier keine.
+Wer weiß das für einen Wert hin, wo ihr uns noch nicht mal sagt: "Ja, die nehmen wir dann auch ab." Und wenn dann gleichzeitig der Filtersieblieferant eine Lieferzeit von sechs oder acht Wochen hat, dann beißt sich das. Und da ist man dann natürlich immer in der Abstimmung, absolut. Aber das heißt, ich habe im Zweifel eben.
+Nach dem ganzen Prüfen der Lagerbestände pro irgendwie Subkomponente oder so, hab ich eventuell noch irgendwelche Hausaufgaben, die ich machen muss, im Sinne von irgendwie abklären, bis wann braucht ihr es denn oder wie kann kann ich kann ich diese Lieferung vorziehen, um irgendwie zu gucken, kann ich welchen Liefertermin kann ich dem Kunden geben?
+Und sie manuell schreiben dann ihren Liefertermin rein, wo sie sagen: 'Glaub, ich könnte abdecken.' Sozusagen, OK, verstanden. Ja, das wäre dann also ein Punkt, wo der Agent nach diesem Lagerbestandscheck erstmal an Sie abgibt und sagt: 'Was ich von dir zurück brauche, ist einfach ein Lieferdatum, was du glaubst, dass es passt.' Das würden Sie dann zurückspielen.
+und dann kann er weiterarbeiten. Ich will nur sagen, weil das ist ja ein Punkt, wo er jetzt im ersten Wurf nicht mehr weiterhelfen kann, erstmal, das ist ja dann kompliziert. Es gibt natürlich viele Punkte, die die die man irgendwo mit berücksichtigen muss, die es dann auch vielleicht schwer macht, vor allen Dingen am Anfang der der K. I. zu vermitteln, ist ja genauso die
+Sache, die wissen dann schon eher so: "Uh, da hat jetzt der Kunde, ich sag mal."
+Ich weiß, das haben wir glaub ich auch noch so hinterlegt. Das macht man ja auch in selben Fällen. Man hat, ich sag mal, der Klassiker. Man hat halt seine Bestellvorlaufzeiten.
+Von 6 Wochen, ja. Wenn der Kunde aber meint, jetzt eine Millionen Trails in in 6 Wochen zu, das krieg ich nicht hin. Passt auch nicht von dem. Also, man ist immer noch so ein gewisses Zusammenspiel mit mit wo man abklären muss.
+Hier Produktionsplanung, wie schaut's aus? Sie haben hier deutlich mehr bestellt. Kriegst du das überhaupt hin oder Material kommt, kommt 'ne Woche später. Schaffst du das überhaupt dann noch bis zum Liefertenden? Ne, das sind Sachen, die müssen dann. Der soll ja erst mal nur Vorschläge machen. Ja. Danach müssen sie immer noch gucken, ob es Sinn macht oder nicht,
+So und um jetzt den Prozess einmal kurz abzurunden, jetzt wollt ihr in dem Sinne unabhängig, wie wir jetzt bestätigen, wollte der Montageauftrag angelegt. Das heißt jetzt hat auch natürlich der durch den Kundenauftrag
+sieht natürlich auch der in der Montage. Jetzt, wenn er immer seine Auswertung, was muss ich bis einschließlich Liefertermin 19.6. liefern, dann irgendwann taucht ja dann auch die Position mit auf, dass er damit planen kann und gleichzeitig wurde natürlich jetzt auch die Produktion.
+Für das Nulleinser-Teil ausgelöst. So, und da haben wir dann natürlich bei uns unser sogenanntes MES-System. Das ist aktuell so aufgebaut, dass alle 15 Minuten.
+immer wieder die Informationen vom Produktionsauftrag übertragen werden, hinsichtlich welche Menge ich hab und was der Wunschliefertermin ist. Ich glaub Mengenänderung, ja, ich glaub, wenn man in der Stückliste Stücklisten werden, glaub ich, nur alle
+12 Stunden immer übertragen, weil sonst wird man ja natürlich irgendwann, wäre der Datentraffic ein bisschen zu hoch, wenn man dann meint, alle 15 Minuten, wer weiß was zu übertragen. So und ist dann sind wahrscheinlich, wenn ich jetzt auf Planung aktivieren gehe, müsste der wahrscheinlich schon vorhanden sein.
+Oben habe ich meinen Pool. Da tauchen die dann auf, die Aufträge, die neu angelegt worden sind, und die kann ich dann per Drag and Drop dann der jeweiligen Anlage dann zuordnen. So, jetzt gucken wir mal kurz, ja, alles.
+Nur ganz kurz, ist jetzt die Auftragsbestätigung schon, nee, weil sie jetzt quasi noch planen. Genau, gut, das machen sie ja hier erst mal manuell. So, gucken wir mal, haben wir den Auftrag, den wir angelegt haben,
+hier der letzte sein, da 9.7. sehe ich hier auch unten. Ich habe immer für mich den Termin drin. Warum ist der nur so klein? Weil sie wissen, weil quasi er schon weiß, 2300 Stück, es ist, es ist eine Schicht oder was? Ja, der wirkt jetzt hier klein, wobei es ein ganzer Tag, anderthalb Tage. Ja, also
+Klein ist, wenn wir über so etwas nicht sprechen. Nee, ich wollte nur sagen, im Sinne von, also warum ist der jetzt nur so klein, während andere größer sind? Ja, der rechnet schon Stückzahlen mit Taktzeit um. Ja, ja, der hat, der hat, aber es. Wir können das mal kurz hinnehmen, den verplanen.
+Werkzeug und Saft auf der F 17 würde ich den in dem Sinne machen. Dann würde ich jetzt schon mal für mich erstmal hier. Es ist natürlich ein Zusammenspiel aus mit was für einer Zykluszeit er quasi rechnet und natürlich dann auch abhängig von den Kavitäten.
+Ne, wenn das jetzt ein 4 Kavitäten Werkzeug wär, dann noch mal deutlich kleiner natürlich. Genau, das kann er ja aber vorher gar nicht wissen, ne, wo er oben in dem, doch oben wusste er das auch schon. Nee, aber ich meine, er, also ich meine, sie rein theoretisch, vielleicht ist es bei ihm gar nicht der Fall, aber ich kann ja theoretisch eine Maschine haben mit irgendwie 8 Kavitäten, eine mit 4.
+die beiden das gleiche Produkt produzieren, theoretisch, und je nachdem, auf welche Maschine ich ja diesen quasi dann diese Menge ziehe, desto lang dauert es dann vielleicht auch nicht der Fall. Also, wir haben jetzt so den konkreten Fall nicht, aber ich hab zum Beispiel bei einem Artikel.
+zum Beispiel 2 Werkzeuge, das alte und das neue, und die laufen zum Beispiel mit unterschiedlichen Zykluszeiten. Es ist aber in dem Sinn immer so konzipiert, dass eigentlich immer einer der, ich sag mal, der Hauptartikel ist und den nimmt er erst mal grundsätzlich als Basis.
+um um die Mengen zu kalkulieren. Wenn der natürlich zum Beispiel, wir haben ja jetzt viele Sachen auch neu. Hier sieht man zum Beispiel einen, das ist ein ganz neuer Artikel für mich, der kommt von von der Firma, die wir dazu gekauft haben, sondern der muss jetzt erst mal hier produziert werden.
+Da hab ich noch gar keine Informationen hinsichtlich. Deswegen hab ich keine Ressource bis dato oder Technologietabelle heißt es dann jetzt hier gepflegt und somit sagt er, ja, ich hab keine Daten, also dauer ich bis zum nimmer letzten Mal, bis ich dem jetzt die Daten verpasst hab und den dann verplane, dann.
+Würde sich dann auch entsprechend dann anpassen. Wie würde das hier angezeigt werden, wenn Sie jetzt für einen Auftrag, wenn Sie jetzt nicht nur für Design Unterbauteil produzieren müssen, sondern noch für ein anderes für denselben Auftrag? Also quasi, Sie haben 2 verschiedene Komponenten, die Sie jetzt produzieren müssen.
+Also, Sie haben ja nur eine Zeile pro Kundenauftrag, oder? 1 F77, was ist das? Also, da links, diese, diese, das ist, ist die, die Auftragsnummer, in dem Sie die Kundenauftragsnummer. Nee, das ist die Fertigungsauftragsnummer. Sie haben verschiedene Fertigungsaufträge. Ja, das stimmt, das wären ja dann 2 verschiedene Fertigungsaufträge für jede, für jedes.
+Teil ein eigener Fertigungsauftrag. Ja, wenn unterschiedliche Teile. Wir haben zum Beispiel, wo habe ich es, hatte ich doch jetzt noch.
+Einen Anblick gehabt.
+Außer Suche.
+Ich glaub, der wars.
+Hallo.
+Genau, hier sehen wir zum Beispiel, das ist eine Produktion, wo halt 2 unterschiedliche Artikel rausfallen. Das ist der Anschlag links und Anschlag rechts. Da hab ich quasi dann eine Artikelkombination verknüpft, so dass das System immer sagt, wenn ich einen verblendet.
+Hör mal, hier gibt es eine Kombination. Da fällt ein anderer Artikel noch mit raus. Aber wie wir sehen, hat natürlich jeder Artikel für sich eine eigene Auftragsnummer.
+Die aber die Auftragsnummer ist jetzt Fertigungsauftrag oder Fertigungsauftrag genau.
+Verstanden genau so und ja, hier drüber wird dann in dem Sinne dann die die Produktion dann auch gesteuert. Wie ist das mit mit sorry, es ist nur aus Interesse, wie ist das mit Rüstzeiten und so weiter? Also sie haben ja auf einer Maschine wahrscheinlich verschiedene Werkzeuge auch, die sie einbauen und ne?
+Und jetzt haben wir ja zwei verschiedene Werke, zwei verschiedene Produkte, zwei verschiedene Werkzeuge. Das müssen wir noch so ein bisschen einplanen hier, oder nicht? Es ist mit in dem Sinne drin hinterlegt. Das kann natürlich deutlich besser sein. Es sind jetzt in dem Sinne.
+Standardwerte, die auf Basis der Maschinengruppen sind, wobei da halt trotzdem große, teilweise doch schon Unterschiede gibt, weil ja, man kann jetzt Maschinengruppe 4 pauschal sagen, zweieinhalb Stunden, da liegt man vielleicht ganz gut, aber es wird definitiv Werkzeuge geben.
+Wo die die innerhalb von einer Stunde drauf haben, uns wird Werkzeug gegeben, wo die 4 Stunden halt einfach brauchen. Wir haben jetzt, nehmen wir einfach mal den hier. Wenn der voll ist, das hä, das sind die Gleichen, das bringt nichts, das ist ja keine Rüstung. Saug diesen Fuß auf, Spanntopf.
+So, und hier gucken wir mal, was hinterlegt ist.
+Der hat zum Beispiel nur 'ne Stunde hinterlegt. O. K. So. Wir sehen hier, hier sehen wir es deutlicher, weil da ist 'n großer Umbau. Das Grau, das Grau hinterlegte am Anfang, das ist in dem Sinne die größere. Hier haben wir 'n großen Umbau, ich glaub, der ist mit mit 6 Stunden, glaub ich, definiert. Und das macht er automatisch.
+Weil er checkt, dass dieser Artikel mit dem vorherigen nicht kombinierbar ist. Deswegen ist es ein anderes Werkzeug. Aber wenn er irgendwie merkt, das ist ja dasselbe Werkzeug, dann plant er den automatisch nicht ein, sozusagen genau.
+Okay, und Sie kriegen jetzt aus der Produktion irgendwie, was meinen Sie, alle 15 Minuten oder was? Ne, es werden es werden alle 15 Minuten werden immer alle offenen Produktionsaufträge vom ERP ins MES System.
+übertragen. Hinsichtlich . die tauchen dann hier oben auf. Genau. Und wird jetzt die, ich sag mal, die [Kollegin 1] oder die [Kollegin 2] oder auch ich jetzt diesen Auftrag, der oben zum Beispiel im Pool liegt, in irgendeiner Art und Weise mit Menge oder Termin bearbeiten?
+würde der nach 15 Minuten, würde der die Änderung da auch dann halt vollzogen haben. Und jetzt ist das ja dann ein reines Planungstool. Ja. Produktion kriegt also sieht wahrscheinlich auch diese Sicht. Ja, das ist jetzt natürlich, ja, so eine ähnliche Sicht ist jetzt natürlich meine Plantafel. Ja,
+und die Produktion hat in dem Sinne an jeder Anlage hat die quasi dieses Bild, das jetzt von der von der F8, wo sie dann ihre Daten haben, hinsichtlich Artikelnummer, Werkzeugnummer, Daten hinsichtlich Kavität. Wir haben hier unten die Zykluszeit,
+verstanden. Mit was es wirklich gerade läuft, das ist jetzt schon angepasst. Da steht natürlich am Anfang in der Regel das wirklich was soll und was kalkuliert ist. Sehen Sie dann, wenn ich jetzt wie, wenn ich jetzt bei der Maschine ein Problem hab? Ja. Sehen Sie das dann hier automatisch?
+Das tragen die dann an der Maschine direkt ein, oder wie? Alles, was nicht grün ist, ist nicht am Laufen. Ok, wir müssen jetzt Gelb, müssen wir ignorieren. Da oben, das sind alles Montagetische, die wir fertig nehmen. Aber wie wir jetzt hier zum Beispiel sehen, F1 steht auf Personal, muss jetzt gerüstet werden. Ist der Auftrag halt durch.
+F3 brauche ich gerade nicht, ist geplanter Stillstand. 4 läuft, 5 läuft, 6 steht gerade wegen Personal, die 7 steht mit Werkzeugschaden. Läuft. Und das meldet dann, wer auch immer welcher Mitarbeiter in der Maschine steht, der sagt dann irgendwie Schaden und dann taucht es bei Ihnen auf.
+Und dann wissen Sie ja eigentlich schon, da wird es irgendwie Verzug geben. Es ist ja, ja, hier ist jetzt blöde. Da haben Sie hat einer eine so schwere Palette auf mein Käbelchen gestellt. Deswegen ist die Verwendung da gerade gekappt. Das System ist eigentlich.
+Recht simpel. Er hat in dem Sinne eine Zykluszeit hinterlegt. Dann habe ich nochmal eine gewisse Karenz/Pufferzeit. Ich sag jetzt mal, hier habe ich denen nochmal 5 Sekunden gegeben und dann geht das System natürlich hin und sagt dann.
+Okay, jetzt sind 24 Sekunden vorbei. Dann sagt er irgendwann: 'Okay, jetzt ist auch meine meine Toleranz, meine Pufferzeit vorbei.' Und dann sagt er: 'Ich hab kein Signal bekommen, geh auf Störung.' Dann geht er auf undefinierte Störung rot, so dass dann auch so der Hinweis dann eventuell für die Jungs: 'Oh, hier steht was auf Rot, da krieg ich kein Signal.'
+Wenn ich schon an der Anlage selber die rote Ampel angegangen ist, so und dann muss natürlich von denen. Jetzt haben wir hier mal einen, der natürlich gut aussieht.
+muss natürlich dann von den Jungs das dann eingestellt werden, ne, das dann sehen wir dann. Hier oben haben wir wohl Maschinenschaden gehabt, Verschleiß, dann war es anscheinend behoben, dann wurde es auf Anfang gestellt. Dann sind wir in Produktion gegangen.
+Und jetzt haben wir hier quasi einen Farbwechsel gemacht und jetzt ist die Anlage wieder am Laufen. Das ist immer das Diagramm von den letzten 24 Stunden, da ist jetzt dann noch Wochenende. So und dahinter würde man theoretisch die Folgeaufträge sehen. Und so ist das dann an jeder Anlage.
+Quasi dran so, wenn die Produktion dann da müssen wir natürlich noch besser werden. Wenn die Produktion dann irgendwann durch ist, würden die Daten, die da drin stehen, als Basis genommen werden und dann
+Gucken wir mal.
+Ein Spritzguss da rein, 171, das ist der DE, den wir produzieren wollen. 233 3000er. Nee, die hat die 0 Einser Produktion. Die würde ich ja jetzt bei mir in der Produktion machen. So, und wenn die Produktion dann.
+irgendwann durch ist, dann würde die Produktion oder jetzt da in dem Fall ist es einfach, wenn die Produktion durch ist, weil es nur 2300 ist, das zum Beispiel bei einer vollen Palette in eben den Artikel, wo wir geguckt haben, wo wir über 40000 hatten,
+da ist eine Palette, 5000 noch was da, da werden natürlich, sobald die Palette voll ist, geht rüber, dann wird die dann gebucht. So und hier wird dann abgezogen, schon also quasi im Sinne von reserviert, dann von diesem Auftrag hier oder oder wie meinen Sie, es wird gebucht? Gebucht, das heißt jetzt, wenn wir jetzt hier die Produktion,
+Das ist ja die, die wir jetzt hier eingeplant haben. Wenn die jetzt erledigt, dann würden die Fertigwaren in die Verpackung gehen und die würden dann natürlich alle Gutteile buchen, ja. O.K. im System und würde natürlich dann abhängig von dem, was Sie an Gut und an Schlechtteilen gebucht haben.
+Wird dann natürlich entsprechend retrograd dann die Materialien dann abgebucht, ja.
+So, und somit wäre dann der Bestand dann zugebucht an 0 Einser Teile, wo draufhin dann der [Monteur] aus der Montage dann auch mit der Montage dann starten könnte. Sobald alles da ist. Genau. Und bei bei ihm wäre dann auch wieder dasselbe Schema, wenn er dann natürlich fertig montiert hat.
+Buch dir die Gutteile an, die dann wiederum dann bei sich in der Stückliste dann wieder retrograd dann hingehen und dann die Materialien dann abziehen. OK.
+Jetzt versuche ich noch gerade, was ist denn das da links? Da sind andere Artikel, ne? Das ist ja, ne, das ist jetzt, ach, das ist der Tray, das sind jetzt nochmal die Subkomponenten. Genau das, das wäre jetzt quasi die Produktion, die ich durchführen müsste von der Hauptkomponente. So, und der hat natürlich jetzt das Subkomponenten.
+Der hat jetzt dann natürlich die ganzen Materialien, der hat 2 unterschiedliche, ja, Kunststoffe. Dann hat er noch ein, ja, das ist so ein bisschen, ist Kunst kostengünstiger. Man könnte jetzt auch einfach Pong GK 10 kaufen. Nein, wir machen Pong GK 30 mit Pong Natur, so ein bisschen Michi Michi.
+Und dann kommt da noch ein Bett rein, damit der schön grau ist. Sonst hat man einen weißen Trail. Ja, und dann halt. Und wie ist das jetzt also?
+Umm.
+Das müssen Sie ja auch noch prüfen, ob. Also ich meine, ich nehme an, Granulat ist eigentlich immer da. Also das hat man wahrscheinlich immer auf Lager, aber ich meine, Sie müssen ja rein theoretisch O. K., aber ich meine, Sie müssen ja rein theoretisch jetzt auch für die Produktion eigentlich hier gucken, ob alles da ist, ne.
+Das machen Sie dann, weil jetzt nur vor, also wie wir jetzt vorgegangen sind. Wir hatten jetzt quasi das einzige Feld für die Auftragsbestätigung, was noch offen ist, ist ja quasi die Liefertermin. So, jetzt sagen Sie, bevor ich jetzt Liefertermin ja ausfüllen kann oder so, muss ich natürlich erst mal gucken, wann kann ich das Ding eigentlich einplanen.
+Aber ich muss ja auch schauen, das hatten wir jetzt nun gerade nicht gemacht. Auch hier gucken, ob ich das alles da habe. Das haben sie jetzt nicht gemacht, weil sie wussten, sie sind alles da, aber rein theoretisch. Aber das hat sie ja, eher gesagt, ich, ich, ich weiß, dass es, nee, das war vor 10 Jahren, nee, da weiß ich.
+Da haben wir die Sachen frei. Das äh, ja, aber wir müssen hier trotzdem sonst hier ganz normal hier das POM C90, da waren wir eben schon drin gewesen. Bei dem anderen, da müssen wir halt, muss ich mit dem Herrn Decker sprechen, dass wir da neu bestellen. Aber trotzdem muss jedes durchgegangen werden. Hier sehen wir natürlich okay.
+Es kommen.
+Angeblich heute soll sogar was kommen. Ja, aber selbst ohne die Anlieferung sehen wir Hammer. Wer macht das, diese Prüfung hier? Also im Sinne von prüfen, ob halt alles da ist im Lager und so weiter. Das machen Sie? Nein. Oder das machen die Kolleginnen, die die auf. Also ich, ich würd ja den
+Den Auftrag jetzt nicht anlegen. Man muss natürlich bei der Geschichte prüfen, aber es ist natürlich ja.
+Suck my.
+Man vergisst, es muss natürlich auch ab und zu mal so einfach auch mal reingeschaut werden. Passt das noch alles? Weil Fakt ist, sehr, sehr gutes Beispiel. Ich hab jetzt nämlich aktuell die.
+M17 habe ich gerade stehen, weil ich kein Material habe.
+Um.
+So, da, da, na klar, das ist dann irgendwann, wobei das haben sie noch nicht richtig gerade gezogen.
+Wahrscheinlich müssen Sie noch etwas buchen.
+Hier ist die Sache, da haben sie mir gestern, was heißt gestern, letzte Woche, ich war Freitag auch nicht da, haben sie eine Inventurbuchung gemacht. Die haben 1,725 Tonnen rausgebucht. So, ja, dann braucht man sich da nicht wundern.
+So, und da ist dann natürlich so der Punkt, wenn das, wenn einer sowas dann korrigiert, wäre natürlich richtig geil, wenn das System dann selber dann auch oder der KI, also hör mal, hier irgendeiner meinte hier gerade was auszusuchen. Jetzt seid ihr hier.
+In der Fritten, ja okay, hier hätte man jetzt auch hat jeder sofort gemerkt, weil die Produktion halt einfach zum zum Stehen gekommen ist und dann erst die Korrekturbuchung gemacht worden ist. Aber also rein theoretisch, wenn man quasi in okay, aber das.
+Das ist ja quasi, das ist ja noch mal ein anderer Agent, weil das ist ja quasi ein Agent, der Lager, Lagerbewegungen von Materialien und so weiter quasi überwacht und sobald ich irgendwie Abgänge habe, immer direkt guckt, gibt's irgendwelche Produktionsaufträge, die dadurch jetzt quasi keine Mengen mehr haben oder so. Das ist ja.
+Noch mal was anderes, ja. Ist ist vielleicht jetzt ein bisschen bisschen zu weit abgeschweift. Wäre aber interessant für mich. Ich hab mir das natürlich angeguckt und hab natürlich dann, müssen wir hier oben die Lagerbestellung reinnehmen.
+Wir sehen, was hier das Fehler, was der Fehler war, der hier gemacht worden ist, und zwar.
+Genau hier unten. So, hier ist der Sachverhalt, nämlich folgender: Das war am besten hier die Daten.
+So.
+Genau, 13.3. ist jetzt dann also gute 10 Wochen her. Vor zweieinhalb Monaten hatten wir produziert. Und anscheinend ist man dann, oder wobei es sogar noch einen Tick länger war, sogar hier oben haben wir 9.2., also 3 Monate.
+Vor 3 Monaten haben wir produziert und die Materialversorgung hat die Bestände hier angepasst. Anscheinend haben die sich so richtig verkloppt. Am Ende des Tages haben die hier, wenn man es genau durchrechnet, haben die knapp 1,68 Tonnen. Also nahezu die Menge, die wir jetzt
+Subprise nicht mehr gefunden habe, haben sie da fälschlicherweise eingebucht. Und eingebucht im Sinne von, also sie haben es quasi verwendet? Nee, die haben es zugebucht, da hat dann einer gesagt, wir haben das, aber gibt es wirklich. Hier stehen noch 3 Tonnen.
+Und hab die dann so eingebaut, dass 3 Tonnen im System sind, aber es waren nur 1,3 Tonnen, so wie wir, wo ich dann sage.
+für für so eine K.I. oder so wäre es doch das Leichteste eigentlich bei bei so einer Buchung zu sagen, hör mal, das geht nicht, das geht nicht, du buchst, du willst hier Mengen einbuchen, die wir in der ganzen Historie niemals, niemals hätten.
+jetzt da haben wir, entweder passen deine Stücke, weil, ah, O. K., also ich weiß, was ich meine, aber ich meine, also die, dass man sie, diese 27, die da angebucht wurden, so in denen da ist, das stimmt, wo das System sagt, dann, hör mal, in Summe hast du.
+in deiner ganzen Karriere hast du 50 Tonnen bekommen und hast einen Verbrauch von von 49.500 gehabt. Du kannst nicht, vielleicht waren 278 gemeint oder so, ne, wer weiß. O. K., aber verstanden, ja, ja, also es ist auf jeden Fall so klar, aber das wäre natürlich noch mal was anderes.
+Ich ich, ich versuch nur gerade noch mal drauf zurückzukommen.
+M.
+Das sind ja also welche Checks quasi alle gemacht werden heute und ich versuch da noch so ein bisschen gerade selber schon im Kopf zu entscheiden, was man davon jetzt im ersten Wurf mal macht. Also wir waren ja jetzt quasi Auftrag, also Artikelnummer identifizieren, Preise raussuchen und so weiter, dann Montage, wenn man merkt, Fehlmenge nicht genug auf Lager von diesem Fertigprodukt.
+dann Montage Auftrag anlegen, dann wird ja direkt schon automatisch für Teile, wo ich quasi nichts auf Lager habe, Produktionsauftrag erstellt und so weiter und so fort. So dann muss ich da durch alle meine Subkomponenten durchgehen und gucken, überfahre ich in der Zukunft irgendwelche Mengen, also andere Aufträge, weil
+dann für diese anderen Aufträge keine Mengen mehr verfügbar sind. So, und dann haben Sie jetzt aber gerade noch gesagt, für die Teile, für die jetzt ein Produktionsauftrag nötig ist, muss ich ja jetzt auch noch vorher.
+oder dann dann also dann für diese Produktionsaufträge auch wieder meine nötigen Materialbestände checken. Ja, das macht OK, das machen dann auch die Kolleginnen aus aus der Sachverarbeitung. OK,
+Und die gehen dann eigentlich genauso durch, wie wir es gerade vorher gemacht haben, wenn sie darauf zurückgehen. Also sie machen es quasi auch so, dass sie dann dadurch theoretisch jeder einzelne Ja, ich gehe eben noch mal über den Auftrag rein, dass wir das dann
+20
+Ja.
+So, dann sehen wir hier diese 5 Subkomponenten. Ja, für einen haben wir einen Produktionsauftrag erstellt, nämlich für den Tray. Genau, und für den müssten wir doch dann jetzt quasi die nötigen Materialien checken. Wie würden wir das machen? Die würden jetzt natürlich genauso hier reingehen. Wir haben jetzt natürlich den Auftrag erzeugt.
+Lagerstandsinfocenter. Dann werden Sie sich dafür die Produktion angucken und werden dann genauso. Sechs Positionen, also Sub-Sub-Positionen quasi und muss jetzt auch wieder.
+Hier durchgehen, ja.
+Aber eigentlich doch auch hier nur wieder nach der gleichen Logik.
+Überfahre ich irgendwann in der Zukunft einen anderen Auftrag oder nach mit oder wo was prüfe ich hier jetzt konkret? Also was, was muss ich jetzt hier bei jeder Position prüfen? Hier, hier muss jetzt geprüft werden, ob ich überall jetzt noch genügend Materialien hab oder ob jetzt halt.
+Materialien bestellt werden müssen. Ne, da gibt's ja wieder die 2 Fälle wahrscheinlich. Entweder es ist heute schon gar kein Material mehr da oder es gibt für einen anderen Auftrag in der Zukunft kein Material mehr, wenn ich jetzt meinen, wenn ich jetzt diesen hier einplane. So wie wir es ja gerade bei den 7 hatten, glaube ich, oder? Theoretisch gibt's diese beiden Fälle ja, ne.
+Oder ich hab halt genug Material. So, wenn ich genug Material hab, dann seh ich, wie seh ich das, dass ich genug Material habe. Das seh ich in dem Material. Also in erster Indikator ist natürlich immer, wenn wenn der Lagerbestand
+jetzt schon höher ist als der geplante Abgang, dann weiß man in der Regel safe. Wenn es dann natürlich dann Unterschiede dann wiederum gibt, dann dann sollte man sich das natürlich mal angucken, was da Sache ist. Aber hier haben wir ja schon gesehen, da muss auf jeden Fall neu bestellt werden.
+Woran seh ich das jetzt noch mal? Hier sind wir ja im Minus. Ja, ja, ja, ja, ja, ja, ja, genau, die Zahl seh ich ja hier unten auch. Ja, nur beim anderen hatten wir natürlich das Thema, dass ja da schon was in die Zukunft ein zugebucht wurde als Zugang.
+Genau, dass ich dann da oben fiktiv bei 0 bin. Ja, aber ich muss nämlich wissen, ob ich zwischenzeitlich irgendwann mal negativ werde. O. K., verstanden. So, dann muss ich da diese ganzen Zugänge, Abgänge, die geplant sind, halt mir anschauen und sobald ich negativ werde, müsste ich dann die Hand heben.
+O. K., den Fall hab ich verstanden. Können wir noch mal zurückgehen? Wenn ich jetzt hier sehe, Lagerbestand in der Zukunft ist ist eh größer, passt, ist der Lagerbestand ist eh größer als das, was jetzt an Abgängen geplant ist, passt.
+So, dann hab ich jetzt hier 0. Ich hab jetzt hier einen, die Clapbox Grau, also ein, das ist eine Sub-Subkomponente, bei der ich heute kein Lagerbestand hab. Da hab ich dann den gleichen Fall. Da muss ich jetzt auch wieder die Hand heben und sagen, da fehlt mir was.
+Ja, OK.
+Da müsste die Hand gehoben werden und gesagt: "Das sehe ich ja, weil hier alles rot ist, hier alles negativ."
+Eigentlich muss er da die Hand heben, muss er haben, fehlt. Können Sie die nochmal öffnen? Da sehe ich, das sind jetzt alles einzelne, nur nochmal zum Verständnis.
+Das sind alles so Aufträge, ne, oder oder also das, das sind alles Aufträge, kommen da, gibt es natürlich Unterschiede. Hier in Maschinengruppe sehen wir, da sind halt Spritzgussaufträge.
+Das hier ist zum Beispiel ein Auftrag aus der Montage, Temperbehandlung. Wir müssen bei der Montage müssen wir zum Beispiel auch bedenken, ja, wir haben zum Glück vielleicht jetzt nicht mehr diesen Komponententräger, sondern endlos Baugruppe, aber es gibt trotzdem immer noch Baugruppen, die mehrere Schritte haben.
+nicht nur, nicht nur diesen einen Schritt, wie beim Trail, wo wir Montageauftrag haben und der hat ein paar Spritzgussteile und ein paar Zugkopfteile. Es gibt dann auch wirklich, wir haben Spritzgussteil, das wird dann erst ein 08er Teil, weil das getempert wird und vom 08er Teil wird es ein 09er.
+Teil, weil es dann irgendwo mit der Lasermaschine noch bearbeitet wird oder also es kann auf jeden Fall sein, dass der mehrere Schritte nach unten gehen muss. O. K., aber quasi meine, er ist aber immer wieder dasselbe. Das heißt, wir haben den Verkaufsartikel, der hat 'ne Stückliste. Ja.
+So, da muss er prüfen. Ist da, ist nicht da. So, OK, muss eine Produktion her. So, und bei dem ist dann auch wieder der, hatte dann auch wieder ein Teil drinne. So, und da muss er dann auch wieder prüfen. Ist da, ist nicht da, musst du produzieren, musst du bestellen. So muss der immer weiter.
+Erkenn ich das also an irgendwas? Also ich meine, 01 ist ja immer Spritzgussteil, da hab ich ja nichts drunter. Nein, so. 05 war ist ein Zuckkaufteil, da hab ich auch nichts drunter. Sonst hab ich eigentlich nur 20er. Nein, oder?
+Uh.
+Jetzt mal gucken, ob ich da jetzt auch easy drauf komme. Ja, also ich habe nicht nur 20er, sondern habe ich auch noch. Nein, weil sie gerade meinen, natürlich 0809. Und die Frage ist, wie also?
+Wie dann diese Hierarchie ist, ja.
+Ja.
+Ich weiß, dass die Furche.
+Ich glaube, da hat irgendeiner mal drumgefuchtelt, dass ich da nicht.
+Mhm.
+Hi.
+Ja, warte. Hol mich doch mal kurz.
+Handy
+Ja.
+Ja.
+So, guck mal das mal.
+Anders also.
+Wenn ich jetzt gerade den Zettel nicht kriege.
+So, hier haben wir in dem Sinne die Nomenklatur von uns. Wie wir sehen, 01 sind die Spritzgussteile, 02 sind halt Einlegeteile. Einlegeteile können Sie sich so vorstellen.
+Hier gibt es 07 Artikel, ein spritzeres Teil mit Einlegeteil. Hab ich hier eventuell. Also 07 würde dann bestehen aus 01 und 02. Nein, ach so, nein. 00 [Produktionsleiter], kannst du mal eben ans Telefon kommen?
+Ja.
+So, alles so.
+Ich wollte hier kurz schauen. Haben wir hier ein gutes Beispiel dafür. Zehn Grad nicht, vielleicht in der Vitrine.
+Das ist jetzt vielleicht nicht das beste Beispiel, aber dann so. Also 07 heißt immer, wir haben ein Zukaufteil, wie hier jetzt diese Stäbe. Das können Muttern oder Schrauben sein. die Wir haben das Werkzeug in der Maschine, Werkzeug geht auf.
+Der Maschinenbediener macht Tür auf und legt die Teile ein und die werden dann umspritzen. Deswegen ist dann ein 0 Siebener Teil und das darf halt immer von 0 Einser Teil wie gesagt, wir haben noch 0 Dreier, das ist ein Schlauchteil, ist sehr sehr sporadisch.
+04er ist dann halt, wenn wir da irgendwo Nacharbeit haben, die Fünfer Sachen sind die Zukaufteile. 0 Achter genau, das ist halt konditionieren, tampern, 09 ist dann halt lasern oder kann wahlweise auch bedrucken sein. 20er sind die
+Baugruppen, was wir jetzt gerade gemacht haben. Es gibt aber auch zum Beispiel Einundzwanziger. Das ist dann die.
+Baugruppe an der Anlage kann dann sein, dass dann im Nachgang die zum Beispiel haben.
+da unten, was so schräg hoch ist, das kommt raus und dann danach müssen dann noch Bügel da rein gemacht werden. Das passiert direkt am Band und nicht in der Montage. Das heißt, das läuft dann immer über die einundzwanziger Nummer. Ja, O. K., wir haben jetzt grundsätzlich verstanden, mir geht es vor allem eigentlich nur darum, nach der Logik her.
+Auf was ich sozusagen.
+Wenn wir halt, also ich will nur ein bisschen verstehen, wenn ich hier im ERP System bin und ich geh jetzt, fang jetzt nochmal von vorne an. Quasi, ich bin beim Verkaufsartikel und das ist ja ein 20er. So, und dann hab ich da irgendwie 5 Komponenten dadrunter. Ich hab nur Einser, ich hab nur Fünfer, ich hab noch ein Zugaufteil, wie auch immer. Also, oder genau so.
+Und dann.
+Ähm.
+Geh ich ja die Ebene bei, also bei den Teilen, wo ich produziere, wo ich einen Produktionsauftrag angelegt habe, oder also bei den Bauteilen, wo ich produzieren muss, muss ich ja dann die Ebene tiefer gehen und wieder prüfen.
+Habe ich da alles? Ja, und dann bei denen, wo ich eventuell wieder produzieren muss, weil ich irgendwie noch mal eine Ebene tiefer gehen muss, muss ich dann auch wieder prüfen. Habe ich dafür alles da? Genau, und ich will nur verstehen.
+Woher weiß ich sozusagen, bei welchen Teilen ich eben überhaupt tiefer gehen kann in Hierarchie, weil sozusagen ich dann checken muss, weil ich da sozusagen checken muss oder um dann eben zu checken, hab ich dafür alles verfügbare Material bestellt, wissen Sie wo ich hin will, also.
+Wenn wir nochmal kurz auf diese Übersicht, die wir gerade uns angeschaut haben, gehen, genau hier. So, das ist jetzt alles, was ich brauche, um dieses Teil, diese 2300 Stück von diesem Teil, was wir da produzieren wollen, zu produzieren. Und jetzt hab ich hier
+Also, ich hab ja gar keine IDs, ok.
+Weil ich hier gar keine.
+Wie, doch klar, die laufen. Ah, wo hab ich meine North Star? Also überall, wir haben ja hier diese Produktions ID. Die ist ja nur dafür da und wir würden jetzt auch zum Beispiel hier beim Batch, dass die 716 am Ende.
+Wo haben wir sie da, die 716er Männer? Das ist jetzt zum Beispiel der Auftrag. Ja, das ist der Bedarf von dem Batch für diesen Auftrag quasi. Nein, was ich, worauf ich hinauswollte, ist, wenn Sie noch mal kurz zurückgehen.
+Es könnte doch sein, dass 1 von diesen subsubteilen ja ein.
+Spritzguss mit Einlegeteil ist, theoretisch, weil ich sozusagen, weil meine Subsubkomponente nicht ein Spritzgussteil ist, sondern eben 'ne Baugruppe. Also ich kann ja irgendwie 'ne finale Baugruppe haben, mein Verkaufsartikel und da drin eine Subkomponente ist 'ne Baugruppe.
+dann besteht die auch wieder aus Subkomponenten, wo ich ja dann auch wieder eventuell das unterteilen muss in Spritzkristallzucker, Teil und so weiter. Das ist ja das, was Sie vorhin gesagt haben, dass ich ja theoretisch auch genau 5 eben tiefer gehen kann, rein theoretisch in der Komponententräger wäre es der Fall gewesen. Das Hauptbaugruppe hat die.
+können wir eigentlich mal. Ja, das vielleicht können wir uns das einmal anschauen, weil ich nur verstehen will, ist das dann immer, ich hab 'ne 20er, das ist ja 'ne Baugruppe, Baugruppe, ne. Und wenn ich da drunter 3 Baugruppen habe, die dieses, diese finale Baugruppe erstellen, sind das dann auch wieder 20er Teile. Können sein, kann aber auch anderes, anderes sein. Es kann sein, dass
+Das wir beim Komponententräger hatten, also es kann sein, dass dann wirklich andere 20er Baugruppen darunter sind. Es kann aber auch sein, dass das dann runter geht in den Nullachter oder sowohl als auch Nullachter, ja nochmal tampern und behandeln. Ja, ja, OK, also das, aber mir ging es nur darum, wenn es eine Baugruppe ist.
+dann wär es 'ne 20er. Wenn es aber jetzt irgendwie 'nen Laserteil, Tamperteil ist, ist es natürlich 'ne andere I. D., das ist mir schon klar. Wenn es einfach 'n Spritzgussteil ist, ist es ja einfach 'ne 01. Ich mein nur sagen, also ich kann theoretisch ja, ja, 335 mal runtergehen in 'ne 20er Baugruppe, also 20er Teil.
+Ja, ja, schon, weil es heißt ja, es ist ja immer die Frage, was gemacht wird. Die 20er Baugruppe heißt einfach nur, dass der Arbeitsvorgang drüben in der Montage stattfindet. Das sagt es einfach aus, das okay, worum es mir halt ging, ist.
+Ich muss ja.
+Beim Spritzgussteil muss ich die Ebene tiefer gehen und dann gucken, hab ich genug Granulat, hab ich genug Batch und so weiter und so fort. Da werd ich aber nicht noch ne Ebene tiefer gehen, weil ich ja, weil das ja schon einzelne, ich hab hier keine, hier ist ja keine Baugruppe dabei beim Spritzgussteil.
+Beim Nulleinser Teil kann ich doch jetzt keine, keine Baugruppe da drunter, also kein, genau das meinte ich. Nein, aber man, man, also was ich damit sagen will, man, man kann jetzt nicht pauschal sagen, sobald das System irgendwo registriert, jetzt bin ich beim Nulleinser Teil jetzt.
+Brauch ich nur noch davon die Materialien, dann geht's nicht tiefer. Es kann ja trotzdem sein, dass dass wir eine Baugruppe haben, wo 0 1er Teile drin sind, aber wo auch nochmal eine Baugruppe drin sind. Also dann darf er ja nicht dann Cut. Aber das ist ja auf derselben Ebene wie das 0 1er Teil. Ich kann ja nicht innerhalb eines 0 1er Teils ne Baugruppe haben, da drunter.
+Ja, ja, das meinte ich damit. Mir ging es nur darum, in welche Teile.
+Geh ich rein, um dann zu schauen, wo ich produzieren muss dafür, für diese, für die diese Bauteile da drunter. Also, ist es immer nur bei den 20er Teilen, weil ich hab ja auch noch andere Baugruppen Codes hatten die ja gerade gezeigt. Ich hab ja nicht nur 20er, sondern Einundzwanziger ist ja auch quasi 'n Bau, also.
+Hier geht's nur darum, auch oder vielleicht, wenn wenn Sie jetzt da durchgehen würden und Sie sehen irgendwie, ich hab 20er Teil, ich hab vielleicht ein 21er Teil, ich hab vielleicht irgendwie noch ein einer Teil, Nulleinser Teil, dann wissen Sie ja, dass Sie beim 20er und 21er tiefer gehen müssen und eventuell für ein paar von den unter
+Komponenten produzieren müssen. Eventuell beim Nulleinser werden sie ja auch tiefer gehen, aber sie wissen, sie werden da jetzt nirgendwo produzieren müssen, weil das ist ja das ist ja nur Granulatbett und so weiter.
+Und wird dann quasi für ne Sub, also wenn ich jetzt mein Verkaufsteil ist ne 20er Teil ja und ich hab da drunter jetzt.
+2 20er Teile als Subkomponente, Subbaugruppen. Wird, wenn ich jetzt nichts auf Lager habe von dem Verkaufsteil und Montageauftrag anlege, wird dann automatisch auch der Montageauftrag für diese beiden Subbaugruppen angelegt? Der würde komplett runtergehen. Runtergehen. Und das heißt auch überall, wo ich nichts auf Lager
+Lager habe, wird hier automatisch für 0 Einser Teile die Produktion auslösen. Und da, wo ich aber, und da kommen wir jetzt in die Schwierigkeit, ja auch wahrscheinlich für Sie, da, wo ich jetzt irgendwann in der Zukunft irgendwie einen anderen Auftrag überfahre, checkt er das ja nicht, sondern das muss ich manuell checken.
+müssen sie ja bei jedem, bei jeder Baugruppe, egal wie komplex sie ist, sich ja eigentlich durch jedes einzelne Subteil durchklicken und gucken, ob gucken, ob da irgendwas problematisch ist. Und das ist das Nervige, wahrscheinlich. Also der.
+Ich sag mal, der der Auftrag vom klassisches Spritzgussteil, auch so ein popeliger kleiner Ring, am besten Pump C90 21 am besten noch auf auf auf Lager. Das ist eine Sache, da das machen die Mädels in 30 Sekunden, da da da.
+Da würde ich sagen, da brauchst du dann nur KI. Da sind die wahrscheinlich noch schneller mit. Aber dann so dieses Beispiel der Komponententräger da oben, da ist das sogar oben rechts die Bar.
+Yeah, yeah, it's had.
+Genau, und alles, das ist quasi das Hauptspitzteil. Aber dann gibt es dann, das ist hier eine Baugruppe für sich, dann noch mal da drin und das ist eine eigene Unterbaugruppe mit den ganzen Schrauben und. Und darum geht es eigentlich vor allem. Und so ein Auftrag.
+Der ein Auftrag, den anlegen, alles durchzuschauen und durch zu über eine halbe Stunde dran.
+Weil wie gesagt, also ich glaube in in dem in der Baugruppe sind am Ende des Tages sind glaube ich über über 50 Komponenten drin.
+So, wovon dann natürlich irgendwo dann 35 Komponenten irgendwelche Zugaufteile sind.
+Was da aber besser ist oder Material und so weiter in in in dem Fall ist es ist es halt.
+Wìrd ich sagen, macht es schwieriger, weil
+Man muss ja dann immer mit mit mit anderen Firmen, ja dann, ich sag mal, bei dem Granulat ist das immer ein bisschen einfacher. Oftmals ist es dann, ich sag mal, auch Material, was man für viele Sachen einsetzt. Da sind es ja dann immer oftmals produktspezifische Sachen.
+Wir bestellen nur diesen Motor für dieses Produkt, nur dieses Blech für dieses Produkt. Und wenn ich jetzt 35 Zukaufteile habe und bei allen fehlt mir was, wird dann quasi, werden die Kollegen aus dem Innendienst quasi bei den Lieferanten die Bestellung auslösen.
+Oder wer macht dann den Einkauf dafür?
+Also, ich meine, ich hab jetzt irgendwie 50 Komponenten und 35 Teile davon sind Zugaufteile oder wie viel auch immer. Und mir fehlt jetzt Mengen dafür. Ich hab jetzt nicht genug Mengen, da muss ich ja bestellen. Wer macht diese Bestellung? Was machen die?
+Das heißt, die die [Kollegin 3] und [Kollegin 2] und so weiter. Genau, O. K. Das heißt, Sie müssen dann über System 'ne Bestellung, ja, geht dann direkt an Lieferanten. Genau, O. K., muss halt dann ausgefüllt werden und so weiter und so fort. Also, wenn man, wenn man Glück hat,
+Hat man dann gegebenenfalls, wie zum Beispiel hier bei dem Träger.
+Oder ich glaub auch, bei dem Filter sieht war, glaub ich, auch haben wir hier oben haben wir Rahmenbestellungen. Das ist dann eigentlich ziemlich easy. Da kann man mit einem Klick reingehen. Dann sagt er, hier, du hast noch 38.000 offen. Dann gibt man einfach, ich sag mal, auf gut, da ist nur noch die Menge ein und ruft sie ab. Alles andere ist vorgefertigt.
+Wenn man natürlich keinen Rahmen hat, muss man selber natürlich die Sachen ausfüllen, wie hinsichtlich Lieferantenname oder dann die Lieferantennummer, die Artikelnummer. Das muss man natürlich dann alles dann endlich dann wieder. Woher weiß ich, wie also gibt es so irgendwie so Mindestbestellmengen und so weiter? Palettenweise, die die sind.
+die sind eigentlich immer eingepflegt, haben wir dann immer über den Lieferanten, ob es jetzt dann die Anlage ist oder
+Wie hier dann bei Bückmann und dann sehen wir hier. Ja, deswegen auch 50.000 bestellt, Mindestbestellmenge 50.000, ne? Also, wäre es hier dann korrekt, wenn das System hingehen würde, dann sagen wir, du musst bestellen und hier ist deine fertige Bestellung für 50.000, weil
+die müssen bestellt werden. Genau und dann musst du, musst, musst du Mitarbeiter nur bestätigen. So. Tendenziell hat das System ja auch eigentlich hier auch schön direkt mit bei hinterlegt, was die offizielle Lieferzeit ist, so 10 Tage. Somit wüsste man ja eigentlich dann auch, wann der späteste Termin wär, wo es
+ankommen muss, damit alles noch gehalten werden kann. Aber das heißt, die machen wirklich dann für alle Komponenten in dem Produkt, also Verkaufsprodukt oder Verkaufsteil, für alle Komponenten diesen Drilldown, zu gucken, hab ich dafür genug da, muss ich produzieren und so weiter.
+Und wenn ich halt nicht genug da hab, dann muss ich halt bestellen.
+Oder wenn oder es ist halt schon was bestellt und es ist halt unterwegs, aber ich muss das halt checken und im Zweifel dann aber auch die Bestellung, dass ich dann quasi beim Lieferanten das Anfrage so.
+Ok, dann haben wir quasi Auftrag anlegen, das diesen Drilldown machen, um zu gucken, habe ich irgendwo Fehlmengen, die ich quasi ausgleichen muss. Dann lege ich einen Produktionsauftrag an, muss aber natürlich für diesen Produktionsauftrag.
+Gucken, ob ich dafür alle Materialien da habe. Wenn nicht, dann muss ich erstmal bestellen. Dann kann ich den ja auch gar nicht einplanen, oder? Aber ich muss erstmal, es muss ja erstmal das Granulat zum Beispiel kommen, wenn ich es jetzt nicht habe oder so. Wie hieß denn das? Wie wird denn das dann quasi einge einge.
+plant. Ja, wenn wir natürlich Materialien bestellen, dann muss es natürlich bestellt werden. Ich sehe den Auftrag, ich gehe natürlich auch proaktiv hin. Wenn ich meinen Auftrag verplane, gucke ich natürlich selber auch noch mal kurz nach. Was ist da Sache? Habe ich Materialien da? Wenn nicht, wann kommen die Materialien? Und dann sehe ich dann natürlich
+O. K., es kommt am so und so vielten, dann ist dann immer für mich noch die Frage, ist es schon bestätigt, dann ist es für mich eigentlich O. K., kann ich mit planen, es kommt am 16., also kann ich meine Produktion für den 17. eigentlich planen, wenn es nicht bestätigt ist, dann ist dann natürlich, muss ich dann eventuell selber noch mal einsteigen und nachhorchen, was ist jetzt Sache, kann ich damit
+Kann oder nicht, aber das heißt doch eigentlich, dass die Kolleginnen eigentlich ja.
+wenn sie Produktionsauftrag Produktionsauftrag erstellt wurde und irgendwo eine Menge fehlt und auch noch nicht bestellt oder so, diese Bestellung schon dann auslösen auch in dem Zeitpunkt, damit sie dann quasi, wenn sie den einplanen, sehen: 'OK, da wurde was bestellt, das kommt dann unter an.' Wahrscheinlich, wie viele Tage dauert das, bis vom Lieferant zurückkommt? Bis dahin liefern wir das euch.
+Auch ein paar Tage, dann auch. Ja, also in der Regel würde ich mal sagen, auch so fünf Werktage, drei bis fünf Werktage. Also, wenn Sie sehen, Produktionsauftrag gestern erstellt, dann warten Sie noch eine Woche, bevor Sie den einplanen, weil wenn also falls jetzt eine Menge fehlt, sag ich mal so.
+Man kennt natürlich seine Schweine am Gang, sagt man hier so sprichwörtlich. Bei ein paar weiß man einfach, da sollte man nochmal vielleicht nachgehen. So ein Mann kennt halt die anderen Lieferanten, wo man weiß, der hat mir das bestätigt für den Sinn. Also kann ich damit planen.
+O. K., verstanden. Aber das heißt, wir gehen dann von der Produktionsplanung, also wir gehen von diesem Drilldown und dem sicherstellen, dass wir für alles entsprechende Mengen entweder da haben, gerade in Produktion sind, noch geliefert werden oder eben
+Jetzt bestand bestellt werden, also dass ich wirklich meine.
+Nötigen Materialien oder Teile, Zugaufteile und so weiter und so fort, dass ich die absichere und irgendwie rechtzeitig, was heißt rechtzeitig, erstmal so schnell wie möglich bekomme und auf Basis von diesen ganzen Informationen, ja eigentlich, wann das letzte Teil reinkommt.
+Ja, wann das letzte Jahr produziert wird, also dann anhand dessen wird dann das Lieferdatum erstellt.
+Ja, OK. Wie genau? Also, wenn Sie jetzt quasi, Sie haben jetzt irgendwie so ein kompliziertes Teil mit 50 Komponenten.
+Was gucken Sie sich an, um dann dieses Lieferdatum zu erstellen?
+Das System kann ja eigentlich, ich denke mal, das wäre für den Anfang nicht verkehrt. Es sollte natürlich einfach hier mit den Daten arbeiten. Also sprich, es fängt an mit den Lieferanten, die natürlich irgendwo ihre Lieferzeiten.
+Versehen haben so und so geht das dann natürlich immer weiter. Wir haben hier unser 0 Einser Teil, wo er natürlich auch Daten hinterlegt hat. Ne, er hat ja jetzt hier einen Arbeitsplan.
+Ja, wo er natürlich sagt, hier 45 Sekunden, ein Stück. Also kann er sich natürlich auch dann errechnen, wie lange ich hier für die ganze Sache brauche. Und dasselbe haben wir ja dann auch für für alle anderen Geschichten, die.
+In Baugruppen können wir jetzt hier auch gucken. Hatte den hiermit eingepflegt, den hat sie nicht eingepflegt. Das ist wahrscheinlich, weil das so ein, das muss natürlich alles gepflegt sein, dass das System in dem Sinne von den Arbeitsstätten weiß, OK, für zweieinhalbtausend Trays brauche ich in der Montage.
+3 Arbeitstage für zweieinhalbtausend Trays in der Spritzgussfertigung brauche ich anderthalb Tage. Aber das ist ja nur Montage und Spritzguss. Ich habe jetzt bin ja auch abhängig davon, dass mein Granulat beispielsweise irgendwann auch mal ankommt, damit ich es verwenden kann, ne?
+Das heißt, ich kriege ja dann vielleicht vom Lieferanten irgendwie noch ein Lieferdatum. Das muss ich ja auch irgendwie, das ist ja so mein kritischer Faden. Aber hier, hier kann er ja dann auch beim Lieferanten. Wo war es jetzt?
+Genau.
+So, there the best down and.
+So, hab ich hier verschiedene, ja, jetzt hab ich meine Subkomponenten, ja. O. K. So, und jetzt zum Beispiel, wenn wir jetzt hier von dem Batch, er würde jetzt merken, O. K., ich hab gar kein Batch und ich müsste jetzt noch Batch bestellen. Bei der Klappbox hat man das eigentlich sogar. Ja. So, und jetzt würde er ja hier sehen, wenn er jetzt heute dann sagen würde,
+Und sagen wir hier Auftrag, du musst bestellen, dann wüsste er ja, alles klar, wir bestellen heute in 20 Tagen, das ist dann 5.12. 19.26. Nee, ich hab jetzt vom 29. ausgegangen, also 9 doch 29.
+Ja, würde das System für sich sagen: 'OK, wir würden das Material theoretisch am 29. bekommen können, wenn alles nach Plan läuft.' Dann muss man natürlich immer für am besten auf einen Tag Puffer. Das heißt, dann könnte das System für sich sagen: 'OK, am 30.
+Kann ich mit der Nulleinser Produktion theoretisch starten?
+braucht anderthalb Tage. Das heißt, ich wäre dann am 1.6. Leucht noch mal ein Tag Puffer und am 2.6. kann dann die Montage starten. Montage braucht für die Menge auch nochmal 5 Tage. Da sind wir dann am 3.6. 7.8.
+So aber wie planen Sie also wie wie machen planen Sie das also so, wie Sie es jetzt gerade im Kopf gemacht haben, machen Sie es heute ja?
+O. K., aber ich meine, bei 50 Komponenten müssen Sie ja den Überblick bewahren, wann welche, wie lange welche Komponente Lieferzeit hat und so oder welches Teil, was Sie zukaufen und so weiter, wie viel Lieferzeit das hat, wie viel. Also, wisst ihr, was ich meine? Das ist ja, das haben Sie heute im Kopf, ja.
+Ich sag mal, bei bei jetzt der Geschichte beim Komponententräger, der schon sehr extrem war, der aber auch sehr viel im Vorlauf war, das hat dazu geführt, dass wir eigentlich
+die Bestellungen in der Regel aus Asien getätigt haben auf Basis von Vorkassezahlungen und nicht tatsächlichen Kundenaufträgen. So, das hat oftmals natürlich dazu geführt, dass ich sag mal ab einem gewissen Zeitfenster der
+Konnten die nicht mehr sagen: 'Wir wollen jetzt noch Summe X früher.' Nein, das ist bestellt. Das ist auf dem Schiff. Das Schiff ist in 4 Wochen in Hamburg und in 6 Wochen haben wir die Ware hier. Da war man natürlich dann klar. Man konnte natürlich dann immer noch irgendwo was mit Fliegen machen oder sonst was, aber da war man, ich sag mal.
+Schon so ein bisschen in so ein gewisses Korsett halt einfach reingezwängt, weil wir halt mit Vorlaufzeiten von 16 bis 20 Wochen bestellen mussten. Ja, ich überlege gerade einfach, also wie das, wie man das, wie man das sinnvoll also.
+Ich versuch ja immer das, was das, was sie im Kopf machen, heute. Ja, muss man ja irgendwie dann halt übersetzen oder überführen in das, was dann ein Agent macht, sozusagen. Und das ist nicht immer ganz so einfach.
+einfach zu sagen, na ja, das was ich genau das so wie ich heute im Kopf arbeite, arbeitet der dann auch. Deswegen habe ich eben versucht zu verstehen, ganz konkret, wie Sie sich dann denken. Also ich glaube jetzt zum Beispiel in in diesem Fall hätten wir jetzt noch diese Baugruppe von dem Komponententräger.
+Würde das in der Regel bei Kundenaufträgen nicht dazu führen, dass das System dann sagen würde: 'Hör mal, du musst hier bestellen.' Da würde er sagen: 'Passt.' oder 'Deine Bestellung dafür kommt zu spät.' Du musst den schieben oder gucken, dass deine Bestellung früher ankommt.
+Da weißt du direkt, ach, das sind die Motoren, die sind auf dem Schiffen, die kommen in Rotterdam an. Da kann ich nichts dran machen, also muss ich meinen Grundauftrag geben. Ja, okay, das heißt also im Sinne von eher so, das ist mein Lieferdatum, das ist mein Zieldatum, kann ich das erreichen, weil ich sozusagen
+Kann ich das erreichen, weil ich alles verfügbar habe? Wenn ich irgendwas nicht verfügbar habe, wie lange dauert das alles jeweils? Und wenn ich jetzt alles bestelle, kommt das dann rechtzeitig an? Weil ich kenne ja meine Lieferzeiten, wenn nicht.
+Wann kommt das an und was bedeutet das für die für die nachgelagerten Schritte der Produktion, Montage und so weiter? Und dann kann ich dadurch ein neues Lieferdatum berechnen. Ja, okay, ja, ja.
+Ja, rein, ja, ja, rein theoretisch schon, schon, schon eigentlich mehr so, dann die so die Logik. Also eher kann ich das Lieferdatum erfüllen, weil entweder ich hab alles da, dann super.
+Obwohl, auch da muss ich mich ja fragen, also.
+Nur weil ich alles da habe, kann ich das Lieferdatum immer erfüllen.
+Ich meine, wenn ich komplett ausgelastet bin auf meinen Maschinen, habe ich theoretisch auch eventuell ein Problem. Aber das können nur Sie dann sagen, indem Sie halt sagen: 'Na ja, ich kann nur bis da produzieren.' Aber da meine ich halt, da kommen wir eben an diese Schnittstelle von Informationen, die nur Sie haben, nämlich aus der Produktionsplanung und Informationen.
+Die, also klar, die kann man sich hier so ein bisschen berechnen. Wann kommt mein Produkt, was ich also wann kommt irgendwie ein Teil, was ich jetzt bestellen muss und so?
+Ich hab jetzt irgendwie im ersten Schritt nur eher so das Gefühl, dass man eigentlich, weil ich versuch so ein bisschen pragmatisch zu sein für den ersten Wurf, für die erste Version von dem Agenten, dass es eigentlich eher so ist, wir können diesen Drilldown machen, also überall reingehen bis zur tiefsten Ebene, die möglich ist, und gucken.
+Haben wir Lager oder nicht? Also haben wir Bestand oder nicht oder wie auch immer. Und da, wo ich halt Probleme bekomme, ähm.
+Da muss ich sozusagen die Hand heben.
+Und dann müssen Sie, wie gesagt, in der ersten Version halt dann in diese ganzen Positionen reingehen und sagen: 'Ja, OK, da bestell ich, da bestell ich nicht so, wie Sie es halt heute ja auch machen.' Ne, im zweiten Schritt könnte man dann sagen.
+Der Agent schlägt dann also in der zweiten Version kann man sagen, O. K., der Agent schlägt dann sozusagen die Bestellung vor. Er sagt halt hier so und so viel sollten wir da und dafür bestellen. Also das sind meine 10 Positionen, wo irgendwie Lagerbestand kritisch wird, wenn ich das jetzt so mache, wie wie es hier gewollt ist. Das sind die Bestellung, die ich jetzt auslösen würde. Passt das für dich? Geht auch kurz durch und dann werden die rausgeschickt. Aber dann auch danach müssten sie
+Die quasi immer noch gucken, ja, was heißt das denn dann jetzt für mein Lieferdatum? Also, so wie sie heute manuell durchgehen, oder ich meine, die Kollegen gehen ja auch manuell durch und sagen: 'Na ja, das ist kritisch. Das ist nicht, ja gut, das ist kritisch. Bis wann kommt das? Hm, ja, passt trotzdem noch.' oder 'Hm, kann ich irgendwie nicht machen. Muss ich jetzt 2 Wochen draufrechnen oder so.'
+Und in der dritten Version.
+Kann man dann theoretisch vielleicht ja genau, dann kann man überlegen, OK, auf Basis dieser gesamten Informationen.
+Kann ich jetzt keine Ergänzung Lieferdatum vorschlagen, wo sie dann aber wissen Sie, er kann dann sagen ab dem Moment.
+ist mein letztes Teil, was ich bestellen muss, oder mein letztes Material, wie auch immer, da. Und dann müssen sie aber sagen, ja, OK, darauf aufbauend kann ich es dann und dann produzieren, bondieren und so weiter. Deswegen sagt der Agent, kann der Agent eigentlich nur sagen,
+Das ist das letzte Datum, wo ein Artikel ankommt, wo ein Teil ankommt. Das ist das Teil, was dann ankommt. Und dann können Sie halt die Produktion planen. Das Problem ist, die Teile kommen ja unterschiedlich, also verschiedene Teile kommen ja wahrscheinlich zu unterschiedlichen Zeitpunkten an. Und bei manchen können Sie ja wahrscheinlich schon anfangen zu produzieren vorher.
+Bei anderen halt noch nicht. Mhm.
+Also, da wird's halt, da ist da, da hab ich jetzt gerade noch einen Klemmer. Wir müssen halt überlegen, dann wie dann sozusagen da die Zusammenarbeit, weil das ist ja dann wirklich eine Kollaboration zwischen Agent und und Ihnen.
+Der Agent kennt quasi die ganzen Lieferdaten der verschiedenen Artikel.
+Weiß auch sozusagen.
+Auf welche Produktionsaufträge sich das bezieht?
+Also, wenn jetzt Granulat fehlt, dann weißt du halt: "OK, für den Produktionsabbau, ich lass das Granulat oder wie auch immer, das kommt dann und dann." Kann er es Ihnen sagen, dann wissen Sie: "OK, den Produktionsabfall muss ich jetzt dann und dann planen."
+Umm.
+Und für einen Zukaufteil, was ja nur noch montiert werden muss, weiß der dann auch, OK, der und der Montageauftrag, es gibt ja noch separate Montageaufträge, ne? Ja, die werden aber anders, wie werden die denn geplant eigentlich, die Montageaufträge?
+Die werden einfach hier im System, wir haben es zwar versucht, aber das war so 'n bisschen Eigenschaft, sie machen es in Excel. O. K., ist 'ne Excel-Planung. Aber eigentlich so ähnlich wie die, wie das M. E. S., quasi im Sinne von dann und dann machen wir den und den Auftrag. Genau.
+Und die lesen sich das irgendwie täglich aus dem ERP raus oder wo auch immer. OK.
+Mhm.
+Die gehen halt, ich sag mal, mittwochs ist immer die, die oder morgen machen wir die Personalplanung. Dann wird der Kruja sich dann wahrscheinlich alle offenen Aufträge mit Liefertermin bis zum 26. ziehen. So wird dann durchgehen, okay, wo hab ich überall schon meine Sachen da und dann wird er anfangen, dann halt seine
+Produktion zu planen, wie er die dann durchführen muss, damit er den Termin hält. So, dann wird er natürlich gegebenenfalls dann im Voraus haben, ich muss dann und dann muss ich montieren. Ich habe aber Spritzgussteil XY oder nicht oder Zukaufteil XY.
+Wenn das bis dann und dann nicht da ist, muss der Auftrag geschoben werden, als Beispiel.
+Ja, ich ìberleg grad nicht, wie man also, wie das, wie das sinnvoll funktionieren soll.
+Dass quasi.
+Aber da fehlt mir gerade noch so ein bisschen, da hab ich hab noch nicht genau verstanden, wie Sie das heute, also wie Sie heute das Lieferdatum abschätzen würden. Also Ihr Gedankenprozess für
+Ja.
+Ich habe das Lieferdatum des Kunden, was er gerne will, und ich muss jetzt etwas sagen. Am Ende des Tages ist es eigentlich, sag ich mal salopp gesagt.
+wird es am Ende des Tages von den Mädels erstmal so praktiziert, der Kunde bestellt und wenn der innerhalb der regulären Lieferzeit ist, kriegt er auch erstmal pauschal erstmal seinen Liefertermin bestätigt. Egal ob ich irgendwo Material noch nicht hab oder so, erstmal
+Denken wir, passt das? Ja, ja, okay, alles.
+Ja, alles.
+in dem Sinne ja von den Vorlaufzeiten miteinander abgestimmt sein soll. Also sonst, sonst passt das ja irgendwo nicht, das Konstrukt, wenn wenn die Lieferzeiten von meinen Zukaufteilen/Rohwaren so deutlich höher ist im Vergleich zu den Bestellvorlaufzeiten.
+Von meinen Kunden, dann weiß ich ja, bringt ja nichts, dass die innerhalb von 4 Wochen Ware bekommen sollten, aber ich meine Komponenten erst nach 8 Wochen kriege, weiß ich ja ne stimmt, das heißt aber doch eigentlich.
+dass ich dann
+Dann wäre doch mein Vorschlag.
+Das
+Der Agent quasi diesen Drilldown macht, im Sinne von überall gucken, hab ich da Probleme? Also, wo hab ich keinen Lagerbestand, das flackt, dann müssen die Mitarbeiter da halt reingehen und halt gucken, ja, was ist denn das Thema?
+Wenn man das, wie bei diesem Sieb, da ist, also wenn man da, wie bei diesem Filtersieb oder was, sieht, dass das halt nicht hinhaut, weil das erst, weil da die neue Ware, erst das neue Zugaufteile, erst im September kommen, dann habe ich ja wirklich ein Problem.
+und dann hab ich wahrscheinlich auch wirklich 'n Lieferterminverzug. Aber dann müssen ja ehrlich gesagt die Mitarbeiter jetzt erst mal gucken, O. K., bis wann, also was ist denn dann realistisch? Also da müssen Sie als Team gucken, was ist 'n realistisches Datum. Ja, wenn es aber so ist, dass.
+Der, der, der jetzt jetzt die, die die Kolleginnen sehen, okay, ja, da hab ich ein Thema, aber da kommt rechtzeitig was oder wie auch immer, oder da kann ich jetzt bestellen und dann kommt das schon rechtzeitig.
+Dann bleibt es ja einfach bei dem Liefertermin, den der Kunde will, sozusagen. Also entweder ich bei den Sachen, die der Agent signalisiert, ist alles OK, weil ich es einfach bestellen kann, oder ich habe halt wirklich ein Problem.
+und ich hätte jetzt vorgeschlagen, in dass er dann in der Phase 2.
+Eben diese Bestellung vorbefüllt, also schon mal anlegt und dann muss er halt irgendwie mit der durchgehen und quasi sagen: Ja, passt. Und auch da ist es ja so, ich kann ja erstmal quasi pauschal für jedes Teil, wo mir was fehlt, eine Bestellung anlegen und der Mitarbeiter kann ja entscheiden: Passt oder passt nicht, schicken wir raus.
+Und da wird dir dann auch wieder auffallen, bei manchen Teilen.
+Dauert es viel zu lange. Ich weiß nicht, woran das jetzt lag, dass das erst im September kommt. Ich meine, kann ich nicht früher bestellen? Also, ich meine, ich, weil wenn sie sagen, normalerweise hab ich ja, müssten ja meine meine Lieferzeiten von meinem Lieferanten in den Zeitrahmen passen von meinen.
+Kunden
+Bestellvorläufen. Dann wunder ich mich ja, dass jetzt bei diesem Teil, wo der Kunde eigentlich Lieferdatum im Juli will, neue Ware erst im September kommt. Da müsste ich doch jetzt eigentlich heute die Möglichkeit haben, was zu bestellen, damit das rechtzeitig vor Juli kommt, rein theoretisch.
+rein theoretisch. OK, wenn das nicht der Fall ist, weil der Lieferant mir dann zurückmeldet, das passt nicht, wir haben gerade komplett irgendwie trocken, kein Granulat, gar nichts, dann kriege ich das ja erst vom Lieferanten mit.
+Und muss dann quasi gegenüber meinem Kunden ein anderes Lieferdatum kommunizieren. Aber das ist, das ist ja dann sehr manuell. Ja, ja, das heißt, eigentlich muss der Agent nicht groß irgendwelche Lieferdaten berechnen, wie ich das jetzt gerade verstehe, weil er eigentlich ja erstmal nur signalisieren muss, ja hier.
+Lagerbestand passt erst mal dieses Handheben so dieses das erste Phase genau aber auch dann später er muss erst mal erste Phase einfach Hand heben, passt irgendwas nicht. Zweite Phase ist meinetwegen schon mal die Bestellung vorbereiten.
+Das ist ja auch eine Maske im ERP, wo ich dann quasi was ausfülle, so und.
+Mehr kann er doch aber auch nicht machen, weil entweder ich kann bestellen in diesem Zeitfenster genau rechtzeitig oder ich kann nicht bestellen, weil der Lieferant mir dann zurückmeldet, sorry, geht gar nicht, Fabrik abgebrannt, wie auch immer. Mhm. Und dann ist
+Ist das ja aber nichts, was der, womit der Agent umgehen kann, weil dann müssen ja die Mitarbeiter irgendwie gucken, dass sie den anderen nicht ranfinden. Keine Ahnung, dann brennt hier halt die Hütte, aber quasi das ist ja dann. Okay.
+und dann ist halt O. K., dann ist es aber einfacher als ich, also als ich jetzt vorher kurz dachte, ich dachte, wenn er jetzt anfangen muss, irgendwie Lieferzeiten zu berechnen, über das ist das, dann wird, dann wird es einfach kompliziert, weil er muss sich mit ihnen abstimmen, ob sie rechtzeitig produzieren können und so weiter. O. K. und ich meine im Zweifel, selbst wenn Lieferdatum kommuniziert wurde,
+sagen wir Auslöser für also
+Wann schicken Sie die Auftragsbestätigung an den Kunden raus? Nachdem Sie die Produktion geplant haben? Nein, vorher schon, vorher schon.
+nachdem sie bestellt, nachdem sie für alle Fehlmengen bestellt haben. Ja, also das wäre jetzt so, die hätten alles eingestellt und alles, was fehlt, hätten die Bestellung ausgelöst und hätten dann die Bestätigung rausgestellt für den Kunden, bevor sie überhaupt noch bedienen. Und wenn ihnen dann quasi in den nächsten Tagen und dann irgendwann in den folgenden Tagen planen sie die Produktion, nachdem sie von den Lieferanten
+Die irgendwie von den Bestellungen Bestätigung bekommen haben oder auch nicht, weil es keine Fehlmengen gab und wenn sie dann merken.
+Alles ausgelastet. Wir haben irgendwie die nächsten sechs Wochen komplett alle Maschinen voll. Dann müssten Sie nochmal auf den Kunden zugehen und sagen: "Ey, wir haben jetzt gemerkt, dass alles voll ist und kriegen wir nicht hin." Das heißt, Sie passen im Zweifel schon im Nachhinein einen Liefertermin an. Ne, OK.
+kann, kann ja auch sein, dass, dass, dass, dass so ein Maschinenschaden bekommen, auf einmal Werkzeugschaden. Das kann ja alles passieren, also als der [Frachter] meinte, sich im Kanal quer zu stellen, standen auch unsere Komponenten, auch diesen verdammten Hummel, also. O. K.
+Das heißt, was wären denn so Fälle, in denen Sie schon in der Auftragsbestätigung Das Lieferdatum nicht bestätigen vom Kunden. Das ist, wenn Sie merken, irgendwie. Das kann kann sein, dass das pauschal der das Wunschliefertermin nicht bestätigt wird aus gewissen Gründen, weil wir das schon direkt sehen oder wissen halt.
+Weil sie wissen, dass der und der ihr Lieferant aktuell gar nicht liefer OK, aber sonst eigentlich erst mal bestätigen, ja, weil ja außer sie solange das natürlich innerhalb der Bestellvorlaufzeit absolut absolut und die Bestell.
+Vorlaufzeit: Kann man die irgendwo auslesen im System?
+Weil sonst kann das der Agent natürlich auch nicht wissen, ne?
+Also, woher weiß das der Mitarbeiter zum Beispiel? Die kennen natürlich ihre Kunden, wahrscheinlich, ne?
+Ist das?
+The methodology.
+Boah, das ist jetzt das ist ne gute Frage. Ich glaub, das ist so in dem Sinne nicht.
+Wirklich drin.
+Nee, ich glaub, die haben wir.
+So still.
+Boah, ja.
+Ja.
+Also aktuell wissen das die Mitarbeiter, weil sie es, weil sie den Kunden kennen und oder weil sie wissen, für das und das Bauteil oder für das und das Teil Verkaufsteil.
+Hatte halt 88 Wochen Vorlauf. Das haben die im Kopf, ja.
+Das ist schlecht. Also, kann man ja irgendwo hinkriegen, aber. Nee, also das haben wir so nicht wirklich in den Artikelstammdaten hinterlegt, was die einzelnen Lieferzeiten. Nee, ich wüsste auch nicht, wo hier irgendwo.
+wo man das wirklich, das ist ja, das müssten die irgendwoher wissen. Also irgendwann muss ja, muss ja auch den Kolleginnen mal gesagt worden sein, dass es die Vorlaufzeit für das Produkt, für den und den Kunden, also irgendwo müssen die ja die Information herhaben, selbst wenn sie die im Kopf haben.
+It's young where home.
+Das ist ja, das ist natürlich so entschlossen. Es wurde ja auch hier und da mal gegebenfalls angepasst, aber wir haben es nie wirklich im System hinterlegt. Jeder Kunde hat natürlich dann auch wieder irgendwo.
+Vielleicht so ein bisschen sein Eigen. Zum Beispiel, [Kunde B] gibt es in dem Sinne keine Lieferzeit. Die machen halt freitags den Abruf und erwarten, dass mittwochs die Sachen da sind, weil wir halt Make-to-Stock machen. Jetzt bei bei [Kunde C] haben wir eigentlich zumindest ja, haben wir es auch nicht im System, aber es gibt halt.
+Forecast-Listen, die werden halt eingespielt und da sieht man halt, was zum Beispiel beim Kunden hinterlegt ist. Das ist oftmals das Problem ist ja.
+Das ist ja etwas, was oftmals ja nicht im eigenen System hinterlegt ist, sondern bei dem, der ja bestellt, so wie wir ja unsere Lieferzeiten für für Granulat drin stehen haben, so mit dem Batch, wo ich dann trotzdem.
+20 Werktage? Ja, das ist korrekt. Nur ich muss ja, ich muss ja als jetzt Mitarbeiter und ich bin jetzt noch gar nicht bei dem Agenten, aber ich muss ja als Mitarbeiter das Lieferdatum vom Kunden sehen, was er sich wünscht und dann sagen.
+Ja, das bestätige ich, bestätige ich nicht. Und wenn der Kunde halt jetzt für was, was er normalerweise 6 Wochen Vorlaufzeit hat, dann 4 Wochen angibt, muss ich ja merken und sagen: 'Weiß ich nicht, muss ich erstmal.' Also, schwierig, keine Ahnung. Ich muss dann irgendwas dann festmachen, also dass ich dann sage: Ja oder nein.
+Wenn das eben seine Standardlieferzeit ist, Vorlaufzeit, dann sag ich erst mal ja. Wenn es niedriger ist als seine Standardvorlaufzeit, dann muss ich natürlich erst mal sagen, muss ich prüfen, ja oder nein. Ich weiß nicht, ob man dann sagt, ich muss es irgendwie, kann es irgendwie prüfen. Aber da, aber das irgendwo.
+Irgendwo muss die Information halt stehen, damit wenn jetzt jemand neu, wenn jetzt ein Praktiker oder ein neuer Mitarbeiter kommt, der muss ja auch irgendwie das dann wissen, ja.
+Und da ist jetzt die Frage, wie wir das.
+festhalten können. Also ich mein, ich hab's ja offensichtlich bei 'nem Lieferanten irgendwie, dass ich da 'ne Lieferzeit habe. Ich muss das doch irgendwie auf auf Artikelebene. Ich vermute, das war, ich guck mal kurz. Da haben wir wenigstens schon 'n bisschen rumgeflickt, ob man das mit beischreiben.
+Kann, bevor ich jetzt anfange, hier meine Sachen.
+Das ist auch eine Lieferadresse: Umrechnungsfaktor.
+Informationen.
+Mhm.
+So geht das nämlich jetzt hier raus.
+Okay.
+Ach, ich hab ja
+Verabschüttet.
+Aber Verkauf kann man auch nichts definieren hinsichtlich.
+That's so talk for one this one.
+Da muss das hier drüber laufen. Ich weiß es nicht. Das ist aber.
+Also, das ist jetzt quasi der zu den Verkaufsartikel, die.
+Die Lieferzeiten, was ist das? Das ist jetzt von der Maschine. Das ist eher noch so, so ein. Das müsste dann aber komplett angepasst werden. Das ist in dem Sinne. Ich habe es bis heute nicht verstanden, warum Sie es gemacht haben.
+Das ist in dem Sinne so eine Art Puffer. Das sind der sagt ja hier Lieferzeit 10 Tage. Das heißt, er haut für sich aktuell auf die Materialien, weil wir die benötigen, haut er noch mal um. Also, das wäre aber in dem Sinne eigentlich die das einzige Feld.
+wo ich jetzt drüber meiden könnte, wo wir wirklich definieren können, was ist die die Lieferzeit, sonst wüsste ich grad nicht, ich hab nicht die Möglichkeit beim beim Preis, weil das Problem ist dann natürlich wiederum
+Aber wir haben keinen Kunden, der jetzt auch andere Lieferzeiten hat.
+Aber wie gesagt, ich kann nicht im Preis quasi auf dem auf Kundenebene das einstellen. Ich hab es nicht im Arbeitsplan drin. Also das ist wirklich jetzt, glaub ich, wirklich der einzige Bereich, was mir jetzt einfallen würde, wo war irgendwo die.
+Lieferzeit wirklich definieren könnten. Das wird jetzt, wie gesagt, aktuell so ein bisschen missbraucht für Materialdispo, um mehr Sicherheit zu haben. Aber das ist doch hier einfach. Also dieser Lieferant P0061, die Maschinengruppe, die ist ja, die wird ja von verschiedenen Artikeln benutzt, oder?
+That hab ich.
+dann, dann, dann hätte ich ja quasi verschiedene. Das stimmt, gut, gut gesagt. Nee, funktioniert auch nicht, stimmt. Es muss natürlich, es muss, nee, es muss artikelspezifisch sein. Also können wir es auch nicht, wie gesagt, über den Lieferanten machen, weil der.
+Aber noch mal heute, sorry, wenn ich so dumm nachfrage, aber woher haben die Mitarbeiter das im Kopf? Woher haben die diese Informationen? Also das erste Mal, die muss ja irgendwo herkommen. Also der der Ursprung dieser Informationen, ob das jetzt 4 Wochen oder 6 Wochen, ob dieser ob dieser ob dieser Kunde.
+seinen diesen Artikel in 4 oder in 6 oder in 8 Wochen bekommt, klassischerweise sozusagen, das ist seine Vorlaufzeit. Die muss ja irgendwo ihren Ursprung haben, diese Information. Ja, das wurde ja zwischen zwischen vereinbart, ja, ja, also in irgendeiner in einem Vertrag quasi.
+Ist nur nicht eingepflegt und das haben die quasi im Kopf, weil sie den Vertrag kennen oder die Vereinbarung kennen oder was, ja.
+Ja, muss man irgendwo einpflegen. Also, weil das Problem ist halt, also ja, beziehungsweise fairerweise, man könnte theoretisch, das wär vielleicht so was für diese Knowledge Base, also wo man sagt, der, der es soll ja der, also wir wollen ja bei uns in der Plattform auch noch ne Daten, ne kundenspezifische Datenbank anlegen, wo quasi für jeden Kunden
+Noch spezielle Informationen, zum Beispiel Kunde XY, der kriegt das immer mit dem Spediteur A. Und der Kunde immer mit Spediteur B. Das sind ja so, das sind ja Sachen, die stehen vielleicht nirgendwo bei ihnen drin. Das haben die Leute halt auch im Kopf, dass man dieses Wissen halt Stück für Stück halt auch in dieser in dieser Datenbank.
+Wir nennen das quasi so Wissensbasis oder so, das Gehirn oder oder das Gedächtnis sozusagen von dieser Plattform, Kundenspezi. Und dann kann man vielleicht sogar sagen, für Kunde XY bei der und der Artikelnummer hat er halt quasi standardmäßig 6 Wochen. Das muss aber müssen die Mitarbeiter dann halt eigentlich Stück für Stück.
+da halt einpflegen. Also irgendwo muss es ja eingeprägt werden. Der Agent kann es ja nicht wissen von und irgendwann muss das dann. Wir können auch gucken, wie man das vielleicht im Betrieb sozusagen abgreifen kann. in denen der Agent vielleicht gerade am Anfang
+wenn er sieht Lieferdatum
+Versus Eingangsdatum. Sind irgendwie 6 Wochen und die Mitarbeiter tragen da das Lieferdatum ein, was der Kunde will. Dann sagt der Agent: 'Ah, ich sehe 6 Wochen zwischen Eingangsdatum und Lieferdatum. Ist das die klassische Vorlaufzeit für diesen Kunden, die vertraglich vereinbart ist?' Unser Mitarbeiter: 'Ja.'
+Und dann speichert er das sozusagen bei sich in der Knowledge Base, so dass er dann quasi weiß, OK, der Mitarbeiter hat mir jetzt gerade das Feedback gegeben. Bei dem Kunden für den Artikel ist immer 6 Wochen die klassische Vorlaufzeit, die der hat. Deswegen bestätigt ja der Mitarbeiter gerade das Lieferdatum, was der Kunde ja bei sich in den Auftrag reingeschrieben hat.
+Dass man so das vielleicht dann abfragt über die Zeit, aber das ist halt nervig, weil ist immer gut, wenn Informationen irgendwo drin stehen, weil das kann man dann einfach auslesen. Aber verstanden, verstanden. Okay, dann ist es halt erstmal so. Müssen wir, müssen wir irgendwie notieren, im Zweifel.
+Muss ja eh in der ersten Version.
+Dem Mitarbeiter das Lieferdatum einfach eintragen. Der Agent sagt einfach nur: 'Hier, die und die Sachen sind, musst du dir angucken, bestellmäßig. Da musst du was bestellen oder guck mal drauf.' Und dann macht der Mitarbeiter ja auch erstmal in der ersten Phase selber die Bestellung und trägt dann das Lieferdatum ein. In der zweiten Phase kann der Agent dann, wie gesagt.
+Die Bestellung selber vorschlagen und so, aber auch da muss der Mitarbeiter ja quasi ein Lieferdatum eintragen.
+Und das war es für mich auch erstmal eigentlich, weil.
+Ja, der Agent kann am Ende ein Lieferdatum vorschlagen. Und mit dieser Wissensdatenbank gucken, OK, passt das in diese Phase? Aber das hat der Mitarbeiter ja auch erstmal im Kopf. Also meinetwegen kann das noch die dritte Phase sein, aber der Mitarbeiter muss es ja doch im Teufel nochmal überprüfen, weil er ja weiß.
+Der und der Lieferant, der ist gerade abgefackelt. Deswegen geht das gerade eh nicht mit diesem Lieferdatum, was jetzt der Kunde gerade will. Das sind ja dann Sachen, die kommen eher so aus dem aus dem Erfahrungswissen, weil man die aktuelle Situation kennt, weil irgendwie ein Lieferant gerade abgebrannt ist oder wie auch immer.
+Aber das war also für die Auftragsbestätigung.
+Sind das doch erstmal die Schritte, die der Agent eigentlich sinnvoll machen kann. Checken, wo ich irgendwie Fehlmengen habe. Genau im zweiten Schritt, dann in der zweiten Phase.
+Die Bestellung vorbereiten für Zugaufteile, Materialien und so weiter und im dritten Schritt meinetwegen prüfen, ob das Lieferdatum, was der Kunde da will, mit seiner klassischen Vorlaufzeit übereinstimmt und dann halt sagen: Passt.
+Und das war's.
+Oder fällt mir also oder muss da gerade oder wird da, würde da jetzt der Mitarbeiter bis zur Auftragsbestätigung?
+Noch andere Sachen machen, über die wir gerade nicht gesprochen haben. Also Auftrag anlegen.
+Verfügbarkeiten meiner Teile, Materialien und so weiter prüfen, Bestellungen auslösen bei meinen Lieferanten, Auftrag anlegen und Auftragsbestätigung an Kunden schicken. Fehlt da noch irgendwas?
+Für den ersten Schritt, für die Auswahl, genau bis auf die halbe Stunde, ja.
+OK, weil alles, was dann Produktionsplanung, Montage und so weiter ist, ist ja dann danach, nachdem die Auftragsbestätigung.
+Quasi angelegt, quasi verschickt worden an Kunden und so weiter. Es gibt dann natürlich dann den, der Schritt ist da, dann natürlich erstmal abgeschlossen. Es kann dann natürlich dann trotzdem passieren. Ich sag jetzt mal heute, ich würd jetzt die, die die Bestätigung rausschicken. Ich würd jetzt aber versuchen, die.
+Ich würd jetzt wirklich, ich sag jetzt einfach mal, den 28.7. bestätigen, zeitgleich die offene Bestellung vom Filtersieb vorziehen, systemtechnisch, so dass das alles dann passen würde. Würde aber dann am übermorgen dann die Rückmeldung kriegen, das Vorziehen vom Filtersieb ist nicht machbar.
+Der Liefertermin bleibt beim 21.09., dann würde ich natürlich wieder in die Auftragsbestätigung von diesem Artikel reingehen und wird den Liefertermin anpassen, wird den Kunden informieren. Lieber Kunde, Zukaufteil XY ist vor dem 21.09. nicht zu bekommen. Dadurch müssen wir den Liefertermin auf
+Drum verschieben.
+Gut, wir müssten sie erstmal manuell machen, sozusagen. Ja, genau. OK, aber sonst würde sich ja eigentlich nichts ändern an dem Auftrag. Nur der Liefertermin wird halt geändert und natürlich, wann ich dann sozusagen.
+produziere, wie auch immer, das ist dann halt später, das ist O. K., aber das ist ja dann Produktionsplanung. O. K., mit Blick auf die Zeit, wahrscheinlich ist 'ne kurze Pause sicher sinnvoll. Die Frage ist, ob wir danach, also für Sie, ja, ich
+Nur eine Kleinigkeit zum Essen, aber ich wollte nur fragen, also jetzt haben wir ja ziemlich im Detail das Thema Auftragsbestätigung besprochen.
+Für so eine Baugruppe gibt es jetzt, weil wir ja gesagt hatten ursprünglich, wir gucken uns 23 Auftragsarten an. Wenn wir uns jetzt eine andere Auftragsart angucken, ich weiß nicht, was das jetzt zum Beispiel wäre, wird sich da jetzt in dem Vorgehen grundsätzlich was unterscheiden?
+Nein, habe ich Vorkassenkunden? Ja.
+Wird sich da was unterscheiden?
+Ja.
+E bar that.
+Es ist jetzt immer wieder so die Frage, ich sag mal so, für mich gibt es gefühlt mittlerweile Vorkasse und Vorkasse. Es gibt halt für mich die Vorkasse hinsichtlich, die Ware geht nicht raus an den Kunden, bevor der nicht bezahlt hat. Es gibt dann aber auch die
+Vorkasse. Es wird erst produziert, wenn der Kunde bezahlt hat. Und aber da sind wir ja noch, wenn ich jetzt sorry, ganz kurz so, bis zur Auftragsbestätigung, bis die rausgeschickt wird an Kunden. Ändert sich ja eigentlich nur nichts, weil dann nachher erst dann.
+die Recht, die Proforma Rechnung für die Vorkasse und so erstellt wird nach der wahrscheinlich oder also Auftragsbestätigung wird erstellt und geht raus an Kunden und danach wird vielleicht noch eine Proforma Rechnung für die Vorkasse erstellt oder der Kunde weiß schon, dass er jetzt überweisen muss. Ich weiß nicht genau, wie das, ich weiß natürlich jetzt nicht.
+Kommt immer drauf an. Ist natürlich so ein spezielles Thema. Ich sag mal, wenn man jetzt einen Kunden hat, der wo's Augenblick natürlich ist, der hat immer seine Probleme, der ist auf Vorkasse und das wird immer so gehandelt. Ware geht erst raus, wenn er bezahlt hat. Alles gut.
+Wenn man jetzt natürlich, ich sag mal, einen Kunden hat, der irgendwo ins Straucheln gerät und man das aus Sicherheitsaspekten macht, erstmal führt das ja natürlich dann irgendwann dazu, dass dann vielleicht eine Bestellung kommt.
+wo ich selber auch wieder bestellen muss und auf Basis der Mindestbestellmengen eventuell ganz andere Diskussionen eventuell geführt werden, weil ich sag mal, wir haben da einen Artikel, wo immer, ich sag mal, 8000 Tonnen, 8 Tonnen bestellt werden müssen. Ich sag einfach mal, 25.000 Euro.
+Kostet das, es wurde immer bestellt und der Kunde ist jetzt gerade am Schwächeln. Und der will jetzt irgendwo sagt hier per Vorkasse, bezahl ich dir jetzt vorab die 2000 Teile, die ich gerne hätte. Für die 2000 Teile brauch ich.
+Ich sag jetzt mal.
+500 Kilogramm Material, die hab ich aber nicht mehr und bin gezwungen, 8 Tonnen zu bestellen. Das ist ja dann wieder eine ganz andere Abwägung, ne? Wo man dann gucken muss, kann man das dann überhaupt noch so? Ja, und das wäre dann aber noch vor der Auftragsbestätigung, ne?
+Ja, ja.
+Also ich, ich würd jetzt natürlich wenn wenn wenn ich jetzt einen einen einen Kunden habe, wo mir die Finanzbuchhaltung sagt du darfst nicht produzieren, ne weil irgendwo das versicherungstechnisch nicht mehr abgedeckt ist.
+Wäre das genau dasselbe halt beim beim Material. Ich kann dann natürlich dann irgendwo, wenn dann irgendwo eine abgestuft worden ist vom Kreditrating und ich dann nachher ne ne Bestellung auslösen muss im Wert von 50000 wo ich weiß, ich geh über das Volumen und 30000 davon sind nicht mehr abgesichert.
+kann ich nicht machen, auch meine Kappe, ne. Ist richtig, das wären ja aber so Fälle, die ja die Kollegin ja auch im Kopf haben, sozusagen jetzt, ne. Und wenn jetzt so eine Bestellung reinkommt und der Agent jetzt erst mal dann das erstellt und Lager und quasi diese ganzen Prüfchecks macht mit Lagerbeständen und so weiter, spätestens ja dann, wenn der Agent sagt, hier, ich hab mal was vorbereitet,
+Die Mitarbeiter sagt.
+
+[Sprecher] stopped transcription

@@ -1,0 +1,1022 @@
+{
+  "nodes": [
+    {
+      "id": "n_receive_order_inquiry_via_email",
+      "label": "Receive order inquiry via email",
+      "type": "task",
+      "quote": "So, also was haben wir heute vor und ich meine, am Ende des Tages, ja, glaub ich, ist der dritte Punkt das Wichtigste, aber vielleicht ganz kurz zu, was wir heute vorhaben, da wollen wir so 'n bisschen gemeinsames Verständnis aufbauen, das ist jetzt auch so die. 20 Minuten jetzt am Anfang, können wir mal gucken, was, wie können wir heute K.I. auch in produzierenden Unternehmen auch einsetzen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_handle_prepayment_customer_create_proforma_invoice",
+      "label": "Handle prepayment customer - create proforma invoice",
+      "type": "task",
+      "quote": "Vorkassenkunden ist im Prinzip das Gleiche, er bestellt Dann erfass ich den Auftrag mit den Positionen und druck dann auch die Pickliste und da steht dann aber oben drauf oder muss ich dann eintragen Vorkasse.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_identify_customer_and_product_from_order",
+      "label": "Identify customer and product from order",
+      "type": "task",
+      "quote": "Dann können Sie sagen: Ja, ich hab ja den Auftrag bekommen. Und der Kunde hat mich jetzt gerade noch angerufen und meinte, er brauch noch 100 Teile davon, oder er brauch das erst in 3 Wochen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_hold_order_until_payment_received_from_prepayment_customer",
+      "label": "Hold order until payment received from prepayment customer",
+      "type": "task",
+      "quote": "Das heißt, siehste bleibt auch bei uns. Also wir gehen hier eigentlich gar nicht ins Lager, weil sonst fängt er ja schon an zu kommissionieren. Also die halten die noch bei uns zurück.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_article_number_and_product_designation",
+      "label": "Check article number and product designation",
+      "type": "task",
+      "quote": "Wenn ich jetzt hier eingebe [Firma C], Das machen wir dann meistens immer mit einem Prozentzeichen [Firma C], weil wir haben zum Beispiel noch einen anderen, wo [Firma C] drin enthalten ist",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_receive_payment_confirmation_for_prepayment_order",
+      "label": "Receive payment confirmation for prepayment order",
+      "type": "sendTask",
+      "quote": "Und wenn der Buchhalter kommt und sagt, Ihr Kunde X hat Vorkasse bezahlt mit der Buchformer Rechnung, dann wird er die Ping fester, legt sie ins Körbchen, dann wird sie kommissioniert.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_look_up_packaging_information_in_packing_list",
+      "label": "Look up packaging information in packing list",
+      "type": "task",
+      "quote": "Dann haben wir hier den Eimer, F6 und hier kommt dann die Deckel dazu. Ach so, ach und der Eimer und F6 Okay, das heißt, du weißt einfach, welcher welcher Name ist jetzt welche. Und woher kommt diese Liste ist aber irgendwo in einem System drin, ne?",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_release_prepayment_order_to_fulfillment_after_payment",
+      "label": "Release prepayment order to fulfillment after payment",
+      "type": "task",
+      "quote": "Und wenn er dann zurückkommt und sagt, hier ist am Lager, kann morgen geladen werden, Dann schicke ich jetzt die AW raus.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_stock_availability_for_ordered_items",
+      "label": "Check stock availability for ordered items",
+      "type": "task",
+      "quote": "Gebe ich da stehen, dann geb ich jetzt ein 11.5. Die Kalenderwochen machen sich da automatisch. Ich könnte das auch über die Kalenderwoche machen, wenn ich nicht genau weiß, wann es fertig ist.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_verify_lot_batch_information_in_warehouse",
+      "label": "Verify lot/batch information in warehouse",
+      "type": "task",
+      "quote": "Jetzt hab ich natürlich so, jetzt muss ich nicht wissen, welcher das ist, ne? Okay, aber das wird ja oben links da auf der Bestellung eigentlich stehen, oder? Wenn man da so ein bisschen hochscrollen. [Firma C]. Ja, okay, gut, dann weiß man Square.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_new_customer_order_in_erp",
+      "label": "Create new customer order in ERP",
+      "type": "task",
+      "quote": "Dann mache ich, also ich geh immer hier mit und man kann das auch mit der MODA natürlich machen. Es gibt dann einen, wann die bestellt haben, das ist dann der 18.5.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_order_reference_and_date",
+      "label": "Enter order reference and date",
+      "type": "task",
+      "quote": "Bestellungen ins ERP-System, genau. Dann mach ich, also ich geh immer hier mit und man kann das auch mit der MODA natürlich machen. Es gibt dann einen, wann die bestellt haben, das ist dann der 18.5. Datum und dann, ich mir das auch wieder. gibt das in ein, muss noch ein eintragen vom 18.5.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_delivery_date_and_terms",
+      "label": "Enter delivery date and terms",
+      "type": "task",
+      "quote": "Dann geb ich weiter, dann hab ich jetzt hier Lieferdatum. Das hast du da stehen, ne, das geb ich da stehen, dann geb ich jetzt ein 11.5.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_record_customer_info_notes_from_address_module",
+      "label": "Record customer info notes from address module",
+      "type": "task",
+      "quote": "Da sind dann Sachen hinterlegt, wie auch Chargen, wenn ich mal die Preise erhöht hab, dann kann ich das ist auch dann wie so eine, ja wie so ein Notizbuch. wenn ich da was eintrage, dann kann das auch hier sehen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_determine_freight_shipping_method_for_customer",
+      "label": "Determine freight/shipping method for customer",
+      "type": "task",
+      "quote": "Dann gehe ich hier auf die Spalte Versand Ja, und da kann ich dann eintragen, [Firma C] ist zum Beispiel ein Kunde, dafür haben wir ja einen festen Spediteur. Das ist zu 99% ist das immer die Spedition [Firma J]",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_determine_and_record_standard_shipping_rate",
+      "label": "Determine and record standard shipping rate",
+      "type": "task",
+      "quote": "Hab ich hier Versandkosten, die muss ich mir auch noch extern ziehen. wirst du aber auch manuell eintragen, ja. Die werde ich auch manuell eintragen. Die hängen vom Spediteur ab und der Menge.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_add_order_article_positions",
+      "label": "Add order article positions",
+      "type": "task",
+      "quote": "Dann gehe ich auf das grüne Häkchen. Es kam gestanden. Die Bestellung mitnehmen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_look_up_article_number_from_customer_designation",
+      "label": "Look up article number from customer designation",
+      "type": "task",
+      "quote": "Dann muss ich jetzt immer switchen, wenn ich es nicht auswendig weiß. Und bei so vielen Artikelnummern die. So, jetzt gibt es natürlich die zwei Wege. Ich kann einmal hier über die Artikelattribute gehen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_inventory_for_article_in_warehouse",
+      "label": "Check inventory for article in warehouse",
+      "type": "task",
+      "quote": "Dann geh ich hier mit dem Rechtsklick, gehe zum Artikel und sehe dann hier den Bestand 4760. Das sind jetzt quasi dann 2 Paletten.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_article_batches_and_availability",
+      "label": "Check article batches and availability",
+      "type": "task",
+      "quote": "Kann ich mir aber hier über das, wenn ich dann hier drauf geh auf Artikelverwaltung, die Chargen, Chargen auf Lager heißt, Chargen ist eine Palette, was. kann ich mir dann hier anzeigen lassen. Ich habe jetzt die Chargennummer 25, die ist mit 2088 gepackt und wir haben auch noch eine Charge mit 1880.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_article_quantity_in_order_position",
+      "label": "Enter article quantity in order position",
+      "type": "task",
+      "quote": "Dann drücke ich hier oben auf das Plus und dann wird er als Position dann im Auftrag hinzugefügt. So, dann gebe ich die bestellte Menge ein: 2880 Stück.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_verify_and_accept_article_price_from_system",
+      "label": "Verify and accept article price from system",
+      "type": "task",
+      "quote": "Dann ist doch schon automatisch immer der Preis hinterlegt. Das passiert auch im Adressmodul mit den Artikelattributen. Da kann ich die Preise dann speichern, die dann automatisch dann im Artikel.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_packaging_pallet_information_for_article",
+      "label": "Check packaging/pallet information for article",
+      "type": "task",
+      "quote": "Kann ich jetzt hier unter Position editieren? Das schreibe ich dann hier. Unter Position 9 ist dann die Packweise. Ist es immer Position 9? Ist es immer Position 9? Position 9, Packweise.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_calculate_total_pallets_needed_for_order",
+      "label": "Calculate total pallets needed for order",
+      "type": "task",
+      "quote": "Dann hab ich jetzt hier dann noch. Das benutzen wir eigentlich gar nicht, weil da sind Sachen drinne. Detaildaten. Ja, das sind Akkreditiv und sowas.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_if_sufficient_stock_available_for_all_items",
+      "label": "Check if sufficient stock available for all items",
+      "type": "gateway",
+      "quote": "Jetzt wird's spannend. Das Problem ist, jetzt ist das System so. Er zeigt mir nicht an oder es kommt keine Maske. Achtung, zu wenig. Das hätte ich jetzt erwartet.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_adjust_order_if_needed_based_on_stock_production_check",
+      "label": "Adjust order if needed based on stock/production check",
+      "type": "task",
+      "quote": "Jetzt habe ich den Auftrag erfasst. Spreche ich das ab?",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_contact_production_planning_if_stock_insufficient",
+      "label": "Contact production planning if stock insufficient",
+      "type": "sendTask",
+      "quote": "Das ist aber dann auch die einzige Folgerung daraus. Also es gibt gar keine andere Option. Auf jeden Fall, das passt nicht, ich muss mit [Person 11] sprechen, weil",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_calculate_truck_capacity_and_pallet_configuration",
+      "label": "Calculate truck capacity and pallet configuration",
+      "type": "task",
+      "quote": "Einen Jumbo LKW fahren, der insgesamt 38 Stellplätze laden kann, hat aber auch eine Ladehöhe von 3 Metern und die Paletten sind, glaube ich, 1 doppelt 1 1 30 1 40. Das heißt, ich kann hier doppelt stapeln.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_get_production_capacity_confirmation_from_production",
+      "label": "Get production capacity confirmation from production",
+      "type": "sendTask",
+      "quote": "Wann hast du denn wieder vor, die Drähtedose aufzubauen oder schaffen wir das zu produzieren und auszuliefern zum bis zum so und so und dann sagt er ja oder nein.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_if_total_pallets_fit_within_truck_capacity",
+      "label": "Check if total pallets fit within truck capacity",
+      "type": "gateway",
+      "quote": "Das ist jetzt ein Stapelbar, das schreiben wir eigentlich auch für uns klar von unseren Lageristen zum Verladen, die das natürlich aber auch eigentlich wissen, aber eigentlich auch für den Kunden, damit der weiß, aha, davon kann ich nichts.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_receive_confirmation_of_delivery_date_from_production",
+      "label": "Receive confirmation of delivery date from production",
+      "type": "task",
+      "quote": "Ja, ist 'ne ganz einfache Anfrage. Am Anfang, ja einmal, erst dann ist es dann, ist es Aktivität. zu [Person 11] gehen und fragen. Genau und dann hoffentlich lernen wir nämlich, besser ist eigentlich, wenn der das als als Tickets bei sich bekommt",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_request_order_adjustment_from_customer_if_too_many_pallets",
+      "label": "Request order adjustment from customer if too many pallets",
+      "type": "sendTask",
+      "quote": "Ich antworte jetzt gleich einfach auf die Bestellung und schreibe ein: 'Mir mal zu, du hast zu viel bestellt.' Es sind 79 Paletten und dann schreibe ich auch immer noch rein, entspricht so und so vielen Stellplätzen. Was können wir denn kürzen, damit wir auf die 8 Stellplätze kommen?",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_reserve_articles_in_inventory_for_order",
+      "label": "Reserve articles in inventory for order",
+      "type": "task",
+      "quote": "So, jetzt habe ich den Auftrag erfasst. Ich habe festgestellt, dass das so nicht passt und jetzt muss ich. Der [Person 17] zurückschreiben und sagen: 'Hör mal zu, du hast zu viele Paletten bestellt. Welche kann ich kürzen?'",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_receive_order_quantity_adjustment_from_customer",
+      "label": "Receive order quantity adjustment from customer",
+      "type": "sendTask",
+      "quote": "Wenn die Rückmeldung reinkommt und die K. E. jetzt einen Auftrag erstellt hätte mit [Firma J], dann steht die Frau doch da dann [Firma J]. [Firma J] sagt, nein, ich kann nicht fahren, dann muss ich den doch wahrscheinlich auch händisch anpassen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_finalize_order_after_customer_confirmation",
+      "label": "Finalize order after customer confirmation",
+      "type": "task",
+      "quote": "Ja, und dann passt du und dann passe ich den Auftritt an, weil du hast ja jetzt ja hier hast du jetzt ja 79 geplant erstmal, ne? OK, und du willst aber OK, das heißt danach passt du den schon. Ja, ja genau, nächsten Woche die 38.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_print_pick_list_for_warehouse",
+      "label": "Print pick list for warehouse",
+      "type": "task",
+      "quote": "Dann würde ich die Pickliste drucken und ich würde die Auftragsbestätigung drucken als PDF. O. K.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_save_correspondence_in_order_file",
+      "label": "Save correspondence in order file",
+      "type": "task",
+      "quote": "Dann speichere ich das hier mit der Diskette. und bin dann wieder hier drin.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_send_order_confirmation_to_customer",
+      "label": "Send order confirmation to customer",
+      "type": "sendTask",
+      "quote": "AP geht per Manuel. Du hängst das an die E-Mail ab. Genau, ich speichere mir die ab als PDF und dann haben wir hier auf unserem Server haben wir dann Kundenordnungen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_freight_order_for_logistics_provider",
+      "label": "Create freight order for logistics provider",
+      "type": "task",
+      "quote": "Dann gehe ich hin und verschicke die AB an den Kunden. Ja, ja, stimmt genau. Mhm. Ja, die Pickliste hat er ja, das heißt, er weiß, was produzieren, plant das quasi ein",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_fill_out_and_send_freight_order_template_via_email",
+      "label": "Fill out and send freight order template via email",
+      "type": "sendTask",
+      "quote": "Ich erstell jetzt hier den Frachtauftrag. Genau, ich geb alle relevanten Dinger ein, speichere das auch wieder auf den Server, schick dann 'ne Mail an den Spediteur mit dieser Excel",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_record_order_in_dispatch_calendar",
+      "label": "Record order in dispatch calendar",
+      "type": "task",
+      "quote": "So, jetzt hat der [Firma J], der X. [Firma J] hat vorgeladen. Wir haben den Lieferschein erstellt und alles ist fertig. Der Patz ist abgeholt. Ich fährt jetzt gerade zu [Firma C]. Da habe ich hier eine Excel-Tabelle",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_shipment_details_in_pallet_tracking_spreadsheet",
+      "label": "Enter shipment details in pallet tracking spreadsheet",
+      "type": "task",
+      "quote": "Und dann trag dann hier ein, am 18.05. unter der Lieferscheinnummer so und so. Der [Firma J] für den Kunden [Firma C] in [Ort 1]. Bei uns 76 Paletten abgeholt.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_receive_delivery_confirmation_and_truck_loading",
+      "label": "Receive delivery confirmation and truck loading",
+      "type": "task",
+      "quote": "Jetzt kommt der hier an und will jetzt 20 Paletten verladen, weil die hab ich ihn ja angemeldet. Was passiert dann? Dann kommen 20 Paletten aus dem Lager raus, die werden abgescannt.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_scan_shipped_items_with_warehouse_scanner",
+      "label": "Scan shipped items with warehouse scanner",
+      "type": "task",
+      "quote": "Also, wie wie erstelle ich jetzt den Lieferschein? Also das Lieferschein erstellen hier oben, was wir hier gerade machen, was eigentlich das Lager machen muss, ist einfach nur, ich schalte den frei. Das ist eigentlich ein Freischalten.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_generate_packing_slip_delivery_note_in_system",
+      "label": "Generate packing slip/delivery note in system",
+      "type": "task",
+      "quote": "Wir drucken den aus. Also nicht hier oben, sondern der Paid, würde nach unten. O. K., ja, das wäre cool.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_if_all_ordered_quantities_were_shipped",
+      "label": "Check if all ordered quantities were shipped",
+      "type": "gateway",
+      "quote": "Dann würde ich den hier bekommen. Dann würde ich hier sehen, aha, der [Person 11] musste nur 20000 scannen, haben wir gesagt, ne, hat aber nur 18000 gescannt und dann würden hier 2000 offen bleiben.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_invoice_in_accounting_module",
+      "label": "Create invoice in accounting module",
+      "type": "task",
+      "quote": "Ich kann das aber auch anzeigen lassen. Rechnungsmodul. Wenn ich hier oben auf Rechnungsverwaltung gehe, Auftrag, Bindestrich, Lieferschein, Sammelrechnung.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_inquire_about_missing_quantities_with_warehouse",
+      "label": "Inquire about missing quantities with warehouse",
+      "type": "sendTask",
+      "quote": "Dann würden dir schon sagen, ey [Person 11], was ist da passiert? Ja klar, wieso, weshalb, warum?",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_invoice_number_from_system",
+      "label": "Enter invoice number from system",
+      "type": "task",
+      "quote": "Dann kommt vom System kommt dann eine volle Versicherungsnummer. Die trage ich dann per Hand hier oben drüber. Also, das wäre dann AR. Fängt es immer an und wie das andere auch, Jahr und Hochzähler, ja.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_print_invoice_with_header_and_terms",
+      "label": "Print invoice with header and terms",
+      "type": "task",
+      "quote": "Ja, ich muss jetzt nur hier sagen, ey, druck mir die als als Rechnung, nehmen wir den Kopf. Ich könnte doch ohne Kopf, ohne AGBs.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_send_invoice_to_customer_billing_contact",
+      "label": "Send invoice to customer billing contact",
+      "type": "sendTask",
+      "quote": "Wenn ich jetzt hier bin und die Rechnung erfasst habe, dann kann ich hier ruhig einfach wieder ins ins Adressfeld gehen und dann haben wir hier 3 verschiedene E-Mail-Adressen manchmal. E-Mail 1 ist immer so die Info von einem von von den Kunden",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_request_production_if_stock_insufficient",
+      "label": "Request production if stock insufficient",
+      "type": "sendTask",
+      "quote": "Jetzt würdest du [Person 11] anrufen. Genau, ich würd, ich würd den anrufen und fragen. Der sagt dir jetzt, ja, passt. Der sagt dann, ja, kommen wir hin, oder er sagt halt, kriegen wir nicht hin.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "n_add_order_article_positions",
+      "target": "n_look_up_article_number_from_customer_designation",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_adjust_order_if_needed_based_on_stock_production_check",
+      "target": "n_calculate_truck_capacity_and_pallet_configuration",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_calculate_total_pallets_needed_for_order",
+      "target": "n_check_if_sufficient_stock_available_for_all_items",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_calculate_truck_capacity_and_pallet_configuration",
+      "target": "n_check_if_total_pallets_fit_within_truck_capacity",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_article_batches_and_availability",
+      "target": "n_enter_article_quantity_in_order_position",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_article_number_and_product_designation",
+      "target": "n_look_up_packaging_information_in_packing_list",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_all_ordered_quantities_were_shipped",
+      "target": "n_create_invoice_in_accounting_module",
+      "condition": "quantities match",
+      "default": true,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_all_ordered_quantities_were_shipped",
+      "target": "n_inquire_about_missing_quantities_with_warehouse",
+      "condition": "quantities do not match",
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_sufficient_stock_available_for_all_items",
+      "target": "n_adjust_order_if_needed_based_on_stock_production_check",
+      "condition": "stock sufficient",
+      "default": true,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_sufficient_stock_available_for_all_items",
+      "target": "n_contact_production_planning_if_stock_insufficient",
+      "condition": "stock insufficient",
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_total_pallets_fit_within_truck_capacity",
+      "target": "n_request_order_adjustment_from_customer_if_too_many_pallets",
+      "condition": "total pallets exceed truck capacity",
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_total_pallets_fit_within_truck_capacity",
+      "target": "n_reserve_articles_in_inventory_for_order",
+      "condition": "total pallets fit within truck capacity",
+      "default": true,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_inventory_for_article_in_warehouse",
+      "target": "n_check_article_batches_and_availability",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_packaging_pallet_information_for_article",
+      "target": "n_calculate_total_pallets_needed_for_order",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_stock_availability_for_ordered_items",
+      "target": "n_verify_lot_batch_information_in_warehouse",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_contact_production_planning_if_stock_insufficient",
+      "target": "n_get_production_capacity_confirmation_from_production",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_freight_order_for_logistics_provider",
+      "target": "n_fill_out_and_send_freight_order_template_via_email",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_invoice_in_accounting_module",
+      "target": "n_enter_invoice_number_from_system",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_new_customer_order_in_erp",
+      "target": "n_enter_order_reference_and_date",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_determine_and_record_standard_shipping_rate",
+      "target": "n_add_order_article_positions",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_determine_freight_shipping_method_for_customer",
+      "target": "n_determine_and_record_standard_shipping_rate",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_article_quantity_in_order_position",
+      "target": "n_verify_and_accept_article_price_from_system",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_delivery_date_and_terms",
+      "target": "n_record_customer_info_notes_from_address_module",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_invoice_number_from_system",
+      "target": "n_print_invoice_with_header_and_terms",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_order_reference_and_date",
+      "target": "n_enter_delivery_date_and_terms",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_shipment_details_in_pallet_tracking_spreadsheet",
+      "target": "n_receive_delivery_confirmation_and_truck_loading",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_fill_out_and_send_freight_order_template_via_email",
+      "target": "n_record_order_in_dispatch_calendar",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_finalize_order_after_customer_confirmation",
+      "target": "n_print_pick_list_for_warehouse",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_generate_packing_slip_delivery_note_in_system",
+      "target": "n_check_if_all_ordered_quantities_were_shipped",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_get_production_capacity_confirmation_from_production",
+      "target": "n_receive_confirmation_of_delivery_date_from_production",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_handle_prepayment_customer_create_proforma_invoice",
+      "target": "n_hold_order_until_payment_received_from_prepayment_customer",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_hold_order_until_payment_received_from_prepayment_customer",
+      "target": "n_receive_payment_confirmation_for_prepayment_order",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_identify_customer_and_product_from_order",
+      "target": "n_check_article_number_and_product_designation",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_inquire_about_missing_quantities_with_warehouse",
+      "target": "n_create_invoice_in_accounting_module",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_look_up_article_number_from_customer_designation",
+      "target": "n_check_inventory_for_article_in_warehouse",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_look_up_packaging_information_in_packing_list",
+      "target": "n_check_stock_availability_for_ordered_items",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_print_invoice_with_header_and_terms",
+      "target": "n_send_invoice_to_customer_billing_contact",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_print_pick_list_for_warehouse",
+      "target": "n_save_correspondence_in_order_file",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_confirmation_of_delivery_date_from_production",
+      "target": "n_adjust_order_if_needed_based_on_stock_production_check",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_delivery_confirmation_and_truck_loading",
+      "target": "n_scan_shipped_items_with_warehouse_scanner",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_order_inquiry_via_email",
+      "target": "n_handle_prepayment_customer_create_proforma_invoice",
+      "condition": "order is from prepayment customer",
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_order_inquiry_via_email",
+      "target": "n_identify_customer_and_product_from_order",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_order_quantity_adjustment_from_customer",
+      "target": "n_finalize_order_after_customer_confirmation",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_payment_confirmation_for_prepayment_order",
+      "target": "n_release_prepayment_order_to_fulfillment_after_payment",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_record_customer_info_notes_from_address_module",
+      "target": "n_determine_freight_shipping_method_for_customer",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_record_order_in_dispatch_calendar",
+      "target": "n_enter_shipment_details_in_pallet_tracking_spreadsheet",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_request_order_adjustment_from_customer_if_too_many_pallets",
+      "target": "n_receive_order_quantity_adjustment_from_customer",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_reserve_articles_in_inventory_for_order",
+      "target": "n_finalize_order_after_customer_confirmation",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_save_correspondence_in_order_file",
+      "target": "n_send_order_confirmation_to_customer",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_scan_shipped_items_with_warehouse_scanner",
+      "target": "n_generate_packing_slip_delivery_note_in_system",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_send_order_confirmation_to_customer",
+      "target": "n_create_freight_order_for_logistics_provider",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_verify_and_accept_article_price_from_system",
+      "target": "n_check_packaging_pallet_information_for_article",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_verify_lot_batch_information_in_warehouse",
+      "target": "n_create_new_customer_order_in_erp",
+      "condition": null,
+      "default": false,
+      "grounded": false,
+      "quote": null,
+      "inferred": true,
+      "grounding_verified": true
+    }
+  ],
+  "start": "n_receive_order_inquiry_via_email",
+  "terminals": [
+    "n_release_prepayment_order_to_fulfillment_after_payment",
+    "n_send_invoice_to_customer_billing_contact",
+    "n_send_order_confirmation_to_customer"
+  ],
+  "dropped_edges": [],
+  "validation": {
+    "passed": false,
+    "structural_problems": [
+      {
+        "type": "unreachable_node",
+        "detail": "n_request_production_if_stock_insufficient"
+      }
+    ],
+    "grounding_problems": []
+  },
+  "source_transcript": "../Anonymized_Transcripts/transcript_1.txt"
+}

@@ -1,0 +1,599 @@
+{
+  "nodes": [
+    {
+      "id": "n_receive_customer_order_via_email",
+      "label": "Receive customer order via email",
+      "type": "task",
+      "quote": "das kommt rein per E-Mail, vielleicht auch kommentarlos und das muss jetzt verarbeitet werden",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_open_order_in_erp_system_and_create_new_business_case",
+      "label": "Open order in ERP system and create new business case",
+      "type": "task",
+      "quote": "So, dann wäre jetzt der nächste Gang ins. ERP-System. So, das wäre jetzt hier das Dashboard und dann werden wir natürlich hier oben hingehen und sagen, okay, Geschäftsfälle. So, jetzt brauchen wir natürlich einen neuen Geschäftsfall, den wir anlegen müssen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_order_confirmation",
+      "label": "Create order confirmation",
+      "type": "task",
+      "quote": "jetzt machen wir natürlich eine Auftragsbestätigung",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": false
+    },
+    {
+      "id": "n_look_up_customer_in_system",
+      "label": "Look up customer in system",
+      "type": "task",
+      "quote": "So, jetzt können wir hier noch direkt den Kunden schon mal raussuchen. Und würde dann suchen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_select_delivery_address",
+      "label": "Select delivery address",
+      "type": "task",
+      "quote": "Das müsste, glaube ich, genau hier sehen wir das auch so. Müssen wir dann. Das ist genau der hier",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_external_business_case_number",
+      "label": "Enter external business case number",
+      "type": "task",
+      "quote": "Geschäftsfallnummer extern, das ist natürlich immer für die wichtig, dass die 'n Bezug bei sich haben muss hier in dem Sinne",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_order_date_from_customer",
+      "label": "Enter order date from customer",
+      "type": "task",
+      "quote": "Bestelldatum 31.5.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_enter_desired_delivery_date",
+      "label": "Enter desired delivery date",
+      "type": "task",
+      "quote": "Wunschliefertermin, den 28.7. 26",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_add_order_line_item_with_article_number_and_quantity",
+      "label": "Add order line item with article number and quantity",
+      "type": "task",
+      "quote": "Hier diese Artikelnummer nehmen. Wir könnten jetzt einmal hier so die Artikelnummer reinziehen, da lädt er sich. Ich hätte natürlich jetzt auch die Möglichkeit. Wir haben hier immer die Möglichkeit, über Plus mit der Kundenartikelnummer zu arbeiten. Das geht auch.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_article_price_from_customer_against_system_price",
+      "label": "Check article price from customer against system price",
+      "type": "task",
+      "quote": "Preis ist auf jeden Fall ein Unterschied. Jetzt würde ich jetzt erstmal. Gucken, was gibt es überhaupt bei den Preisen? Dann gehe ich in den Artikel nämlich rein. Also Artikelstamm da in den Artikelstamm gehe ich jetzt rein",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_inventory_level_for_article",
+      "label": "Check inventory level for article",
+      "type": "task",
+      "quote": "Jetzt müssten wir natürlich gucken. Was ist Sache bei dem Artikel? Jetzt sehe ich hier, wir haben von diesem Artikel 257 Stück fertig auf Lager liegen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_assembly_order_if_inventory_insufficient",
+      "label": "Create assembly order if inventory insufficient",
+      "type": "task",
+      "quote": "lege jetzt in dem Sinne ein Montageauftrag an für diesen Artikel, weil wir wissen, wir brauchen ungefähr 2253 oder was das jetzt da bräuchten wir noch zur Verladung",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_bill_of_materials_for_assembly_order",
+      "label": "Check bill of materials for assembly order",
+      "type": "task",
+      "quote": "Dieser Produktionsauftrag hat jetzt natürlich eine Stückliste. Das ist jetzt die Stückliste, die ich benötige. um diesen Auftrag zu fertigen.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_check_inventory_for_each_sub_component",
+      "label": "Check inventory for each sub-component",
+      "type": "task",
+      "quote": "Jetzt haben Sie die Stickliste und jetzt müssen Sie in jeden einzelnen von diesen 5 Artikeln reingehen. Genau, natürlich jetzt hier zum Beispiel Ring für Bürstenring, weil ich, ah, okay, hab ich noch abgedeckt.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_create_production_order_for_missing_components",
+      "label": "Create production order for missing components",
+      "type": "task",
+      "quote": "Da wurde jetzt automatisch quasi vom System quasi dann auch gleichzeitig eine Produktion für das 0-1er Teil ausgelöst",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_identify_purchased_parts_with_insufficient_inventory",
+      "label": "Identify purchased parts with insufficient inventory",
+      "type": "task",
+      "quote": "Wenn nicht, dann müssen Sie vielleicht dann in der in dem in dem Sinne muss, muss, müssen Sie vielleicht dann in der in dem Sinne muss Bestellung auslösen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": false
+    },
+    {
+      "id": "n_check_if_future_orders_would_be_jeopardized_by_current_order",
+      "label": "Check if future orders would be jeopardized by current order",
+      "type": "gateway",
+      "quote": "Überfahre ich einen anderen Auftrag? Das ist ja das, was Sie vorhin gesagt haben, dass ich ja quasi eine Menge offen die grüne Zeit kann ich natürlich nicht auslesen als Agent",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": false
+    },
+    {
+      "id": "n_place_purchase_orders_for_missing_materials",
+      "label": "Place purchase orders for missing materials",
+      "type": "sendTask",
+      "quote": "Wenn die jetzt sagen, nee, 21.9. ist geliefert, dann würde ich jetzt auch, weil klar, am Ende des Tages, wenn wird der Kunde irgendwo um die Ecke kommen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_signal_procurement_issues_requiring_manual_intervention",
+      "label": "Signal procurement issues requiring manual intervention",
+      "type": "task",
+      "quote": "Im ersten Schritt, wir versuchen ja so ein bisschen iterativ, dass wir jetzt nicht irgendwie direkt die direkt alles erschlagen, sondern im ersten Schritt wäre für mich ja schon mal schön, wenn der Agent halt checkt, da geht da, da kommt ein Problem auf",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_verify_delivery_dates_are_achievable",
+      "label": "Verify delivery dates are achievable",
+      "type": "gateway",
+      "quote": "bevor ich quasi das Lieferdatum bestätige. habe ich eben wahrscheinlich ab und zu dann eben den Fall, dass ich eben meine Lager, also meine quasi, ich muss meine Kapazitäten noch irgendwo organisieren",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_confirm_or_adjust_requested_delivery_date",
+      "label": "Confirm or adjust requested delivery date",
+      "type": "task",
+      "quote": "Wenn die jetzt sagen, nee, 21.9. ist geliefert, dann würde ich jetzt auch, weil klar, am Ende des Tages, wenn wird der Kunde irgendwo um die Ecke kommen und hier und der eine ist nicht so ganz so wichtig und kümmer. Ja, aber ich fang nicht an für den Kunden jetzt.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_send_order_confirmation_to_customer",
+      "label": "Send order confirmation to customer",
+      "type": "sendTask",
+      "quote": "dann würd ich den wahrscheinlich, wenn ich die Information morgen kriege, würd ich den den 28.7. bestätigen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_transfer_assembly_order_to_production_planning",
+      "label": "Transfer assembly order to production planning",
+      "type": "task",
+      "quote": "So, und um jetzt den Prozess einmal kurz abzurunden, jetzt ist die ganze Sache erstmal von von der AB Auftragserstellung erstmal fertig. Jetzt wäre natürlich die einzige. Entscheidung, die man jetzt zu treffen hätte, jetzt für für die für die Dispositionsseite",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_transfer_production_order_to_mes_system",
+      "label": "Transfer production order to MES system",
+      "type": "sendTask",
+      "quote": "Das ist aktuell so aufgebaut, dass alle 15 Minuten. immer wieder die Informationen vom Produktionsauftrag übertragen werden, hinsichtlich welche Menge ich hab und was der Wunschliefertermin ist",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_plan_production_on_machines",
+      "label": "Plan production on machines",
+      "type": "task",
+      "quote": "Oben habe ich meinen Pool. Da tauchen die dann auf, die Aufträge, die neu angelegt worden sind, und die kann ich dann per Drag and Drop dann der jeweiligen Anlage dann zuordnen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_book_finished_goods_into_inventory",
+      "label": "Book finished goods into inventory",
+      "type": "task",
+      "quote": "Wenn die Produktion dann. irgendwann durch ist, würde die Produktion oder jetzt da in dem Fall ist es einfach, wenn die Produktion durch ist, weil es nur 2300 ist, das zum Beispiel bei einer vollen Palette in eben den Artikel",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_reverse_post_materials_consumed_in_production",
+      "label": "Reverse-post materials consumed in production",
+      "type": "task",
+      "quote": "würde natürlich dann abhängig von dem, was Sie an Gut und an Schlechtteilen gebucht haben. Wird dann natürlich entsprechend retrograd dann die Materialien dann abgebucht",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_start_assembly_after_all_components_available",
+      "label": "Start assembly after all components available",
+      "type": "gateway",
+      "quote": "Sobald alles da ist. Genau. Und bei bei ihm wäre dann auch wieder dasselbe Schema, wenn er dann natürlich fertig montiert hat.",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    },
+    {
+      "id": "n_book_assembled_goods_into_inventory",
+      "label": "Book assembled goods into inventory",
+      "type": "task",
+      "quote": "Buch dir die Gutteile an, die dann wiederum dann bei sich in der Stückliste dann wieder retrograd dann hingehen und dann die Materialien dann abziehen",
+      "grounded": true,
+      "note": null,
+      "grounding_verified": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "n_add_order_line_item_with_article_number_and_quantity",
+      "target": "n_check_article_price_from_customer_against_system_price",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "jetzt sehen wir schon direkt, Preis ist auf jeden Fall ein Unterschied. Jetzt würde ich jetzt erstmal. Gucken, was gibt es überhaupt bei den Preisen?",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_book_finished_goods_into_inventory",
+      "target": "n_reverse_post_materials_consumed_in_production",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Wird dann natürlich entsprechend retrograd dann die Materialien dann abgebucht",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_article_price_from_customer_against_system_price",
+      "target": "n_check_inventory_level_for_article",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Gut, jetzt müssten wir hier nochmal zurückgehen. Jetzt haben wir den Artikel hier drin. Jetzt müssten wir natürlich gucken. Was ist Sache bei dem Artikel?",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_bill_of_materials_for_assembly_order",
+      "target": "n_check_inventory_for_each_sub_component",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Jetzt haben Sie die Stickliste und jetzt müssen Sie in jeden einzelnen von diesen 5 Artikeln reingehen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_future_orders_would_be_jeopardized_by_current_order",
+      "target": "n_place_purchase_orders_for_missing_materials",
+      "condition": "no future order jeopardized but purchased parts still missing",
+      "default": true,
+      "grounded": true,
+      "quote": "Und dann müssen sie sowieso erst mal händisch gehandhabt werden. ... müssen Sie vielleicht dann in der in dem in dem Sinne muss, muss, muss ja dann ganz normal Bestellung auslösen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_if_future_orders_would_be_jeopardized_by_current_order",
+      "target": "n_signal_procurement_issues_requiring_manual_intervention",
+      "condition": "future order would be jeopardized",
+      "default": false,
+      "grounded": true,
+      "quote": "wäre für mich ja schon mal schön, wenn der Agent halt checkt, da geht da, da kommt ein Problem auf, wenn wir das jetzt so planen, weil ich irgendwo später nicht mehr genug Lager hab für irgendeinen Auftrag. Und erstmal einfach die Hand hebt",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_inventory_for_each_sub_component",
+      "target": "n_create_production_order_for_missing_components",
+      "condition": "component inventory insufficient today",
+      "default": false,
+      "grounded": true,
+      "quote": "Da wurde jetzt automatisch quasi vom System quasi dann auch gleichzeitig eine Produktion für das 0-1er Teil ausgelöst",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_inventory_for_each_sub_component",
+      "target": "n_identify_purchased_parts_with_insufficient_inventory",
+      "condition": "purchased part with insufficient inventory",
+      "default": true,
+      "grounded": true,
+      "quote": "Alles was Zukaufteil oder so ist, da passiert dann nichts von von Systemseite.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_check_inventory_level_for_article",
+      "target": "n_create_assembly_order_if_inventory_insufficient",
+      "condition": "insufficient finished goods inventory",
+      "default": false,
+      "grounded": true,
+      "quote": "Also fehlen uns 2243 Stück. ... lege jetzt in dem Sinne ein Montageauftrag an für diesen Artikel",
+      "inferred": false,
+      "grounding_verified": false
+    },
+    {
+      "source": "n_confirm_or_adjust_requested_delivery_date",
+      "target": "n_send_order_confirmation_to_customer",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "dann würd ich den wahrscheinlich, wenn ich die Information morgen kriege, würd ich den den 28.7. bestätigen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_assembly_order_if_inventory_insufficient",
+      "target": "n_check_bill_of_materials_for_assembly_order",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Dieser Produktionsauftrag hat jetzt natürlich eine Stückliste. Das ist jetzt die Stückliste, die ich benötige. um diesen Auftrag zu fertigen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_order_confirmation",
+      "target": "n_look_up_customer_in_system",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "So, jetzt können wir hier noch direkt den Kunden schon mal raussuchen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_create_production_order_for_missing_components",
+      "target": "n_check_if_future_orders_would_be_jeopardized_by_current_order",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Das Einzige, was ich prüfen muss, ist quasi: Überfahre ich einen anderen Auftrag?",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_desired_delivery_date",
+      "target": "n_add_order_line_item_with_article_number_and_quantity",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "So, dann würden wir jetzt in die Position eingehen und jetzt müssten wir in dem Sinne natürlich Hier diese Artikelnummer nehmen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_external_business_case_number",
+      "target": "n_enter_order_date_from_customer",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "An dem komplett mit rein, so Bestelldatum 31.5.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_enter_order_date_from_customer",
+      "target": "n_enter_desired_delivery_date",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "So, und dann haben Sie natürlich einen Wunschliefertermin, den 28.7. 26.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_identify_purchased_parts_with_insufficient_inventory",
+      "target": "n_check_if_future_orders_would_be_jeopardized_by_current_order",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Das Einzige, was ich prüfen muss, ist quasi: Überfahre ich einen anderen Auftrag?",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_look_up_customer_in_system",
+      "target": "n_select_delivery_address",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Das müsste, glaube ich, genau hier sehen wir das auch so. Müssen wir dann. Das ist genau der hier und dann gehen wir auf OK.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_open_order_in_erp_system_and_create_new_business_case",
+      "target": "n_create_order_confirmation",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Genau, und wir machen natürlich eine Auftragsbestätigung.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_place_purchase_orders_for_missing_materials",
+      "target": "n_verify_delivery_dates_are_achievable",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "bevor ich quasi das Lieferdatum bestätige. habe ich eben wahrscheinlich ab und zu dann eben den Fall, dass ich eben meine Lager, also meine quasi, ich muss meine Kapazitäten noch irgendwo organisieren",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_plan_production_on_machines",
+      "target": "n_book_finished_goods_into_inventory",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Wenn die Produktion dann. irgendwann durch ist, würde die Produktion oder jetzt da in dem Fall ist es einfach, wenn die Produktion durch ist ... werden die dann gebucht",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_receive_customer_order_via_email",
+      "target": "n_open_order_in_erp_system_and_create_new_business_case",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "das kommt rein per E-Mail, vielleicht auch kommentarlos und das muss jetzt verarbeitet werden",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_reverse_post_materials_consumed_in_production",
+      "target": "n_start_assembly_after_all_components_available",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "So, und somit wäre dann der Bestand dann zugebucht an 0 Einser Teile, wo draufhin dann der [Monteur] aus der Montage dann auch mit der Montage dann starten könnte. Sobald alles da ist.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_select_delivery_address",
+      "target": "n_enter_external_business_case_number",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Jetzt müsste hier Geschäftsfallnummer extern, das ist natürlich immer für die wichtig, dass die 'n Bezug bei sich haben muss hier in dem Sinne.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_send_order_confirmation_to_customer",
+      "target": "n_transfer_assembly_order_to_production_planning",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "So, und um jetzt den Prozess einmal kurz abzurunden, jetzt wollt ihr in dem Sinne unabhängig, wie wir jetzt bestätigen, wollte der Montageauftrag angelegt.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_signal_procurement_issues_requiring_manual_intervention",
+      "target": "n_place_purchase_orders_for_missing_materials",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "In der Evolutionsstufe 3 kann man dann meinetwegen sagen: OK, man man befähigt den Agenten schon mal 'ne Bestellung vorzuschlagen",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_start_assembly_after_all_components_available",
+      "target": "n_book_assembled_goods_into_inventory",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Und bei bei ihm wäre dann auch wieder dasselbe Schema, wenn er dann natürlich fertig montiert hat. Buch dir die Gutteile an",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_transfer_assembly_order_to_production_planning",
+      "target": "n_transfer_production_order_to_mes_system",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Das ist aktuell so aufgebaut, dass alle 15 Minuten. immer wieder die Informationen vom Produktionsauftrag übertragen werden",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_transfer_production_order_to_mes_system",
+      "target": "n_plan_production_on_machines",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Oben habe ich meinen Pool. Da tauchen die dann auf, die Aufträge, die neu angelegt worden sind, und die kann ich dann per Drag and Drop dann der jeweiligen Anlage dann zuordnen.",
+      "inferred": false,
+      "grounding_verified": true
+    },
+    {
+      "source": "n_verify_delivery_dates_are_achievable",
+      "target": "n_confirm_or_adjust_requested_delivery_date",
+      "condition": null,
+      "default": false,
+      "grounded": true,
+      "quote": "Wenn die jetzt sagen, nee, 21.9. ist geliefert, dann würde ich jetzt auch ... 27.09. sag ich jetzt einfach mal bestätigen.",
+      "inferred": false,
+      "grounding_verified": false
+    }
+  ],
+  "start": "n_receive_customer_order_via_email",
+  "terminals": [
+    "n_book_assembled_goods_into_inventory"
+  ],
+  "dropped_edges": [],
+  "validation": {
+    "passed": false,
+    "structural_problems": [],
+    "grounding_problems": [
+      {
+        "type": "ungrounded_node",
+        "detail": "n_create_order_confirmation"
+      },
+      {
+        "type": "ungrounded_node",
+        "detail": "n_identify_purchased_parts_with_insufficient_inventory"
+      },
+      {
+        "type": "ungrounded_node",
+        "detail": "n_check_if_future_orders_would_be_jeopardized_by_current_order"
+      },
+      {
+        "type": "ungrounded_edge",
+        "detail": "n_check_inventory_level_for_article -> n_create_assembly_order_if_inventory_insufficient"
+      },
+      {
+        "type": "ungrounded_edge",
+        "detail": "n_verify_delivery_dates_are_achievable -> n_confirm_or_adjust_requested_delivery_date"
+      }
+    ]
+  },
+  "source_transcript": "../Anonymized_Transcripts/transcript_2.txt"
+}
